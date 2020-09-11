@@ -1,36 +1,5 @@
-
-.clearfix:after{
-  height: 0;
-  clear: both;
-  font-size: 0;
-  content: " ";
-  display: block;
-  visibility: hidden;
-}
-
-.text-left{
-  text-align: left;
-}
-
-.text-right{
-  text-align: right;
-}
-
-.text-center{
-  text-align: center;
-}
-
-.text-justify {
-  text-align: justify;
-}
-
-.pull-left{
-  float: left;
-}
-
-.pull-right{
-  float: right;
-}
+@import url(./text.css);
+@import url(./color.css);
 
 .inline{
   display: inline;
@@ -46,4 +15,25 @@
 
 .full-width{
   width: 100%;
+}
+
+.pull-left{
+  float: left;
+}
+
+.pull-right{
+  float: right;
+}
+
+.clearfix:after{
+  height: 0;
+  clear: both;
+  font-size: 0;
+  content: " ";
+  display: block;
+  visibility: hidden;
+}
+
+.border-none {
+  border: none;
 }

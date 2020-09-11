@@ -1,0 +1,63 @@
+.color-black {
+  color: #000;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.color-red {
+  color: red;
+}
+
+.color-green {
+  color: green;
+}
+
+.color-blue {
+  color: blue;
+}
+
+.color-111 {
+  color: #111;
+}
+
+.color-333 {
+  color: #333;
+}
+
+.color-666 {
+  color: #666;
+}
+
+.color-999 {
+  color: #999;
+}
+
+.color-ccc {
+  color: #ccc;
+}
+
+.color-ddd {
+  color: #ddd;
+}
+
+.color-eee {
+  color: #eee;
+}
+
+.bgc-black {
+  background-color: #000;
+}
+
+.bgc-white {
+  background-color: #fff;
+}
+
+.bgc-1 {
+  background-color: #fefefe;
+}
+
+.bgc-2 {
+  background-color: #efefef;
+}
