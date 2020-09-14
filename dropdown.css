@@ -1,39 +1,49 @@
+/**
+
+Example:
+
+<div class="dropdown">
+  <h3>Dropdown Menu</h3>
+  <ul class="dropdown-menu">
+    <li><a href="">Menu Item 1</a></li>
+    <li><a href="">Menu Item 2</a></li>
+    <li><a href="">Menu Item 3</a></li>
+    <li><a href="">Menu Item 4</a></li>
+  </ul>
+</div>
+*/
+
 .dropdown {
   position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 .dropdown-menu {
   left: 0;
   top: 100%;
+  right: 0;
   margin: 0;
   padding: 0;
   display: none;
-  min-width: 160px;
-  background: #fff;
+  overflow: hidden;
   position: absolute;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  border: 1px solid rgba(0, 0, 0, .15);
-  transition: all linear .2s;
+  background: #fff;
+  border: 1px solid #ddd;
 }
 
-.dropdown-menu li {
-  padding: 10px;
-  display: block;
-  text-align: left;
+.dropdown-menu li,
+.dropdown-menu-item {
+  width: 100%;
   cursor: pointer;
+  list-style: none;
+  padding: 3px 5px;
 }
 
-.dropdown-menu li:hover {
+.dropdown-menu li:hover,
+.dropdown-menu-item:hover {
   background-color: #efefef;
-  -webkit-transition: all linear .2s;
-  transition: all linear .2s;
-}
-
-.dropdown:hover {
-  background-color: #efefef;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
 }

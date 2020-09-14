@@ -1,44 +1,16 @@
-
 .panel {
-  padding: 0;
-  margin: 15px 0;
-  list-style: none;
-  background: #fff;
-  border-top: 1px solid #efefef;
+  margin: 10px 0;
+  background-color: #fff;
 }
 
-  .panel-title{
-    padding: 15px 10px;
-    font-weight: bold;
-    border-bottom: 1px solid #efefef;
-  }
+.panel-footer,
+.panel-header {
+  margin: 0;
+  padding: 10px 15px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
 
-  .panel-content {
-    margin: 5px 10px;
-    border-bottom: 1px solid #efefef;
-  }
-
-  .panel-content h3 {
-      padding: 0;
-      margin: 0;
-    }
-
-  .panel-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .panel-content{
-    -webkit-box-flex: 100%;
-        -ms-flex: 100%;
-            flex: 100%;
-  }
-
-  .panel-footer {
-    color: #666;
-  }
-
-img{
-  width: 80px;
+.panel-body {
+  padding: 15px;
 }
