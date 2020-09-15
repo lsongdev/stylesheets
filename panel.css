@@ -1,6 +1,6 @@
 .panel {
   margin: 10px 0;
-  background-color: #fff;
+  background-color: var(--content-background-color, white);
 }
 
 .panel-footer,
@@ -10,11 +10,13 @@
   display: block;
   font-size: 14px;
   font-weight: bold;
-  box-sizing: border-box;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+
+  color: var(--color, #000);
+  border-top: 1px solid var(--border-color, #eee);
+  border-bottom: 1px solid var(--border-color, #eee);
 }
 
 .panel-body {
   padding: 15px;
+  color: var(--color);
 }

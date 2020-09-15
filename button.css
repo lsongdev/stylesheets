@@ -13,8 +13,8 @@
   display: inline-block;
   vertical-align: middle;
   box-sizing: border-box;
-  
   font-family: sans-serif;
+
   color: var(--button-normal-color, #333);
   border: 1px solid var(--button-normal-border-color, white);
   background-color: var(--button-normal-background-color, white);

@@ -6,7 +6,7 @@
 }
 
 .table thead {
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .table th {
@@ -24,11 +24,11 @@
 .table-border td,
 .table-border th,
 .table-border tr {
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: #fafafa;
+  background-color: var(--content-background-color);
 }
 
 .table-hover tbody tr:hover {

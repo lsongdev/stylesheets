@@ -1,4 +1,10 @@
 :root {
+
+  --color: #111;
+  --border-color: #eee;
+  --background-color: #efefef;
+  --content-background-color: #fff;
+
   /* button-normal */
   --button-normal-color: #333;
   --button-normal-border-color: #ddd;
@@ -19,4 +25,13 @@
   --button-danger-color: #fff;
   --button-danger-border-color: #e74c3c;
   --button-danger-background-color: #e74c3c;
+}
+/* dark mode */
+@media(prefers-color-scheme: dark) {
+  :root {
+    --color: #fff;
+    --border-color: #333;
+    --background-color: #111;
+    --content-background-color: #222;
+  }
 }

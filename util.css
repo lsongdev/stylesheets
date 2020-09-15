@@ -37,3 +37,16 @@
 .border-none {
   border: none;
 }
+
+.overflow-hidden,
+.scroll-none {
+  overflow: hidden;
+}
+
+.scroll-x {
+  overflow-x: scroll;
+}
+
+.scroll-y {
+  overflow-y: scroll;
+}

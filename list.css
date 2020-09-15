@@ -7,7 +7,7 @@
 .list-item {
   list-style: none;
   padding: 5px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-color, #eee);
 }
 
 .list-item:last-of-type {

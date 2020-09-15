@@ -24,8 +24,10 @@
   appearance: none;
   border-radius: 0;
   box-sizing: border-box;
-  color: #333;
-  border: 1px solid #ccc;
+  background-color: transparent;
+
+  color: var(--color);
+  border: 1px solid var(--border-color);
 }
 
 .form input[type="checkbox"] + label,
