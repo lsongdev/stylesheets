@@ -46,11 +46,3 @@ q:before {
   content: '';
   content: none;
 }
-
-.margin-reset {
-  margin: 0;
-}
-
-.padding-reset {
-  padding: 0;
-}

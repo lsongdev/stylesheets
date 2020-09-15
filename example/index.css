@@ -1,13 +1,12 @@
 @import url(../theme/default.css);
 @import url(../grid.css);
+@import url(../color.css);
 @import url(../panel.css);
 @import url(../list.css);
 @import url(../button.css);
 @import url(../form.css);
 @import url(../table.css);
 
-html, body {
-  margin: 0;
-  padding: 0;
+body {
   background-color: var(--background-color);
 }

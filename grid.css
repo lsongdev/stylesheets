@@ -63,6 +63,7 @@
   float: left;
 }
 @media (max-width:870px) {
+  .container,
   .row > [class*="col-"] {
     width: 100%;
   }

@@ -50,3 +50,11 @@
 .scroll-y {
   overflow-y: scroll;
 }
+
+.margin-reset {
+  margin: 0;
+}
+
+.padding-reset {
+  padding: 0;
+}

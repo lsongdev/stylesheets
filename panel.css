@@ -11,12 +11,12 @@
   font-size: 14px;
   font-weight: bold;
 
-  color: var(--color, #000);
+  color: var(--text-color, #000);
   border-top: 1px solid var(--border-color, #eee);
   border-bottom: 1px solid var(--border-color, #eee);
 }
 
 .panel-body {
   padding: 15px;
-  color: var(--color);
+  color: var(--text-color);
 }

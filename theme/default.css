@@ -1,6 +1,6 @@
 :root {
 
-  --color: #111;
+  --text-color: #111;
   --border-color: #eee;
   --background-color: #efefef;
   --content-background-color: #fff;
@@ -29,7 +29,7 @@
 /* dark mode */
 @media(prefers-color-scheme: dark) {
   :root {
-    --color: #fff;
+    --text-color: #fff;
     --border-color: #333;
     --background-color: #111;
     --content-background-color: #222;
