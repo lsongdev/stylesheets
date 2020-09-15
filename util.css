@@ -58,3 +58,15 @@
 .padding-reset {
   padding: 0;
 }
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.relative {
+  position: relative;
+}
