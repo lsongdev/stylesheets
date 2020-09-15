@@ -1,9 +1,15 @@
 .list {
   margin: 0;
-  padding: 0;
+  padding: 0 15px;
   list-style: none;
 }
 
 .list-item {
   list-style: none;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.list-item:last-of-type {
+  border-bottom: none;
 }

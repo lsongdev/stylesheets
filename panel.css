@@ -6,7 +6,11 @@
 .panel-footer,
 .panel-header {
   margin: 0;
-  padding: 10px 15px;
+  padding: 8px 15px;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  box-sizing: border-box;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }

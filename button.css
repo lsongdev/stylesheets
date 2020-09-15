@@ -1,5 +1,5 @@
 .button {
-  color: #333;
+  
   outline: 0;
   opacity: .95;
   font-size: 1em;
@@ -13,8 +13,11 @@
   display: inline-block;
   vertical-align: middle;
   box-sizing: border-box;
-  border: 1px solid #ddd;
-  background-color: #eee;
+  
+  font-family: sans-serif;
+  color: var(--button-normal-color, #333);
+  border: 1px solid var(--button-normal-border-color, white);
+  background-color: var(--button-normal-background-color, white);
 }
 
 .button:hover {
@@ -22,27 +25,27 @@
 }
 
 .button-primary {
-  color: #fff;
-  border-color: #1682af;
-  background-color: #1682af;
+  color: var(--button-primary-color, white);
+  border-color: var(--button-primary-border-color, black);
+  background-color: var(--button-primary-background-color, black);
 }
 
 .button-success {
-  color: #fff;
-  border-color: #27ae60;
-  background-color: #27ae60;
+  color: var(--button-success-color, white);
+  border-color: var(--button-success-border-color, black);
+  background-color: var(--button-success-background-color, black);
 }
 
 .button-warning {
-  color: #fff;
-  border-color: #f39c12;
-  background-color: #f39c12;
+  color: var(--button-warning-color, white);
+  border-color: var(--button-warning-border-color, black);
+  background-color: var(--button-warning-background-color, black);
 }
 
 .button-danger {
-  color: #fff;
-  border-color: #e74c3c;
-  background-color: #e74c3c;
+  color: var(--button-danger-color, white);
+  border-color: var(--button-danger-border-color, black);
+  background-color: var(--button-danger-background-color, black);
 }
 
 .button-small {

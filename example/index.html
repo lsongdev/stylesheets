@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../panel.css">
+  <title>Example</title>
+  <link rel="stylesheet" href="./index.css">
   <style>
     body {
       margin: 0;
@@ -15,15 +15,14 @@
   </style>
 </head>
 
-<body>
-
+<body class="margin-reset padding-reset">
 
   <div class="panel">
-    <h3 class="panel-header">Panel Title</h3>
+    <span class="panel-header">Panel Title</span>
     <div class="panel-body">
       balabala
       balabala
-      <br/>
+      <br />
       balabala
       balabala
       balabala
@@ -34,18 +33,77 @@
   </div>
 
   <div class="panel">
-    <h3 class="panel-header">Panel Title</h3>
-    <div class="panel-body">
-      balabala
-      balabala
-      <br/>
-      balabala
-      balabala
-      balabala
+    <h3 class="panel-header">Form Example</h3>
+    <form class="panel-body form">
+      <div class="form-field">
+        <label for="username">username</label>
+        <input type="text" id="username">
+      </div>
+
+      <div class="form-field">
+        <label for="password" id="password">password</label>
+        <input type="password" id="pasword">
+      </div>
+
+      <div class="form-field">
+        <button type="submit" class="button button-primary">submit</button>
+        <button type="reset" class="button">reset</button>
+      </div>
+
+    </form>
+  </div>
+
+
+  <div class="panel">
+    <h3 class="panel-header">Button Example</h3>
+    <div class="panel-body list">
+      <div class="list-item">
+        <button class="button">Normal</button>
+        <button class="button button-primary">Primary</button>
+      </div>
+      <div class="list-item">
+        <button class="button button-success">Success</button>
+        <button class="button button-warning">Warning</button>
+        <button class="button button-danger">Danger</button>
+      </div>
+      <div class="list-item">
+        <a href="#" class="button button-primary">Link</a>
+        <input type="button" class="button button-warning" value="Input">
+        <div class="button button-danger">DIV</div>
+      </div>
+
+      <div class="list-item">
+        <button class="button button-small">small</button>
+        <button class="button">normal</button>
+        <button class="button button-large">large</button>
+      </div>
     </div>
-    <div class="panel-footer">
-      <a href="">More</a>
-    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-header">Table Example</div>
+    <table class="table panel-body table-border table-striped">
+      <thead>
+        <th>#</th>
+        <th>name</th>
+        <th>ages</th>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td>tom</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>jack</td>
+        <td>12</td>
+      </tr>
+      <tfoot>
+        <td>total</td>
+        <td>prev</td>
+        <td>next</td>
+      </tfoot>
+      </tabel>
   </div>
 
 </body>

@@ -1,0 +1,22 @@
+:root {
+  /* button-normal */
+  --button-normal-color: #333;
+  --button-normal-border-color: #ddd;
+  --button-normal-background-color: #eee;
+  /* button-primary */
+  --button-primary-color: #fff;
+  --button-primary-border-color: #1682af;
+  --button-primary-background-color: #1682af;
+  /* button-success */
+  --button-success-color: #fff;
+  --button-success-border-color: #27ae60;
+  --button-success-background-color: #27ae60;
+  /* button-warning */
+  --button-warning-color: #fff;
+  --button-warning-border-color: #f39c12;
+  --button-warning-background-color: #f39c12;
+  /* button-danger */
+  --button-danger-color: #fff;
+  --button-danger-border-color: #e74c3c;
+  --button-danger-background-color: #e74c3c;
+}
