@@ -1,0 +1,19 @@
+.link,
+.link a {
+  color: var(--link-color);
+}
+
+.link a:active,
+.link:active {
+  color: var(--link-color);
+}
+
+.link:hover,
+.link a:hover {
+  text-decoration: underline;
+}
+
+.link-without-underline,
+.link-without-underline a {
+  text-decoration: none;
+}

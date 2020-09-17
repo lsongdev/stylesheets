@@ -25,6 +25,8 @@
   --button-danger-color: #fff;
   --button-danger-border-color: #e74c3c;
   --button-danger-background-color: #e74c3c;
+  /* link */
+  --link-color: #0070f3;
 }
 /* dark mode */
 @media(prefers-color-scheme: dark) {
