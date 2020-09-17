@@ -1,0 +1,16 @@
+/* dark mode */
+:root[theme=dark] {
+  --text-color: #fff;
+  --border-color: #333;
+  --background-color: #111;
+  --content-background-color: #222;
+}
+
+@media(prefers-color-scheme: dark) {
+  :root[theme=auto] {
+    --text-color: #fff;
+    --border-color: #333;
+    --background-color: #111;
+    --content-background-color: #222;
+  }
+}

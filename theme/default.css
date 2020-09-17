@@ -1,5 +1,4 @@
 :root {
-
   --text-color: #111;
   --border-color: #eee;
   --background-color: #efefef;
@@ -27,13 +26,4 @@
   --button-danger-background-color: #e74c3c;
   /* link */
   --link-color: #0070f3;
-}
-/* dark mode */
-@media(prefers-color-scheme: dark) {
-  :root {
-    --text-color: #fff;
-    --border-color: #333;
-    --background-color: #111;
-    --content-background-color: #222;
-  }
 }
