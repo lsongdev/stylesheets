@@ -1,5 +1,25 @@
+/**
+  Example
+
+  <div class="panel">
+    <span class="panel-header">Panel Title</span>
+    <div class="panel-body">
+      balabala
+      balabala
+      <br />
+      balabala
+      balabala
+      balabala
+    </div>
+    <div class="panel-footer">
+      <a href="">More</a>
+    </div>
+  </div>
+*/
+
 .panel {
   margin: 10px 0;
+  border: 1px solid var(--border-color, #eee);
   background-color: var(--content-background-color, white);
 }
 
@@ -7,16 +27,22 @@
 .panel-header {
   margin: 0;
   padding: 10px 15px;
+
   display: block;
   font-size: 16px;
   font-weight: bold;
-
   color: var(--text-color, #000);
-  border-top: 1px solid var(--border-color, #eee);
-  border-bottom: 1px solid var(--border-color, #eee);
 }
 
 .panel-body {
   padding: 15px;
   color: var(--text-color);
+}
+
+.panel-header {
+  border-bottom: 1px solid var(--border-color, #eee);
+}
+
+.panel-footer {
+  border-top: 1px solid var(--border-color, #eee);
 }

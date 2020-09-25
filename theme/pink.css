@@ -1,0 +1,9 @@
+@import url(./default.css);
+
+.theme-pink {
+
+  --link-color: #EC407A;
+
+  --button-primary-border-color: #EC407A;
+  --button-primary-background-color: #EC407A;
+}

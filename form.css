@@ -27,7 +27,7 @@
   background-color: transparent;
 
   color: var(--text-color);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color, #eee);
 }
 
 .form input[type="checkbox"] + label,
