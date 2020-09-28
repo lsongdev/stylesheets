@@ -1,5 +1,6 @@
 @import url(../theme/dark.css);
 @import url(../theme/pink.css);
+@import url(../theme/black.css);
 @import url(../grid.css);
 @import url(../color.css);
 @import url(../panel.css);
@@ -8,6 +9,8 @@
 @import url(../form.css);
 @import url(../table.css);
 @import url(../link.css);
+@import url(../select.css);
+@import url(../checkbox.css);
 
 body {
   color: var(--text-color);
