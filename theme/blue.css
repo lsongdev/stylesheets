@@ -10,6 +10,7 @@
 }
 
 body {
+  color: var(--text-color);
   font-family: "Fira Code", monospace;
   background-color: var(--background-color);
 }
