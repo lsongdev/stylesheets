@@ -1,0 +1,22 @@
+@import url(./default.css);
+
+:root {
+  --text-color: #ccc;
+  --border-color: transparent;
+  --background-color: #002240;
+  --content-background-color: transparent;
+  --link-color: #9effff;
+  --title-color: #ffee80;
+}
+
+body {
+  font-family: fira code,monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--title-color);
+}
+
+a {
+  color:  var(--link-color) !important;
+}
