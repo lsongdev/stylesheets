@@ -10,7 +10,8 @@
 }
 
 body {
-  font-family: fira code,monospace;
+  font-family: "Fira Code", monospace;
+  background-color: var(--background-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,5 +19,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color:  var(--link-color) !important;
+  color: var(--link-color) !important;
 }
