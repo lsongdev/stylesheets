@@ -8,17 +8,3 @@
   --link-color: #9effff;
   --title-color: #ffee80;
 }
-
-body {
-  color: var(--text-color);
-  font-family: "Fira Code", monospace;
-  background-color: var(--background-color);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: var(--title-color);
-}
-
-a {
-  color: var(--link-color) !important;
-}
