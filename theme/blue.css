@@ -2,9 +2,10 @@
 
 :root {
   --text-color: #ccc;
-  --border-color: transparent;
-  --background-color: #002240;
-  --content-background-color: transparent;
   --link-color: #9effff;
   --title-color: #ffee80;
+  --border-color: #ddd3;
+  --background-color: #002240;
+  --content-background-color: transparent;
+  --code-block-background-color: #333;
 }

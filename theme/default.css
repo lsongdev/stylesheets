@@ -1,7 +1,7 @@
 :root {
   /* common */
   --text-color: #111;
-  --border-color: #eee;
+  --border-color: #ddd;
   --background-color: #efefef;
   --content-background-color: #fff;
 
@@ -10,12 +10,12 @@
 
   /* button-normal */
   --button-normal-color: #333;
-  --button-normal-border-color: #ddd;
+  --button-normal-border-color: #ccc;
   --button-normal-background-color: #eee;
   /* button-primary */
   --button-primary-color: #fff;
-  --button-primary-border-color: #1682af;
-  --button-primary-background-color: #1682af;
+  --button-primary-border-color: #1a73e8;
+  --button-primary-background-color: #1a73e8;
   /* button-success */
   --button-success-color: #fff;
   --button-success-border-color: #27ae60;

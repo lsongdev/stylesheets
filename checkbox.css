@@ -54,7 +54,7 @@ Example:
 }
 
 .switch-input:checked + .switch-label::before {
-  background-color: var(--switch-color-on, #89c12d);
+  background-color: var(--switch-color-on, var(--main-color, #89c12d));
 }
 
 .switch-input:checked + .switch-label::after {

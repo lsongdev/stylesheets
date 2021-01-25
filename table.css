@@ -3,10 +3,8 @@
  */
 .table {
   width: 100%;
-}
-
-.table thead {
-  border-bottom: 1px solid var(--border-color);
+  border-spacing: 0.5rem;
+  border-collapse: collapse;
 }
 
 .table th {
@@ -16,22 +14,21 @@
   font-weight: bold;
 }
 
-.table td {
-  padding: 2px;
-}
-
-.table-border,
-.table-border td,
-.table-border th,
-.table-border tr {
-  border: 1px solid var(--border-color);
-}
-
-.table-striped tbody tr:nth-of-type(odd) {
-  background-color: var(--content-background-color);
-}
-
 .table-hover tbody tr:hover {
-  opacity: .8;
-  background-color: #f0f0f0;
+  background-color: beige;
+}
+
+.table-striped tbody tr:nth-child(even) {
+  background-color: var(--table-row-bgcolor, #efefef);
+}
+
+.table-bordered,
+.table-bordered th,
+.table-bordered tr,
+.table-bordered td {
+  border: 1px solid var(--border-color, #efefef);
+}
+
+.table-bordered>thead>tr>th {
+  border-bottom-width: 2px;
 }

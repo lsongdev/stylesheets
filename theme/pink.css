@@ -1,10 +1,7 @@
 @import url(./default.css);
 
-.theme-pink {
-  --radius-size: 5px;
-  --link-color: #EC407A;
-  --switch-color-on: #EC407A;
+:root {
+  --main-color: #ec407a;
 
-  --button-primary-border-color: #EC407A;
-  --button-primary-background-color: #EC407A;
+  --button-primary-color: #fff;
 }

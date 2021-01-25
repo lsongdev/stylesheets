@@ -1,0 +1,15 @@
+
+.input {
+  outline: 0;
+  width: 100%;
+  font-size: 1em;
+  display: block;
+  padding: .4rem;
+  appearance: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+
+  color: var(--text-color);
+  border: 1px solid var(--border-color, #eee);
+}

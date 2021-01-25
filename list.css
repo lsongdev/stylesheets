@@ -1,12 +1,19 @@
 .list {
   margin: 0;
-  padding: 0 15px;
+  padding: 0 10px;
   list-style: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid var(--border-color, #eee);
 }
 
 .list-item {
-  list-style: none;
+  display: flex;
   padding: 5px 0;
+  list-style: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid var(--border-color, #eee);
 }
 

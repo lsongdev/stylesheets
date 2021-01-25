@@ -1,7 +1,7 @@
 @import url(./default.css);
 
-.theme-black {
+:root {
   --switch-color-on: #000;
-  --button-primary-border-color: #000;
-  --button-primary-background-color: #000;
+  --button-border-color: #000;
+  --button-background-color: #000;
 }

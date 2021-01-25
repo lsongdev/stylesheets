@@ -1,6 +1,10 @@
 @import url(./text.css);
 @import url(./color.css);
 
+.hide {
+  display: none;
+}
+
 .inline {
   display: inline;
 }
@@ -64,6 +68,7 @@
 }
 
 .sticky {
+  top: 0;
   position: sticky;
 }
 

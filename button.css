@@ -1,54 +1,42 @@
 .button {
-  outline: 0;
-  opacity: .95;
-  font-size: 1em;
+  /* size */
   min-width: 70px;
-  cursor: pointer;
-  appearance: none;
-  text-align: center;
-  white-space: nowrap;
-  text-decoration: none;
   padding: .4rem .45rem;
   display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
+  /* align */
+  text-align: center;
+  vertical-align: middle;
+  /* text */
+  font-size: 1em;
   font-family: sans-serif;
-
+  white-space: nowrap;
+  /* border */
+  border-width: 1px;
+  border-style: solid;
   border-radius: var(--radius-size);
-  color: var(--button-normal-color, #333);
-  border: 1px solid var(--button-normal-border-color, white);
-  background-color: var(--button-normal-background-color, white);
+  border-color: var(--button-border-color, #efefef);
+  /* appearance */
+  outline: 0;
+  opacity: .9;
+  cursor: pointer;
+  appearance: none;
+  color: var(--button-color, #333);
+  background-color: var(--button-background-color, #fefefe);
+}
+
+a.button {
+  /* remove link underline */
+  text-decoration: none;
+  color: var(--button-color, #333) !important;
 }
 
 .button:hover {
   opacity: 1;
 }
 
-.button-primary {
-  color: var(--button-primary-color, white);
-  border-color: var(--button-primary-border-color, black);
-  background-color: var(--button-primary-background-color, black);
-}
-
-.button-success {
-  color: var(--button-success-color, white);
-  border-color: var(--button-success-border-color, black);
-  background-color: var(--button-success-background-color, black);
-}
-
-.button-warning {
-  color: var(--button-warning-color, white);
-  border-color: var(--button-warning-border-color, black);
-  background-color: var(--button-warning-background-color, black);
-}
-
-.button-danger {
-  color: var(--button-danger-color, white);
-  border-color: var(--button-danger-border-color, black);
-  background-color: var(--button-danger-background-color, black);
-}
-
 .button-small {
+  min-width: 50px;
   font-size: .75em;
   padding: .1rem .2rem;
 }
@@ -65,24 +53,39 @@
 }
 
 .button-group {
+  overflow: hidden;
   display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: var(--radius-size);
+  border-color: var(--button-border-color, #efefef);
 }
 
 .button-group .button {
+  border: none;
   border-radius: 0;
 }
 
-.button-group > .button + .button {
-  border-left: none;
-  white-space: nowrap;
+.button-primary {
+  --button-color: var(--button-primary-color);
+  --button-border-color: var(--button-primary-border-color);
+  --button-background-color: var(--button-primary-background-color);
 }
 
-.button-group .button:first-child {
-  border-top-left-radius: var(--radius-size);
-  border-bottom-left-radius: var(--radius-size);
+.button-success {
+  --button-color: var(--button-success-color);
+  --button-border-color: var(--button-success-border-color);
+  --button-background-color: var(--button-success-background-color);
 }
 
-.button-group .button:last-child {
-  border-top-right-radius: var(--radius-size);
-  border-bottom-right-radius: var(--radius-size);
+.button-warning {
+  --button-color: var(--button-warning-color);
+  --button-border-color: var(--button-warning-border-color);
+  --button-background-color: var(--button-warning-background-color);
+}
+
+.button-danger {
+  --button-color: var(--button-danger-color);
+  --button-border-color: var(--button-danger-border-color);
+  --button-background-color: var(--button-danger-background-color);
 }

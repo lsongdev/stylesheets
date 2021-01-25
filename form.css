@@ -1,45 +1,14 @@
+@import url(./input.css);
+@import url(./button.css);
+@import url(./select.css);
+@import url(./checkbox.css);
+
 .form label {
   display: block;
 }
 
-.form input:not([type]),
-.form input[type="color"],
-.form input[type="date"],
-.form input[type="datetime"],
-.form input[type="email"],
-.form input[type="number"],
-.form input[type="password"],
-.form input[type="search"],
-.form input[type="tel"],
-.form input[type="text"],
-.form input[type="time"],
-.form input[type="url"],
-.form select,
-.form textarea {
-  outline: 0;
-  width: 100%;
-  font-size: 1em;
-  display: block;
-  padding: .4rem;
-  appearance: none;
-  border-radius: 0;
-  box-sizing: border-box;
-  background-color: transparent;
-
-  color: var(--text-color);
-  border: 1px solid var(--border-color, #eee);
-}
-
-.form input[type="checkbox"] + label,
-.form input[type="radio"] + label {
-  display: inline-block;
-}
-
-.form.text-center input {
-  text-align: center;
-}
-
-.form-field + .form-field {
+.form-field {
+  flex: 1 1 auto;
   margin-top: 10px;
 }
 

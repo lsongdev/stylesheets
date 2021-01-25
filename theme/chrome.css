@@ -1,0 +1,9 @@
+:root {
+  --radius-size: 2px;
+  --button-border-color: rgba(0, 0, 0, 0.25);
+}
+
+.button {
+  box-shadow: 0 1px 0 rgb(0 0 0 / 8%), inset 0 1px 2px rgb(255 255 255 / 75%);
+  background-image: -webkit-linear-gradient(#ededed, #ededed 38%, #dedede);
+}

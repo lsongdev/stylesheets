@@ -19,30 +19,34 @@
 
 .panel {
   margin: 10px 0;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
   border: 1px solid var(--border-color, #eee);
   background-color: var(--content-background-color, white);
 }
 
 .panel-footer,
+.panel-body,
 .panel-header {
   margin: 0;
   padding: 10px 15px;
-
+  
   display: block;
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--text-color, #000);
+  overflow: hidden;
 }
 
-.panel-body {
-  padding: 15px;
-  color: var(--text-color);
+.panel-header,
+.panel-footer {
+  font-weight: bold;
 }
 
 .panel-header {
   border-bottom: 1px solid var(--border-color, #eee);
 }
 
+/*
 .panel-footer {
   border-top: 1px solid var(--border-color, #eee);
 }
+*/
