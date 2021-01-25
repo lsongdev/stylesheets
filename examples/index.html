@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Components Demo</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../card.css">
+    <link rel="stylesheet" href="../panel.css">
+    <link rel="stylesheet" href="../grid.css">
+    <link rel="stylesheet" href="../form.css">
+    <link rel="stylesheet" href="../button.css">
+    <link rel="stylesheet" href="../input.css">
+    <link rel="stylesheet" href="../select.css">
+    <link rel="stylesheet" href="../checkbox.css">
+    <link rel="stylesheet" href="../table.css">
+    <link rel="stylesheet" href="../list.css">
+    <link rel="stylesheet" href="../link.css">
+    <link rel="stylesheet" href="../text.css">
+    <link rel="stylesheet" href="../animation.css">
+    <link rel="stylesheet" href="../utils.css">
+    <link rel="stylesheet" href="../navigation.css">
+    <link rel="stylesheet" href="../menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            height: 100vh;
+            background-color: #f8f9fa;
+            overflow: hidden;
+        }
+
+        #app {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* 主内容区域 */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-left: var(--sidebar-width, 250px); /* Account for vertical navigation width */
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        iframe {
+            flex: 1;
+            width: 100%;
+            height: 100%;
+            border: none;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 左侧导航 - 使用组件库的导航样式 -->
+        <nav class="navigation navigation-vertical">
+            <a href="#" class="navigation-brand">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="24" fill="#4F46E5" />
+                </svg>
+                CSS Components
+            </a>
+
+            <ul class="menu menu-vertical">
+                <li>
+                    <a href="#"><i class="fas fa-ruler-combined"></i> <span>基础样式</span></a>
+                    <ul>
+                        <li><a href="base.html" target="component-frame"><i class="fas fa-ruler-combined"></i> <span>Base</span></a></li>
+                        <li><a href="color.html" target="component-frame"><i class="fas fa-palette"></i> <span>Color</span></a></li>
+                        <li><a href="font.html" target="component-frame"><i class="fas fa-font"></i> <span>Font</span></a></li>
+                        <li><a href="animation.html" target="component-frame"><i class="fas fa-play-circle"></i> <span>Animation</span></a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fas fa-columns"></i> <span>布局组件</span></a>
+                    <ul>
+                        <li><a href="flex.html" target="component-frame"><i class="fas fa-columns"></i> <span>Flex</span></a></li>
+                        <li><a href="grid.html" target="component-frame"><i class="fas fa-th-large"></i> <span>Grid</span></a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fas fa-th-large"></i> <span>UI组件</span></a>
+                    <ul>
+                        <li><a href="button.html" target="component-frame"><i class="fas fa-hand-pointer"></i> <span>Button</span></a></li>
+                        <li><a href="input.html" target="component-frame"><i class="fas fa-keyboard"></i> <span>Input</span></a></li>
+                        <li><a href="form.html" target="component-frame"><i class="fas fa-edit"></i> <span>Form</span></a></li>
+                        <li><a href="card.html" target="component-frame"><i class="fas fa-id-card"></i> <span>Card</span></a></li>
+                        <li><a href="list.html" target="component-frame"><i class="fas fa-list"></i> <span>List</span></a></li>
+                        <li><a href="link.html" target="component-frame"><i class="fas fa-link"></i> <span>Link</span></a></li>
+                        <li><a href="badge.html" target="component-frame"><i class="fas fa-certificate"></i> <span>Badge</span></a></li>
+                        <li><a href="icon.html" target="component-frame"><i class="fas fa-icons"></i> <span>Icon</span></a></li>
+                        <li><a href="checkbox.html" target="component-frame"><i class="fas fa-check-square"></i> <span>Checkbox</span></a></li>
+                        <li><a href="dropdown.html" target="component-frame"><i class="fas fa-caret-down"></i> <span>Dropdown</span></a></li>
+                        <li><a href="dialog.html" target="component-frame"><i class="fas fa-window-maximize"></i> <span>Dialog</span></a></li>
+                        <li><a href="navigation.html" target="component-frame"><i class="fas fa-bars"></i> <span>Navigation</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- 右侧iframe显示区域 -->
+        <div class="main-content">
+            <iframe name="component-frame" src="overview.html"></iframe>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Toggle submenu for vertical menu
+            document.querySelectorAll('.menu-vertical li:has(ul) > a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const li = link.parentElement;
+                    const submenu = li.querySelector('ul');
+                    if (submenu) {
+                        const isOpen = submenu.style.display === 'block';
+                        submenu.style.display = isOpen ? 'none' : 'block';
+                        li.classList.toggle('menu-open', !isOpen);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

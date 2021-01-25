@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog - CSS Components Demo</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../dialog.css">
+    <link rel="stylesheet" href="../button.css">
+    <link rel="stylesheet" href="../card.css">
+    <style>
+        body {
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dialog 对话框组件</h1>
+        <p>这是对话框组件的演示页面，展示了各种对话框样式和交互。</p>
+        
+        <div class="dialog-group">
+            <h2>基本对话框</h2>
+            <button id="openBasicDialog" class="button button-primary">打开基本对话框</button>
+            
+            <div id="basicDialog" class="dialog">
+                <div class="dialog-content">
+                    <div class="dialog-header">
+                        <span class="close-dialog">&times;</span>
+                        <h3>基本对话框</h3>
+                    </div>
+                    <div class="dialog-body">
+                        <p>这是一个基本的对话框示例。您可以在此处放置任何内容，如文本、表单或其他组件。</p>
+                    </div>
+                    <div class="dialog-footer">
+                        <button class="button button-secondary close-dialog">取消</button>
+                        <button class="button button-primary">确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dialog-group">
+            <h2>确认对话框</h2>
+            <button id="openConfirmDialog" class="button button-danger">打开确认对话框</button>
+            
+            <div id="confirmDialog" class="dialog">
+                <div class="dialog-content">
+                    <div class="dialog-header">
+                        <span class="close-dialog">&times;</span>
+                        <h3>确认操作</h3>
+                    </div>
+                    <div class="dialog-body">
+                        <p>您确定要执行此操作吗？此操作不可撤销。</p>
+                    </div>
+                    <div class="dialog-footer">
+                        <button class="button button-secondary close-dialog">取消</button>
+                        <button class="button button-danger">删除</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dialog-group">
+            <h2>提示对话框</h2>
+            <button id="openPromptDialog" class="button button-info">打开提示对话框</button>
+            
+            <div id="promptDialog" class="dialog">
+                <div class="dialog-content">
+                    <div class="dialog-header">
+                        <span class="close-dialog">&times;</span>
+                        <h3>输入信息</h3>
+                    </div>
+                    <div class="dialog-body">
+                        <p>请输入您的姓名：</p>
+                        <input type="text" class="input" placeholder="输入姓名" style="width: 100%; margin-top: 10px;">
+                    </div>
+                    <div class="dialog-footer">
+                        <button class="button button-secondary close-dialog">取消</button>
+                        <button class="button button-primary">提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dialog-group">
+            <h2>全屏对话框</h2>
+            <button id="openFullscreenDialog" class="button button-outline-primary">打开全屏对话框</button>
+            
+            <div id="fullscreenDialog" class="dialog">
+                <div class="dialog-content" style="width: 90%; max-width: 90%; height: 80%; margin: 5% auto;">
+                    <div class="dialog-header">
+                        <span class="close-dialog">&times;</span>
+                        <h3>全屏对话框</h3>
+                    </div>
+                    <div class="dialog-body">
+                        <p>这是一个全屏对话框示例。它占据大部分视口空间，适合显示大量内容或复杂表单。</p>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>详细信息</h4>
+                                <p>这里可以放置复杂的表单、图表或其他内容。全屏对话框提供更多的空间来展示详细信息。</p>
+                                <p>您可以滚动查看更多内容...</p>
+                                <p style="height: 200px;">更多内容...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog-footer">
+                        <button class="button button-secondary close-dialog">关闭</button>
+                        <button class="button button-primary">保存更改</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dialog-group">
+            <h2>不同主题的对话框</h2>
+            <button id="openSuccessDialog" class="button button-success button-margin">成功对话框</button>
+            <button id="openWarningDialog" class="button button-warning button-margin">警告对话框</button>
+            <button id="openInfoDialog" class="button button-info button-margin">信息对话框</button>
+            
+            <div id="successDialog" class="dialog">
+                <div class="dialog-content">
+                    <div class="dialog-header dialog-success">
+                        <span class="close-dialog">&times;</span>
+                        <h3><i class="fas fa-check-circle text-success mr-2"></i>操作成功</h3>
+                    </div>
+                    <div class="dialog-body">
+                        <p>您的操作已成功完成！数据已保存到服务器。</p>
+                    </div>
+                    <div class="dialog-footer">
+                        <button class="button button-success">确定</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="warningDialog" class="dialog">
+                <div class="dialog-content">
+                    <div class="dialog-header dialog-warning">
+                        <span class="close-dialog">&times;</span>
+                        <h3><i class="fas fa-exclamation-triangle text-warning mr-2"></i>警告</h3>
+                    </div>
+                    <div class="dialog-body">
+                        <p>请检查您输入的信息，某些字段可能需要修正。</p>
+                    </div>
+                    <div class="dialog-footer">
+                        <button class="button button-secondary close-dialog">关闭</button>
+                        <button class="button button-warning">继续</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="infoDialog" class="dialog">
+                <div class="dialog-content">
+                    <div class="dialog-header dialog-info">
+                        <span class="close-dialog">&times;</span>
+                        <h3><i class="fas fa-info-circle text-info mr-2"></i>信息</h3>
+                    </div>
+                    <div class="dialog-body">
+                        <p>这里是相关信息的详细说明。您可以阅读以下内容了解更多信息。</p>
+                    </div>
+                    <div class="dialog-footer">
+                        <button class="button button-info">我知道了</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dialog-group">
+            <h2>模态对话框</h2>
+            <button id="openModalDialog" class="button button-outline-secondary">打开模态对话框</button>
+            
+            <div id="modalDialog" class="dialog">
+                <div class="dialog-content">
+                    <div class="dialog-header">
+                        <span class="close-dialog">&times;</span>
+                        <h3>模态对话框</h3>
+                    </div>
+                    <div class="dialog-body">
+                        <p>这是一个模态对话框，用户必须与之交互才能继续使用应用程序的其余部分。背景被遮罩，无法点击其他元素。</p>
+                        <p>这种类型的对话框通常用于需要用户立即关注和操作的重要信息。</p>
+                    </div>
+                    <div class="dialog-footer">
+                        <button class="button button-secondary close-dialog">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 对话框交互脚本
+        document.getElementById('openBasicDialog').addEventListener('click', function() {
+            document.getElementById('basicDialog').style.display = 'block';
+        });
+        
+        document.getElementById('openConfirmDialog').addEventListener('click', function() {
+            document.getElementById('confirmDialog').style.display = 'block';
+        });
+        
+        document.getElementById('openPromptDialog').addEventListener('click', function() {
+            document.getElementById('promptDialog').style.display = 'block';
+        });
+        
+        document.getElementById('openFullscreenDialog').addEventListener('click', function() {
+            document.getElementById('fullscreenDialog').style.display = 'block';
+        });
+        
+        document.getElementById('openSuccessDialog').addEventListener('click', function() {
+            document.getElementById('successDialog').style.display = 'block';
+        });
+        
+        document.getElementById('openWarningDialog').addEventListener('click', function() {
+            document.getElementById('warningDialog').style.display = 'block';
+        });
+        
+        document.getElementById('openInfoDialog').addEventListener('click', function() {
+            document.getElementById('infoDialog').style.display = 'block';
+        });
+        
+        document.getElementById('openModalDialog').addEventListener('click', function() {
+            document.getElementById('modalDialog').style.display = 'block';
+        });
+        
+        // 关闭对话框的通用事件监听器
+        document.querySelectorAll('.close-dialog').forEach(button => {
+            button.addEventListener('click', function() {
+                const dialog = this.closest('.dialog') || this.parentElement.parentElement.parentElement;
+                dialog.style.display = 'none';
+            });
+        });
+        
+        // 点击对话框外部关闭
+        window.addEventListener('click', function(event) {
+            if (event.target.classList.contains('dialog')) {
+                event.target.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

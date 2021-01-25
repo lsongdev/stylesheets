@@ -1,0 +1,15 @@
+.alert {
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.alert-danger {
+  background: #fee;
+  border: 1px solid #c00;
+}
+
+.alert-warning {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+}

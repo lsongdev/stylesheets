@@ -1,0 +1,37 @@
+
+details {
+  margin-bottom: 1rem;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  background: #fafafa;
+  cursor: pointer;
+}
+
+details summary {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #111;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+details summary::after {
+  content: "+";
+  font-size: 1.25rem;
+  color: #2563eb;
+  transition: transform 0.2s;
+}
+
+details[open] summary::after {
+  content: "−";
+}
+
+details p {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}

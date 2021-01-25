@@ -1,40 +1,43 @@
 @import url(./default.css);
 
 :root {
-  /* Base colors - Blue theme */
-  --background: 210 40% 98%;
-  --foreground: 222.2 84% 4.9%;
+  /* Base colors - Chrome theme */
+  --background: 0 0% 100%;
+  --foreground: 0 0% 20%;
 
   /* Surface colors */
   --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
+  --card-foreground: 0 0% 20%;
   --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
+  --popover-foreground: 0 0% 20%;
 
-  /* Primary colors - Blue */
-  --primary: 200 98% 39%;
+  /* Primary colors - Chrome blue */
+  --primary: 210 100% 50%;
   --primary-foreground: 0 0% 100%;
 
   /* Secondary colors */
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 0 0% 95%;
+  --secondary-foreground: 0 0% 20%;
 
   /* Muted colors */
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
+  --muted: 0 0% 95%;
+  --muted-foreground: 0 0% 50%;
 
   /* Accent colors */
-  --accent: 199 89% 48%;
-  --accent-foreground: 0 0% 100%;
+  --accent: 210 100% 95%;
+  --accent-foreground: 0 0% 20%;
 
   /* Destructive colors */
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
 
   /* Border and input */
-  --border: 200 98% 39%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 200 98% 39%;
+  --border: 0 0% 85%;
+  --input: 0 0% 90%;
+  --ring: 210 100% 50%;
+
+  /* Radius */
+  --radius: 2px;
 
   /* Legacy variables for compatibility */
   --text-color: hsl(var(--foreground));
@@ -51,6 +54,7 @@
   --button-primary-color: hsl(var(--primary-foreground));
   --button-primary-border-color: hsl(var(--primary));
   --button-primary-background-color: hsl(var(--primary));
+  --button-box-shadow: 0 1px 0 rgb(0 0 0 / 8%), inset 0 1px 2px rgb(255 255 255 / 75%);
   --switch-color-off: hsl(var(--muted-foreground));
   --select-background-color: hsl(var(--secondary));
 }

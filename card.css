@@ -1,0 +1,42 @@
+@import url(./color.css);
+
+.card {
+  --card-padding: 10px;
+  --card-border: 1px solid var(--color-black-op1, #eee);
+  --card-border-radius: var(--border-radius, 8px);
+  --card-bg: var(--color-white-op5);
+  --card-text: var(--color-gray-900);
+
+  overflow: hidden;
+  color: var(--card-text);
+  padding: var(--card-padding);
+  border: var(--card-border);
+  background-color: var(--card-bg);
+  border-radius: var(--card-border-radius);
+  margin-bottom: 10px;
+}
+
+.card.active {
+    /* border: 1px solid #2196f3; */
+    background-color: var(--card-bg-active-bg, #e3f2fd);
+    border: 1px solid var(--card-border-active-color, #2196f3);
+}
+.card.selectable {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.card.selectable:hover {
+    /* background-color: #e0e0e0; */
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-theme="auto"] .card {
+    --card-text: var(--color-dark-text);
+    --card-bg: var(--color-dark-surface);
+    --card-border: 1px solid var(--color-dark-border);
+    --card-border-active-color: var(--color-333);
+    --card-bg-active-bg: var(--color-1a1a1a, #1a1a1a);
+  }
+}

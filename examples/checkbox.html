@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox - CSS Components Demo</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../checkbox.css">
+    <style>
+        body {
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+        .checkbox-group {
+            margin: 20px 0;
+            padding: 20px;
+            border-left: 4px solid #4F46E5;
+            background-color: #f9f9f9;
+        }
+        .checkbox-item {
+            margin: 10px 0;
+            padding: 8px 0;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .form-label {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Checkbox 复选框组件</h1>
+        <p>这是复选框组件的演示页面，展示了各种复选框样式和状态。</p>
+        
+        <div class="checkbox-group">
+            <h2>基本复选框</h2>
+            <div class="checkbox-item">
+                <label class="checkbox-container">
+                    <input type="checkbox" class="checkbox">
+                    <span class="checkmark"></span>
+                    基本复选框
+                </label>
+            </div>
+            <div class="checkbox-item">
+                <label class="checkbox-container">
+                    <input type="checkbox" class="checkbox" checked>
+                    <span class="checkmark"></span>
+                    已选中的复选框
+                </label>
+            </div>
+            <div class="checkbox-item">
+                <label class="checkbox-container">
+                    <input type="checkbox" class="checkbox" disabled>
+                    <span class="checkmark"></span>
+                    禁用的复选框
+                </label>
+            </div>
+            <div class="checkbox-item">
+                <label class="checkbox-container">
+                    <input type="checkbox" class="checkbox" checked disabled>
+                    <span class="checkmark"></span>
+                    已选中且禁用的复选框
+                </label>
+            </div>
+        </div>
+        
+        <div class="checkbox-group">
+            <h2>不同颜色的复选框</h2>
+            <div class="checkbox-item">
+                <label class="checkbox-container">
+                    <input type="checkbox" class="checkbox checkbox-primary" checked>
+                    <span class="checkmark"></span>
+                    主要颜色复选框
+                </label>
+            </div>
+            <div class="checkbox-item">
+                <label class="checkbox-container">
+                    <input type="checkbox" class="checkbox checkbox-success" checked>
+                    <span class="checkmark"></span>
+                    成功颜色复选框
+                </label>
+            </div>
+            <div class="checkbox-item">
+                <label class="checkbox-container">
+                    <input type="checkbox" class="checkbox checkbox-danger" checked>
+                    <span class="checkmark"></span>
+                    危险颜色复选框
+                </label>
+            </div>
+            <div class="checkbox-item">
+                <label class="checkbox-container">
+                    <input type="checkbox" class="checkbox checkbox-warning" checked>
+                    <span class="checkmark"></span>
+                    警告颜色复选框
+                </label>
+            </div>
+        </div>
+        
+        <div class="checkbox-group">
+            <h2>不同尺寸的复选框</h2>
+            <div class="checkbox-item">
+                <label class="checkbox-container">
+                    <input type="checkbox" class="checkbox checkbox-xs">
+                    <span class="checkmark"></span>
+                    超小复选框
+                </label>
+            </div>
+            <div class="checkbox-item">
+                <label class="checkbox-container">
+                    <input type="checkbox" class="checkbox checkbox-sm">
+                    <span class="checkmark"></span>
+                    小型复选框
+                </label>
+            </div>
+            <div class="checkbox-item">
+                <label class="checkbox-container">
+                    <input type="checkbox" class="checkbox checkbox-md" checked>
+                    <span class="checkmark"></span>
+                    中等复选框
+                </label>
+            </div>
+            <div class="checkbox-item">
+                <label class="checkbox-container">
+                    <input type="checkbox" class="checkbox checkbox-lg" checked>
+                    <span class="checkmark"></span>
+                    大型复选框
+                </label>
+            </div>
+            <div class="checkbox-item">
+                <label class="checkbox-container">
+                    <input type="checkbox" class="checkbox checkbox-xl" checked>
+                    <span class="checkmark"></span>
+                    超大复选框
+                </label>
+            </div>
+        </div>
+        
+        <div class="checkbox-group">
+            <h2>复选框在表单中的应用</h2>
+            <form class="form">
+                <div class="form-control">
+                    <label class="form-label">兴趣爱好</label>
+                    <div class="checkbox-item">
+                        <label class="checkbox-container">
+                            <input type="checkbox" class="checkbox" checked>
+                            <span class="checkmark"></span>
+                            阅读
+                        </label>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="checkbox-container">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkmark"></span>
+                            运动
+                        </label>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="checkbox-container">
+                            <input type="checkbox" class="checkbox" checked>
+                            <span class="checkmark"></span>
+                            音乐
+                        </label>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="checkbox-container">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkmark"></span>
+                            旅行
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-control">
+                    <label class="checkbox-container">
+                        <input type="checkbox" class="checkbox checkbox-success">
+                        <span class="checkmark"></span>
+                        我同意用户协议和隐私政策
+                    </label>
+                </div>
+            </form>
+        </div>
+        
+        <div class="checkbox-group">
+            <h2>复选框组</h2>
+            <div class="form-control">
+                <label class="form-label">选择技术栈</label>
+                <div class="d-flex flex-wrap gap-4">
+                    <label class="checkbox-container">
+                        <input type="checkbox" class="checkbox checkbox-primary">
+                        <span class="checkmark"></span>
+                        <div class="card p-3" style="width: 120px; text-align: center;">
+                            <i class="fab fa-html5 icon icon-2xl text-danger"></i>
+                            <span>HTML</span>
+                        </div>
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" class="checkbox checkbox-primary">
+                        <span class="checkmark"></span>
+                        <div class="card p-3" style="width: 120px; text-align: center;">
+                            <i class="fab fa-css3-alt icon icon-2xl text-primary"></i>
+                            <span>CSS</span>
+                        </div>
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" class="checkbox checkbox-primary">
+                        <span class="checkmark"></span>
+                        <div class="card p-3" style="width: 120px; text-align: center;">
+                            <i class="fab fa-js icon icon-2xl text-warning"></i>
+                            <span>JavaScript</span>
+                        </div>
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" class="checkbox checkbox-primary">
+                        <span class="checkmark"></span>
+                        <div class="card p-3" style="width: 120px; text-align: center;">
+                            <i class="fab fa-react icon icon-2xl text-info"></i>
+                            <span>React</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="checkbox-group">
+            <h2>复选框与标签的组合</h2>
+            <div class="checkbox-item">
+                <label class="checkbox-container">
+                    <input type="checkbox" class="checkbox checkbox-success" checked>
+                    <span class="checkmark"></span>
+                    <span class="ml-2">启用通知</span>
+                    <span class="badge badge-success ml-2">推荐</span>
+                </label>
+            </div>
+            <div class="checkbox-item">
+                <label class="checkbox-container">
+                    <input type="checkbox" class="checkbox checkbox-warning">
+                    <span class="checkmark"></span>
+                    <span class="ml-2">接收营销邮件</span>
+                    <span class="badge badge-warning ml-2">可选</span>
+                </label>
+            </div>
+            <div class="checkbox-item">
+                <label class="checkbox-container">
+                    <input type="checkbox" class="checkbox checkbox-danger">
+                    <span class="checkmark"></span>
+                    <span class="ml-2">删除账户</span>
+                    <span class="badge badge-danger ml-2">危险操作</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="checkbox-group">
+            <h2>复选框在列表中的应用</h2>
+            <ul class="list-group">
+                <li class="list-item d-flex align-items-center">
+                    <label class="checkbox-container mr-3">
+                        <input type="checkbox" class="checkbox checkbox-success">
+                        <span class="checkmark"></span>
+                    </label>
+                    <span>完成项目提案</span>
+                </li>
+                <li class="list-item d-flex align-items-center">
+                    <label class="checkbox-container mr-3">
+                        <input type="checkbox" class="checkbox checkbox-success" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                    <span>团队会议</span>
+                    <span class="badge badge-info ml-auto">已完成</span>
+                </li>
+                <li class="list-item d-flex align-items-center">
+                    <label class="checkbox-container mr-3">
+                        <input type="checkbox" class="checkbox checkbox-warning">
+                        <span class="checkmark"></span>
+                    </label>
+                    <span>客户反馈整理</span>
+                </li>
+                <li class="list-item d-flex align-items-center">
+                    <label class="checkbox-container mr-3">
+                        <input type="checkbox" class="checkbox checkbox-danger">
+                        <span class="checkmark"></span>
+                    </label>
+                    <span>系统维护</span>
+                    <span class="badge badge-danger ml-auto">重要</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

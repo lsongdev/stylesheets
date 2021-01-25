@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Examples</title>
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; padding: 40px; background: #f3f4f6; }
+    .demo { background: #fff; border-radius: 8px; padding: 24px; margin-bottom: 32px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    .demo h3 { margin: 0 0 16px; color: #374151; }
+    .sidebar-demo { width: 220px; }
+    .btn { padding: 8px 16px; border: 1px solid #d1d5db; border-radius: 6px; background: #fff; cursor: pointer; font-size: 14px; }
+    .btn:hover { background: #f3f4f6; }
+    .context-area { width: 100%; height: 200px; border: 2px dashed #d1d5db; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #6b7280; }
+    .dropdown-wrap { position: relative; display: inline-block; }
+  </style>
+</head>
+<body>
+
+  <h1>Menu Component Demos</h1>
+
+  <!-- Horizontal Menu -->
+  <div class="demo">
+    <h3>Horizontal Menu (hover to expand submenu)</h3>
+    <ul class="menu menu-horizontal">
+      <li><a href="#">Home</a></li>
+      <li><a href="#" class="menu-item-active">Dashboard</a></li>
+      <li>
+        <a href="#">Team <i class="fas fa-chevron-down" style="margin-left:auto;font-size:10px;"></i></a>
+        <ul class="menu-submenu">
+          <li><a href="#">Members</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Invites</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+  </div>
+
+  <!-- Button Dropdown Menu -->
+  <div class="demo">
+    <h3>Button Dropdown Menu (click button)</h3>
+    <div class="dropdown-wrap">
+      <button class="btn" id="dropdownBtn"><i class="fas fa-ellipsis-v"></i> Actions</button>
+      <ul class="menu menu-dropdown" id="dropdownMenu">
+        <li><a href="#"><i class="fas fa-edit"></i> Edit</a></li>
+        <li><a href="#"><i class="fas fa-copy"></i> Duplicate</a></li>
+        <li><a href="#"><i class="fas fa-trash"></i> Delete</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Right-click Context Menu -->
+  <div class="demo">
+    <h3>Context Menu (right-click the area below)</h3>
+    <div class="context-area" id="contextArea">
+      Right-click here
+    </div>
+    <ul class="menu menu-context" id="contextMenu">
+      <li><a href="#"><i class="fas fa-copy"></i> Copy</a></li>
+      <li><a href="#"><i class="fas fa-paste"></i> Paste</a></li>
+      <li><a href="#"><i class="fas fa-cut"></i> Cut</a></li>
+    </ul>
+  </div>
+
+  <!-- Vertical Menu -->
+  <div class="demo sidebar-demo">
+    <h3>Vertical Menu (click to toggle submenu)</h3>
+    <ul class="menu menu-vertical" id="verticalMenu">
+      <li><a href="#">Home</a></li>
+      <li>
+        <a href="#" data-toggle="submenu">Dashboard</a>
+        <ul class="menu-submenu">
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Reports</a></li>
+        </ul>
+      </li>
+      <li><a href="#" class="menu-item-active">Team</a></li>
+      <li>
+        <a href="#" data-toggle="submenu">Projects</a>
+        <ul class="menu-submenu">
+          <li><a href="#">Active</a></li>
+          <li><a href="#">Archived</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+  </div>
+
+  <script>
+    // Vertical menu toggle
+    document.querySelectorAll('[data-toggle="submenu"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const li = link.parentElement;
+        const submenu = li.querySelector('ul');
+        if (submenu) {
+          const isOpen = submenu.style.display === 'block';
+          submenu.style.display = isOpen ? 'none' : 'block';
+          li.classList.toggle('menu-open', !isOpen);
+        }
+      });
+    });
+
+    // Button dropdown
+    const dropdownBtn = document.getElementById('dropdownBtn');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    dropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdownMenu.classList.toggle('menu-open');
+    });
+
+    // Context menu
+    const contextArea = document.getElementById('contextArea');
+    const contextMenu = document.getElementById('contextMenu');
+    contextArea.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+      contextMenu.style.left = e.clientX + 'px';
+      contextMenu.style.top = e.clientY + 'px';
+      contextMenu.classList.add('menu-open');
+    });
+
+    // Close menus on outside click
+    document.addEventListener('click', () => {
+      dropdownMenu.classList.remove('menu-open');
+      contextMenu.classList.remove('menu-open');
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.dropdown-wrap')) {
+        dropdownMenu.classList.remove('menu-open');
+      }
+    });
+  </script>
+
+</body>
+</html>

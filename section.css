@@ -1,0 +1,87 @@
+/**
+  Example
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-title">Section Title</span>
+    </div>
+    <div class="section-body">
+      balabala
+      balabala
+      <br />
+      balabala
+      balabala
+      balabala
+    </div>
+    <div class="section-footer">
+      <a href="">More</a>
+    </div>
+  </div>
+*/
+.section {
+  --section-bg: var(--color-f6f8fa);
+  --section-border: var(--color-e1e4e8);
+  --section-text: var(--color-24292e);
+
+  background: var(--section-bg);
+  border: 1px solid var(--section-border);
+  border-radius: 6px;
+  padding: 10px;
+  margin: 10px 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--section-border);
+  font-weight: bold;
+  margin: 0 10px;
+  padding: 10px 0;
+}
+
+.section-title {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--section-text);
+}
+
+.section-body {
+  margin: 0;
+  padding: 10px;
+}
+
+.section-body>.list {
+  padding: 0;
+}
+
+.section-footer {
+  padding: 10px;
+  margin: 0;
+  font-weight: bold;
+  border-top: 1px solid var(--section-border);
+}
+
+.section h3 {
+  margin: 0;
+  padding: 10px 3px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--section-text);
+  border-bottom: 1px solid var(--section-border);
+
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-theme="auto"] .section {
+    --section-bg: var(--color-dark-surface);
+    --section-border: var(--color-dark-border);
+    --section-text: var(--color-dark-text);
+  }
+}

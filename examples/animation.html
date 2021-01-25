@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation - CSS Components Demo</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../animation.css">
+    <style>
+        body {
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+        .animation-box {
+            width: 100px;
+            height: 100px;
+            background-color: #4F46E5;
+            margin: 20px 0;
+            display: inline-block;
+            margin-right: 20px;
+            vertical-align: top;
+        }
+        .animation-container {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+        .animation-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .animation-description {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .animate-on-hover {
+            transition: all 0.3s ease;
+        }
+        .animate-on-hover:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Animation 动画系统</h1>
+        <p>这是动画系统的演示页面，展示了定义的CSS动画效果。</p>
+        
+        <div class="animation-container">
+            <div class="animation-title">Fade In Animation</div>
+            <div class="animation-description">淡入动画效果</div>
+            <div class="animation-box animate-fade-in"></div>
+        </div>
+        
+        <div class="animation-container">
+            <div class="animation-title">Slide In Left</div>
+            <div class="animation-description">从左侧滑入效果</div>
+            <div class="animation-box animate-slide-in-left"></div>
+        </div>
+        
+        <div class="animation-container">
+            <div class="animation-title">Slide In Right</div>
+            <div class="animation-description">从右侧滑入效果</div>
+            <div class="animation-box animate-slide-in-right"></div>
+        </div>
+        
+        <div class="animation-container">
+            <div class="animation-title">Slide In Up</div>
+            <div class="animation-description">从下方滑入效果</div>
+            <div class="animation-box animate-slide-in-up"></div>
+        </div>
+        
+        <div class="animation-container">
+            <div class="animation-title">Slide In Down</div>
+            <div class="animation-description">从上方滑入效果</div>
+            <div class="animation-box animate-slide-in-down"></div>
+        </div>
+        
+        <div class="animation-container">
+            <div class="animation-title">Zoom In</div>
+            <div class="animation-description">放大进入效果</div>
+            <div class="animation-box animate-zoom-in"></div>
+        </div>
+        
+        <div class="animation-container">
+            <div class="animation-title">Pulse</div>
+            <div class="animation-description">脉冲动画效果</div>
+            <div class="animation-box animate-pulse"></div>
+        </div>
+        
+        <div class="animation-container">
+            <div class="animation-title">Bounce</div>
+            <div class="animation-description">弹跳动画效果</div>
+            <div class="animation-box animate-bounce"></div>
+        </div>
+        
+        <div class="animation-container">
+            <div class="animation-title">Rotate</div>
+            <div class="animation-description">旋转动画效果</div>
+            <div class="animation-box animate-rotate"></div>
+        </div>
+        
+        <div class="animation-container">
+            <div class="animation-title">Transition on Hover</div>
+            <div class="animation-description">悬停时的过渡效果</div>
+            <div class="animation-box animate-on-hover"></div>
+        </div>
+        
+        <div class="animation-container">
+            <div class="animation-title">Custom Animation Example</div>
+            <div class="animation-description">自定义动画示例</div>
+            <style>
+                @keyframes customAnimation {
+                    0% { transform: rotate(0deg) scale(1); background-color: #4F46E5; }
+                    25% { transform: rotate(90deg) scale(1.2); background-color: #10B981; }
+                    50% { transform: rotate(180deg) scale(0.8); background-color: #EF4444; }
+                    75% { transform: rotate(270deg) scale(1.1); background-color: #F59E0B; }
+                    100% { transform: rotate(360deg) scale(1); background-color: #4F46E5; }
+                }
+                .custom-animation {
+                    animation: customAnimation 3s infinite linear;
+                }
+            </style>
+            <div class="animation-box custom-animation"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+:root {
+  --progress-bar-height: 8px;
+  --progress-bar-border-radius: 4px;
+  --progress-bar-background: #e1e4e8;
+  --progress-bar-foreground: linear-gradient(90deg, #0366d6, #007bff);
+}
+
+.progress-bar {
+  width: 100%;
+  z-index: 100;
+  overflow: hidden;
+  height: var(--progress-bar-height, 20px);
+  background: var(--progress-bar-background, #ccc);
+  border-radius: var(--progress-bar-border-radius, var(--border-radius));
+}
+
+.progress-bar-inner,
+.progress-fill {
+  height: 100%;
+  max-width: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+  background: var(--progress-bar-foreground);
+}
+
+.progress-bar-loading {
+  --progress-bar-foreground: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent) 0 0 / 40px 40px;
+}
+
+.progress-bar-green,
+.progress-fill.green {
+  --progress-bar-foreground: linear-gradient(90deg, #28a745, #20c997);
+}
+
+.progress-fill.warning {
+  --progress-bar-foreground: linear-gradient(90deg, #ffc107, #ff9800);
+}
+
+.progress-bar-red,
+.progress-fill.danger {
+  --progress-bar-foreground: linear-gradient(90deg, #dc3545, #f44336);
+}

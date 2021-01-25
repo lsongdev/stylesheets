@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button - CSS Components Demo</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../button.css">
+    <style>
+        body {
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+        .button-group {
+            margin: 15px 0;
+            padding: 15px;
+            border-left: 4px solid #4F46E5;
+            background-color: #f9f9f9;
+        }
+        .button-sample {
+            margin: 10px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Button 按钮组件</h1>
+        <p>这是按钮组件的演示页面，展示了各种按钮样式和类型。</p>
+        
+        <div class="button-group">
+            <h2>主要按钮类型</h2>
+            <div class="button-sample">
+                <button class="button button-primary">Primary Button</button>
+                <button class="button button-secondary">Secondary Button</button>
+                <button class="button button-success">Success Button</button>
+                <button class="button button-danger">Danger Button</button>
+                <button class="button button-warning">Warning Button</button>
+                <button class="button button-info">Info Button</button>
+            </div>
+        </div>
+        
+        <div class="button-group">
+            <h2>按钮尺寸</h2>
+            <div class="button-sample">
+                <button class="button button-primary button-xs">Extra Small</button>
+                <button class="button button-primary button-sm">Small</button>
+                <button class="button button-primary button-md">Medium</button>
+                <button class="button button-primary button-lg">Large</button>
+                <button class="button button-primary button-xl">Extra Large</button>
+            </div>
+        </div>
+        
+        <div class="button-group">
+            <h2>轮廓按钮</h2>
+            <div class="button-sample">
+                <button class="button button-outline-primary">Outline Primary</button>
+                <button class="button button-outline-secondary">Outline Secondary</button>
+                <button class="button button-outline-success">Outline Success</button>
+                <button class="button button-outline-danger">Outline Danger</button>
+            </div>
+        </div>
+        
+        <div class="button-group">
+            <h2>禁用状态</h2>
+            <div class="button-sample">
+                <button class="button button-primary" disabled>Disabled Primary</button>
+                <button class="button button-secondary" disabled>Disabled Secondary</button>
+                <button class="button button-success" disabled>Disabled Success</button>
+            </div>
+        </div>
+        
+        <div class="button-group">
+            <h2>块级按钮</h2>
+            <div class="button-sample">
+                <button class="button button-primary button-block">Block Level Button</button>
+                <button class="button button-secondary button-block">Another Block Button</button>
+            </div>
+        </div>
+        
+        <div class="button-group">
+            <h2>带图标的按钮</h2>
+            <div class="button-sample">
+                <button class="button button-primary">
+                    <i class="fas fa-download"></i> Download
+                </button>
+                <button class="button button-success">
+                    <i class="fas fa-check"></i> Submit
+                </button>
+                <button class="button button-danger">
+                    <i class="fas fa-trash"></i> Delete
+                </button>
+                <button class="button button-info">
+                    <i class="fas fa-info-circle"></i> Info
+                </button>
+            </div>
+        </div>
+        
+        <div class="button-group">
+            <h2>按钮组</h2>
+            <div class="button-sample">
+                <div class="button-group">
+                    <button class="button button-primary">Left</button>
+                    <button class="button button-secondary">Middle</button>
+                    <button class="button button-primary">Right</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="button-group">
+            <h2>链接样式按钮</h2>
+            <div class="button-sample">
+                <a href="#" class="button button-link">Link Button</a>
+                <a href="#" class="button button-primary">Primary Link</a>
+                <a href="#" class="button button-danger">Danger Link</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

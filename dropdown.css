@@ -1,49 +1,73 @@
-/**
-
-Example:
-
-<div class="dropdown">
-  <h3>Dropdown Menu</h3>
-  <ul class="dropdown-menu">
-    <li><a href="">Menu Item 1</a></li>
-    <li><a href="">Menu Item 2</a></li>
-    <li><a href="">Menu Item 3</a></li>
-    <li><a href="">Menu Item 4</a></li>
-  </ul>
-</div>
-*/
-
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 1000;
+  border-radius: 8px;
+  overflow: hidden;
+  top: 100%;
+  margin-top: 4px;
+}
+
+.dropdown-content a {
+  color: #374151;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f3f4f6;
+}
+
+.dropdown-content.show {
   display: block;
 }
 
-.dropdown-menu {
-  left: 0;
-  top: 100%;
-  right: 0;
-  margin: 0;
-  padding: 0;
-  display: none;
-  overflow: hidden;
-  position: absolute;
-  background: #fff;
-  border: 1px solid #ddd;
-}
-
-.dropdown-menu li,
-.dropdown-menu-item {
-  width: 100%;
+.dropdown-toggle {
   cursor: pointer;
-  list-style: none;
-  padding: 3px 5px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
-.dropdown-menu li:hover,
-.dropdown-menu-item:hover {
-  background-color: #efefef;
+.dropdown-toggle::after {
+  content: '▼';
+  font-size: 0.6em;
+  margin-left: 4px;
+}
+
+/* Right-aligned dropdown */
+.dropdown.right .dropdown-content {
+  right: 0;
+  left: auto;
+}
+
+/* Left-aligned dropdown */
+.dropdown.left .dropdown-content {
+  left: 0;
+  right: auto;
+}
+
+/* Dropdown with icons */
+.dropdown-content .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown-content .dropdown-separator {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 4px 0;
 }

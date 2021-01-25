@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List - CSS Components Demo</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../list.css">
+    <style>
+        body {
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+        .list-group {
+            margin: 20px 0;
+            padding: 20px;
+            border-left: 4px solid #4F46E5;
+            background-color: #f9f9f9;
+        }
+        .list-item {
+            padding: 10px 15px;
+        }
+        .list-item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>List 列表组件</h1>
+        <p>这是列表组件的演示页面，展示了各种列表样式和类型。</p>
+        
+        <div class="list-group">
+            <h2>基本列表组</h2>
+            <ul class="list-group">
+                <li class="list-item">列表项 1</li>
+                <li class="list-item">列表项 2</li>
+                <li class="list-item">列表项 3</li>
+                <li class="list-item">列表项 4</li>
+                <li class="list-item">列表项 5</li>
+            </ul>
+        </div>
+        
+        <div class="list-group">
+            <h2>带标题的列表项</h2>
+            <ul class="list-group">
+                <li class="list-item">
+                    <h4 class="list-title">列表项标题 1</h4>
+                    <p class="list-text">这是列表项的描述文本，提供更多关于该项目的信息。</p>
+                </li>
+                <li class="list-item">
+                    <h4 class="list-title">列表项标题 2</h4>
+                    <p class="list-text">这是另一个列表项的描述文本，展示如何使用标题和文本。</p>
+                </li>
+                <li class="list-item">
+                    <h4 class="list-title">列表项标题 3</h4>
+                    <p class="list-text">这是第三个列表项的描述文本，说明列表的灵活性。</p>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="list-group">
+            <h2>带图标的列表</h2>
+            <ul class="list-group">
+                <li class="list-item">
+                    <i class="fas fa-home"></i> 首页
+                </li>
+                <li class="list-item">
+                    <i class="fas fa-user"></i> 个人资料
+                </li>
+                <li class="list-item">
+                    <i class="fas fa-envelope"></i> 消息
+                </li>
+                <li class="list-item">
+                    <i class="fas fa-cog"></i> 设置
+                </li>
+                <li class="list-item">
+                    <i class="fas fa-sign-out-alt"></i> 退出
+                </li>
+            </ul>
+        </div>
+        
+        <div class="list-group">
+            <h2>带徽章的列表</h2>
+            <ul class="list-group">
+                <li class="list-item">
+                    <span>通知</span>
+                    <span class="badge badge-primary">5</span>
+                </li>
+                <li class="list-item">
+                    <span>消息</span>
+                    <span class="badge badge-success">3</span>
+                </li>
+                <li class="list-item">
+                    <span>好友请求</span>
+                    <span class="badge badge-warning">2</span>
+                </li>
+                <li class="list-item">
+                    <span>待办事项</span>
+                    <span class="badge badge-danger">8</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="list-group">
+            <h2>不同风格的列表</h2>
+            <h3>无边框列表</h3>
+            <ul class="list-group list-unstyled">
+                <li class="list-item">无边框列表项 1</li>
+                <li class="list-item">无边框列表项 2</li>
+                <li class="list-item">无边框列表项 3</li>
+            </ul>
+            
+            <h3>链接列表</h3>
+            <div class="list-group">
+                <a href="#" class="list-item list-link">链接列表项 1</a>
+                <a href="#" class="list-item list-link">链接列表项 2</a>
+                <a href="#" class="list-item list-link">链接列表项 3</a>
+            </div>
+            
+            <h3>分隔线列表</h3>
+            <div class="list-group list-divided">
+                <div class="list-item">分隔线列表项 1</div>
+                <div class="list-item">分隔线列表项 2</div>
+                <div class="list-item">分隔线列表项 3</div>
+            </div>
+        </div>
+        
+        <div class="list-group">
+            <h2>激活状态列表</h2>
+            <ul class="list-group">
+                <li class="list-item list-active">激活的列表项</li>
+                <li class="list-item">普通列表项</li>
+                <li class="list-item">普通列表项</li>
+                <li class="list-item list-disabled">禁用的列表项</li>
+            </ul>
+        </div>
+        
+        <div class="list-group">
+            <h2>不同主题的列表</h2>
+            <div class="list-group">
+                <div class="list-item list-primary">主要主题列表项</div>
+                <div class="list-item list-success">成功主题列表项</div>
+                <div class="list-item list-warning">警告主题列表项</div>
+                <div class="list-item list-danger">危险主题列表项</div>
+            </div>
+        </div>
+        
+        <div class="list-group">
+            <h2>复杂列表项</h2>
+            <ul class="list-group">
+                <li class="list-item">
+                    <div class="d-flex justify-between items-center">
+                        <div>
+                            <h4 class="list-title">复杂列表项 1</h4>
+                            <p class="list-text">这是带有多个元素的复杂列表项示例</p>
+                        </div>
+                        <div>
+                            <span class="badge badge-info">新</span>
+                            <button class="button button-xs button-outline-primary ml-2">操作</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <div class="d-flex justify-between items-center">
+                        <div>
+                            <h4 class="list-title">复杂列表项 2</h4>
+                            <p class="list-text">列表项可以包含多种交互元素</p>
+                        </div>
+                        <div>
+                            <span class="badge badge-success">完成</span>
+                            <button class="button button-xs button-outline-secondary ml-2">详情</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

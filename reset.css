@@ -1,48 +1,21 @@
-* {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  width: auto;
-  height: auto;
-  border: none;
-  font: initial;
-  font-size: 100%;
-  -webkit-box-sizing: border-box;
+
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
-  line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+img, picture, video, canvas, svg {
   display: block;
+  max-width: 100%;
 }
 
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:after,
-blockquote:before,
-q:after,
-q:before {
-  content: '';
-  content: none;
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
 }

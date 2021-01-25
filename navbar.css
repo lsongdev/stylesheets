@@ -1,0 +1,30 @@
+
+.navbar {
+  gap: 10px;
+  width: 100%;
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-bottom-style: var(--border-style, solid);
+  border-bottom-color: var(--border-color, #efefef);
+  border-bottom-width: var(--border-width, 1px);
+}
+
+.navbar::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar-brand,
+.sidebar-brand {
+  gap: 5px;
+  display: flex;
+}
+
+.navbar-brand h1,
+.sidebar-brand h1 {
+  font-size: inherit;
+}
+
