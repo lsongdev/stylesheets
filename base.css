@@ -11,6 +11,7 @@ body {
   width: 80%;
   margin: auto;
   padding: 0px 50px;
+  overflow: hidden;
   box-sizing: border-box;
   background-color: var(--content-background-color);
 }
