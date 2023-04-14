@@ -8,13 +8,10 @@
 }
 
 .table th {
-  padding: 8px;
-  font-size: 14px;
   text-align: left;
-  font-weight: bold;
 }
 
-.table-hover tbody tr:hover {
+.table-hover tr:hover td {
   background-color: beige;
 }
 

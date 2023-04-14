@@ -67,6 +67,10 @@
   line-height: 2.25rem;
 }
 
+.text-wrap {
+  white-space: normal;
+}
+
 .text-nowrap {
   white-space: nowrap;
 }

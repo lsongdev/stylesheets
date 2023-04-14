@@ -42,17 +42,20 @@
   border: none;
 }
 
-.overflow-hidden,
-.scroll-none {
-  overflow: hidden;
-}
-
 .scroll-x {
   overflow-x: scroll;
 }
 
 .scroll-y {
   overflow-y: scroll;
+}
+
+.scroll-none::-webkit-scrollbar {
+  display: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .margin-reset {
