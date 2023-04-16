@@ -11,12 +11,12 @@
   text-align: left;
 }
 
-.table-hover tr:hover td {
-  background-color: beige;
+.table-striped tbody tr:nth-child(odd) {
+  background-color: rgba(249, 249, 249, 1);
 }
 
-.table-striped tbody tr:nth-child(even) {
-  background-color: var(--table-row-bgcolor, #efefef);
+.table-hover tr:hover td {
+  background-color: rgba(243, 244, 246, 1);
 }
 
 .table-bordered,

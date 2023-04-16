@@ -4,7 +4,6 @@
   list-style: none;
   overflow-y: auto;
   overflow-x: hidden;
-  border: 1px solid var(--border-color, #eee);
 }
 
 .list-item {
