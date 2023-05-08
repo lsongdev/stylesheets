@@ -25,7 +25,7 @@ h6 {
 }
 
 a[href] {
-  color: var(--link-color) !important;
+  color: var(--link-color);
 }
 
 img {
