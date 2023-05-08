@@ -10,3 +10,20 @@ dialog::backdrop {
 dialog > form {
   margin: 0;
 }
+
+.dialog-bottom {
+  width: 50%;
+  margin: 0;
+  transform: translate(calc(50vw - 50%), calc(100vh - 100%));
+}
+
+.dialog-right {
+  margin: 0;
+  height: 100vh;
+  transform: translate(calc(100vw - 100%), 0);
+}
+
+.dialog-top-right {
+  margin: 0;
+  transform: translate(calc(100vw - 100% - 20px), 20px);
+}
