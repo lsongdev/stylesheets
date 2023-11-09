@@ -6,10 +6,16 @@
   display: block;
   padding: .4rem;
   appearance: none;
-  border-radius: 0;
   box-sizing: border-box;
   background-color: transparent;
 
   color: var(--text-color);
   border: 1px solid var(--border-color, #eee);
+  border-radius: var(--radius-size);
+
+  transition: border-color 1s ease;
+}
+
+.input:hover {
+  border-color: var(--text-hover-color, lightblue);
 }

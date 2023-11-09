@@ -69,6 +69,7 @@
         <div class="button-group">
           <button class="button">One</button><button class="button">Two</button>
         </div>
+        <button class="button" disabled>disabled</button>
       </div>
     </div>
   </div>
@@ -104,23 +105,23 @@
     <form class="panel-body form">
       <div class="form-field">
         <label for="username">username</label>
-        <input type="text" id="username">
+        <input type="text" id="username" class="input" >
       </div>
 
       <div class="form-field">
-        <label for="password" id="password">password</label>
-        <input type="password" id="pasword">
+        <label for="password" id="password" >password</label>
+        <input type="password" id="pasword" class="input" >
       </div>
 
       <div class="form-field">
-        <input type="checkbox" name="remember" id="remember">
+        <input type="checkbox" name="remember" id="remember" >
         <label for="remember">Remember me</label>
       </div>
 
       <div class="form-field">
         <div class="switch">
-          <input id="switch-1" type="checkbox" class="switch-input" />
-          <label for="switch-1" class="switch-label"></label>
+          <input id="switch-1" type="checkbox" />
+          <label for="switch-1" ></label>
         </div>
       </div>
 
@@ -134,7 +135,7 @@
 
   <div class="panel">
     <h3 class="panel-header">Table Example</h3>
-    <table class="table panel-body table-bordered table-striped">
+    <table class="table table-bordered table-striped">
       <thead>
         <th>#</th>
         <th>name</th>

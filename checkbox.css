@@ -8,7 +8,11 @@ Example:
 */
 
 .switch {
-  display: flex;
+  display: inline-flex;
+  --size: 10px;
+  --width: 25px;
+  --switch-color-on: #5549f1;
+  --switch-color-off: rgb(0, 0, 0, 0.2);
 }
 
 .switch input[type="checkbox"] {
@@ -18,8 +22,8 @@ Example:
 }
 
 .switch label {
-  width: 45px;
-  height: 20px;
+  width: var(--width);
+  height: var(--size);
   padding: 4px;
   display: block;
   cursor: pointer;
@@ -27,23 +31,23 @@ Example:
   position: relative;
   transition: 0.3s;
   box-sizing: content-box;
-  background-color: rgb(0, 0, 0, 0.2);
+  background-color: var(--switch-color-off);
 }
 
 .switch label:after {
   content: "";
-  width: 20px;
-  height: 20px;
+  width: var(--size);
+  height: var(--size);
   position: absolute;
   transition: 0.3s;
   border-radius: 50em;
   background-color: #fff;
 }
 
-.switch input:checked + label {
-  background-color: #5549f1;
+.switch input:checked+label {
+  background-color: var(--switch-color-on);
 }
 
-.switch input:checked + label:after {
-  transform: translateX(calc(100% + 5px));
+.switch input:checked+label:after {
+  transform: translateX(calc(var(--width) - var(--size)));
 }

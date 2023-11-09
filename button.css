@@ -2,11 +2,13 @@
   /* size */
   min-width: 70px;
   padding: .4rem .45rem;
-  display: inline-block;
+  display: inline-flex;
   box-sizing: border-box;
   /* align */
+  align-items: center;
   text-align: center;
   vertical-align: middle;
+  justify-content: center;
   /* text */
   font-size: 1em;
   font-family: sans-serif;
@@ -18,11 +20,13 @@
   border-color: var(--button-border-color, #efefef);
   /* appearance */
   outline: 0;
-  opacity: .9;
+  opacity: .85;
   cursor: pointer;
   appearance: none;
   color: var(--button-color, #333);
   background-color: var(--button-background-color, #fefefe);
+
+  transition: all .5s ease;
 }
 
 a.button {
@@ -33,6 +37,10 @@ a.button {
 
 .button:hover {
   opacity: 1;
+}
+
+.button:active {
+  opacity: .75;
 }
 
 .button-small {

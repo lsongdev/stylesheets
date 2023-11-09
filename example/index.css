@@ -1,9 +1,10 @@
-@import url(../theme/default.css);
+/* @import url(../theme/default.css); */
 /* @import url(../theme/dark.css); */
 /* @import url(../theme/pink.css); */
 /* @import url(../theme/black.css); */
+/* @import url(../theme/blue.css); */
 /* @import url(../theme/chrome.css); */
-/* @import url(../theme/google.css); */
+@import url(../theme/google.css);
 @import url(../base.css);
 @import url(../flex.css);
 @import url(../grid.css);
@@ -19,3 +20,7 @@
 @import url(../select.css);
 @import url(../checkbox.css);
 @import url(../dropdown.css);
+
+.container {
+  background-color: var(--content-background-color);
+}
