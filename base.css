@@ -12,6 +12,7 @@ body {
   margin: auto;
   padding: 0px 50px;
   box-sizing: border-box;
+  overflow: hidden;
   background-color: var(--content-background-color);
 }
 
@@ -22,10 +23,6 @@ h4,
 h5,
 h6 {
   color: var(--title-color);
-}
-
-a[href] {
-  color: var(--link-color);
 }
 
 img {
