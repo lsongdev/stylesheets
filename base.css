@@ -3,7 +3,6 @@ body {
   margin: auto;
   min-width: 320px;
   color: var(--text-color);
-  font-family: system-ui, sans-serif;
   background-color: var(--background-color);
 }
 
