@@ -8,199 +8,202 @@
   <link rel="stylesheet" href="./index.css">
 </head>
 
-<body class="container theme-pink">
+<body class=" theme-pink">
+  <div class="container">
+    <header class="header flex flex-row flex-center flex-jc-between">
 
-  <header class="header flex flex-row flex-center flex-jc-between">
-
-    <div class="logo">
-      <svg viewBox="0 0 512 512" width="32" height="32">
-        <path fill="#000000"
-          d="M200 100L300 0l106 106-100 100zM100 200l100-100 212 212-100 100zM106 406l100-100 106 106-100 100z"></path>
-      </svg>
-      <h1 class="inline-block margin-reset">Stylesheet Example</h1>
-    </div>
-
-    <nav id="navbar" class="nav nav-bar">
-      <a href="//lsong.org">home</a>
-      <a href="//lsong.org/posts">blog</a>
-      <a href="//lsong.org/books">books</a>
-      <a href="//lsong.org/music">music</a>
-      <a href="//lsong.org/game">game</a>
-    </nav>
-  </header>
-
-
-  <div class="panel">
-    <h3 class="panel-header">Panel Title</h3>
-    <div class="panel-body">
-      balabala
-      balabala
-      <br />
-      balabala
-      balabala
-      balabala
-    </div>
-    <div class="panel-footer link link-without-underline">
-      <a href="">More</a>
-    </div>
-  </div>
-
-  <div class="panel">
-    <h3 class="panel-header">Button Example</h3>
-    <div class="panel-body list">
-      <div class="list-item">
-        <button class="button">Normal</button>
-        <button class="button button-large">LARGE</button>
-        <button class="button button-small">small</button>
-      </div>
-      <div class="list-item">
-        <button class="button button-primary">Primary</button>
-        <button class="button button-success">Success</button>
-        <button class="button button-warning">Warning</button>
-        <button class="button button-danger">Danger</button>
-      </div>
-      <div class="list-item">
-        <a href="#" class="button button-primary">Link</a>
-        <input type="button" class="button button-warning" value="Input">
-        <div class="button button-danger">DIV</div>
+      <div class="logo">
+        <svg viewBox="0 0 512 512" width="32" height="32">
+          <path fill="#000000"
+            d="M200 100L300 0l106 106-100 100zM100 200l100-100 212 212-100 100zM106 406l100-100 106 106-100 100z">
+          </path>
+        </svg>
+        <h1 class="inline-block margin-reset">Stylesheet Example</h1>
       </div>
 
-      <div class="list-item">
-        <div class="button-group">
-          <button class="button">One</button><button class="button">Two</button>
+      <nav id="navbar" class="nav nav-bar">
+        <a href="//lsong.org">home</a>
+        <a href="//lsong.org/posts">blog</a>
+        <a href="//lsong.org/books">books</a>
+        <a href="//lsong.org/music">music</a>
+        <a href="//lsong.org/game">game</a>
+      </nav>
+    </header>
+
+
+    <div class="panel">
+      <h3 class="panel-header">Panel Title</h3>
+      <div class="panel-body">
+        balabala
+        balabala
+        <br />
+        balabala
+        balabala
+        balabala
+      </div>
+      <div class="panel-footer link link-without-underline">
+        <a href="">More</a>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3 class="panel-header">Button Example</h3>
+      <div class="panel-body list">
+        <div class="list-item">
+          <button class="button">Normal</button>
+          <button class="button button-large">LARGE</button>
+          <button class="button button-small">small</button>
         </div>
-        <button class="button" disabled>disabled</button>
-      </div>
-    </div>
-  </div>
+        <div class="list-item">
+          <button class="button button-primary">Primary</button>
+          <button class="button button-success">Success</button>
+          <button class="button button-warning">Warning</button>
+          <button class="button button-danger">Danger</button>
+        </div>
+        <div class="list-item">
+          <a href="#" class="button button-primary">Link</a>
+          <input type="button" class="button button-warning" value="Input">
+          <div class="button button-danger">DIV</div>
+        </div>
 
-  <div class="panel">
-    <h3 class="panel-header">Select</h3>
-    <div class="panel-body">
-      <select class="select">
-        <option>This is a native select element</option>
-        <option>Apples</option>
-        <option>Bananas</option>
-        <option>Grapes</option>
-        <option>Oranges</option>
-      </select>
-    </div>
-    <div class="panel-footer"></div>
-  </div>
-
-  <div class="panel">
-    <div class="panel-header">Grid</div>
-    <div class="panel-body">
-      <div class="grid">
-        <div class="col-6 row-2">This element spans 6 columns and 2 rows.</div>
-        <div class="col-3 row-1">This element spans 3 columns and 1 row.</div>
-        <div class="col-3 row-1">This element spans 3 columns and 1 row.</div>
-      </div>
-    </div>
-    <div class="panel-footer"></div>
-  </div>
-
-  <div class="panel">
-    <h3 class="panel-header">Form Example</h3>
-    <form class="panel-body form">
-      <div class="form-field">
-        <label for="username">username</label>
-        <input type="text" id="username" class="input" >
-      </div>
-
-      <div class="form-field">
-        <label for="password" id="password" >password</label>
-        <input type="password" id="pasword" class="input" >
-      </div>
-
-      <div class="form-field">
-        <input type="checkbox" name="remember" id="remember" >
-        <label for="remember">Remember me</label>
-      </div>
-
-      <div class="form-field">
-        <div class="switch">
-          <input id="switch-1" type="checkbox" />
-          <label for="switch-1" ></label>
+        <div class="list-item">
+          <div class="button-group">
+            <button class="button">One</button><button class="button">Two</button>
+          </div>
+          <button class="button" disabled>disabled</button>
         </div>
       </div>
+    </div>
 
-      <div class="form-field">
-        <button type="submit" class="button button-primary">submit</button>
-        <button type="reset" class="button">reset</button>
+    <div class="panel">
+      <h3 class="panel-header">Select</h3>
+      <div class="panel-body">
+        <select class="select">
+          <option>This is a native select element</option>
+          <option>Apples</option>
+          <option>Bananas</option>
+          <option>Grapes</option>
+          <option>Oranges</option>
+        </select>
       </div>
+      <div class="panel-footer"></div>
+    </div>
 
-    </form>
-  </div>
-
-  <div class="panel">
-    <h3 class="panel-header">Table Example</h3>
-    <table class="table table-bordered table-striped">
-      <thead>
-        <th>#</th>
-        <th>name</th>
-        <th>ages</th>
-      </thead>
-      <tbody>
-        <td>1</td>
-        <td>tom</td>
-        <td>12</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>jack</td>
-          <td>12</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <td>total</td>
-        <td>prev</td>
-        <td>next</td>
-      </tfoot>
-    </table>
-  </div>
-
-  <div class="panel">
-    <h3 class="panel-header">Dialog Example</h3>
-    <dialog id="favDialog">
-      <form method="dialog">
-        <b>Dialog</b>
-        <p>
-          <label>Favorite animal:
-            <select id="selectEl">
-              <option value="default">Choose</option>
-              <option>Brine shrimp</option>
-              <option>Red panda</option>
-              <option>Spider monkey</option>
-            </select>
-          </label>
-        </p>
-        <div>
-          <button value="cancel">Cancel</button>
-          <button id="confirmBtn" value="default">Confirm</button>
+    <div class="panel">
+      <div class="panel-header">Grid</div>
+      <div class="panel-body">
+        <div class="grid">
+          <div class="col-6 row-2">This element spans 6 columns and 2 rows.</div>
+          <div class="col-3 row-1">This element spans 3 columns and 1 row.</div>
+          <div class="col-3 row-1">This element spans 3 columns and 1 row.</div>
         </div>
+      </div>
+      <div class="panel-footer"></div>
+    </div>
+
+    <div class="panel">
+      <h3 class="panel-header">Form Example</h3>
+      <form class="panel-body form">
+        <div class="form-field">
+          <label for="username">username</label>
+          <input type="text" id="username" class="input">
+        </div>
+
+        <div class="form-field">
+          <label for="password" id="password">password</label>
+          <input type="password" id="pasword" class="input">
+        </div>
+
+        <div class="form-field">
+          <input type="checkbox" name="remember" id="remember">
+          <label for="remember">Remember me</label>
+        </div>
+
+        <div class="form-field">
+          <div class="switch">
+            <input id="switch-1" type="checkbox" />
+            <label for="switch-1"></label>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <button type="submit" class="button button-primary">submit</button>
+          <button type="reset" class="button">reset</button>
+        </div>
+
       </form>
-    </dialog>
-    <div class="panel-body">
-      <p>
-        <button id="showButton" class="button">Show the dialog</button>
-      </p>
-      <output id="outputBox"></output>
     </div>
-    <script>
-      showButton.addEventListener('click', () => {
-        favDialog.showModal();
-      });
-      // "Favorite animal" input sets the value of the submit button
-      selectEl.addEventListener('change', (e) => {
-        confirmBtn.value = selectEl.value;
-      });
-      // "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
-      favDialog.addEventListener('close', () => {
-        outputBox.value = `ReturnValue: ${favDialog.returnValue}.`;
-      });
-    </script>
+
+    <div class="panel">
+      <h3 class="panel-header">Table Example</h3>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <th>#</th>
+          <th>name</th>
+          <th>ages</th>
+        </thead>
+        <tbody>
+          <td>1</td>
+          <td>tom</td>
+          <td>12</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>jack</td>
+            <td>12</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <td>total</td>
+          <td>prev</td>
+          <td>next</td>
+        </tfoot>
+      </table>
+    </div>
+
+    <div class="panel">
+      <h3 class="panel-header">Dialog Example</h3>
+      <dialog id="favDialog">
+        <form method="dialog">
+          <b>Dialog</b>
+          <p>
+            <label>Favorite animal:
+              <select id="selectEl">
+                <option value="default">Choose</option>
+                <option>Brine shrimp</option>
+                <option>Red panda</option>
+                <option>Spider monkey</option>
+              </select>
+            </label>
+          </p>
+          <div>
+            <button value="cancel">Cancel</button>
+            <button id="confirmBtn" value="default">Confirm</button>
+          </div>
+        </form>
+      </dialog>
+      <div class="panel-body">
+        <p>
+          <button id="showButton" class="button">Show the dialog</button>
+        </p>
+        <output id="outputBox"></output>
+      </div>
+      <script>
+        showButton.addEventListener('click', () => {
+          favDialog.showModal();
+        });
+        // "Favorite animal" input sets the value of the submit button
+        selectEl.addEventListener('change', (e) => {
+          confirmBtn.value = selectEl.value;
+        });
+        // "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
+        favDialog.addEventListener('close', () => {
+          outputBox.value = `ReturnValue: ${favDialog.returnValue}.`;
+        });
+      </script>
+    </div>
   </div>
+
 
 </body>
 

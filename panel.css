@@ -22,7 +22,6 @@
   display: flex;
   overflow: hidden;
   flex-direction: column;
-  border: 1px solid var(--border-color, #eee);
   background-color: var(--content-background-color, white);
 }
 
@@ -43,6 +42,10 @@
 
 .panel-header {
   border-bottom: 1px solid var(--border-color, #eee);
+}
+
+.panel-body > .list {
+  padding: 0;
 }
 
 /*

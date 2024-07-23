@@ -20,7 +20,3 @@
 @import url(../select.css);
 @import url(../checkbox.css);
 @import url(../dropdown.css);
-
-.container {
-  background-color: var(--content-background-color);
-}

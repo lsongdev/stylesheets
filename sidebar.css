@@ -3,16 +3,22 @@
   top: 0;
   left: 0;
   bottom: 0;
+  padding: 10px;
   width: 200px;
-  padding: 20px;
-  overflow: auto;
+  display: flex;
+  overflow: hidden;
   background-color: #eee;
+  flex-direction: column;
 }
 
 .sidebar ul {
-  margin: 0;
-  padding: 0;
+  padding: 10px;
   list-style: none;
+  overflow: auto;
+}
+
+.sidebar ul::-webkit-scrollbar {
+  display: none;
 }
 
 .sidebar li {
