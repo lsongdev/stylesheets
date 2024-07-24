@@ -22,11 +22,17 @@
   flex: 0 1 auto;
 }
 
-.flex-row {
-  flex-direction: row;
+.flex-x,
+.flex-row,
+.flex-horizontal {
+    display: flex;
+    flex-direction: row;
 }
 
-.flex-column {
+.flex-y,
+.flex-column,
+.flex-vertical {
+  display: flex;
   flex-direction: column;
 }
 

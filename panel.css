@@ -25,11 +25,9 @@
   background-color: var(--content-background-color, white);
 }
 
-.panel-footer,
-.panel-body,
-.panel-header {
+.panel-body {
   margin: 0;
-  padding: 10px 15px;
+  padding: 10px;
   
   display: block;
   overflow: hidden;
@@ -41,6 +39,10 @@
 }
 
 .panel-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid var(--border-color, #eee);
 }
 
