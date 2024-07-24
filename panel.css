@@ -25,10 +25,12 @@
   background-color: var(--content-background-color, white);
 }
 
+.panel-title,
+.panel-footer,
 .panel-body {
   margin: 0;
   padding: 10px;
-  
+
   display: block;
   overflow: hidden;
 }
@@ -46,12 +48,6 @@
   border-bottom: 1px solid var(--border-color, #eee);
 }
 
-.panel-body > .list {
+.panel-body>.list {
   padding: 0;
 }
-
-/*
-.panel-footer {
-  border-top: 1px solid var(--border-color, #eee);
-}
-*/
