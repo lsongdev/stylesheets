@@ -19,3 +19,7 @@
 .input:hover {
   border-color: var(--text-hover-color, lightblue);
 }
+
+.input-block {
+  width: 100%;
+}

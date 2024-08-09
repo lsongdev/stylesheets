@@ -42,6 +42,10 @@
   border: none;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .scroll-x {
   overflow-x: scroll;
 }
@@ -50,18 +54,18 @@
   overflow-y: scroll;
 }
 
-.scroll-none::-webkit-scrollbar {
+.scroll-none::-webkit-scrollbar,
+.scroll-hide::-webkit-scrollbar {
   display: none;
 }
 
-.overflow-hidden {
-  overflow: hidden;
-}
 
+.margin-0,
 .margin-reset {
   margin: 0;
 }
 
+.padding-0,
 .padding-reset {
   padding: 0;
 }

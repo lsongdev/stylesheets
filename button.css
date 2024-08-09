@@ -69,31 +69,31 @@ a.button {
   border-color: var(--button-border-color, #efefef);
 }
 
-.button-group .button {
+.button-group button {
   border: none;
   border-radius: 0;
 }
 
 .button-primary {
-  --button-color: var(--button-primary-color);
+  --button-color: var(--button-primary-color, blue);
   --button-border-color: var(--button-primary-border-color);
   --button-background-color: var(--button-primary-background-color);
 }
 
 .button-success {
-  --button-color: var(--button-success-color);
+  --button-color: var(--button-success-color, green);
   --button-border-color: var(--button-success-border-color);
   --button-background-color: var(--button-success-background-color);
 }
 
 .button-warning {
-  --button-color: var(--button-warning-color);
+  --button-color: var(--button-warning-color, orange);
   --button-border-color: var(--button-warning-border-color);
   --button-background-color: var(--button-warning-background-color);
 }
 
 .button-danger {
-  --button-color: var(--button-danger-color);
+  --button-color: var(--button-danger-color, red);
   --button-border-color: var(--button-danger-border-color);
   --button-background-color: var(--button-danger-background-color);
 }
