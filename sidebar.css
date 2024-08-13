@@ -21,6 +21,7 @@
 .sidebar-footer {
   margin: auto;
   overflow: hidden;
+  width: var(--sidebar-width);
   color: var(--sidebar-item-color, #fff);
 }
 
