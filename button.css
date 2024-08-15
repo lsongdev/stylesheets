@@ -1,3 +1,22 @@
+:root {
+  --button-bg: #fefefe;
+  --button-text: #333;
+  --button-border: #efefef;
+  --button-primary-bg: #007bff;
+  --button-primary-text: #ffffff;
+  --button-primary-border: #0056b3;
+  --button-success-bg: #28a745;
+  --button-success-text: #ffffff;
+  --button-success-border: #1e7e34;
+  --button-warning-bg: #ffc107;
+  --button-warning-text: #212529;
+  --button-warning-border: #d39e00;
+  --button-danger-bg: #dc3545;
+  --button-danger-text: #ffffff;
+  --button-danger-border: #bd2130;
+  --button-transition: all 0.3s ease;
+}
+
 .button {
   /* size */
   min-width: 70px;
@@ -16,23 +35,21 @@
   /* border */
   border-width: 1px;
   border-style: solid;
-  border-radius: var(--radius-size);
-  border-color: var(--button-border-color, #efefef);
+  border-radius: var(--border-radius, 4px);
+  border-color: var(--button-border);
   /* appearance */
   outline: 0;
   opacity: .85;
   cursor: pointer;
   appearance: none;
-  color: var(--button-color, #333);
-  background-color: var(--button-background-color, #fefefe);
-
-  transition: all .5s ease;
+  color: var(--button-text);
+  background-color: var(--button-bg);
+  box-shadow: var(--button-box-shadow);
+  transition: var(--button-transition);
 }
 
 a.button {
-  /* remove link underline */
   text-decoration: none;
-  color: var(--button-color, #333) !important;
 }
 
 .button:hover {
@@ -41,6 +58,15 @@ a.button {
 
 .button:active {
   opacity: .75;
+}
+
+.button:focus {
+  /* box-shadow: var(--button-focus-shadow); */
+}
+
+.button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
 }
 
 .button-small {
@@ -62,38 +88,56 @@ a.button {
 
 .button-group {
   overflow: hidden;
-  display: inline-block;
+  display: inline-flex;
   border-width: 1px;
   border-style: solid;
-  border-radius: var(--radius-size);
-  border-color: var(--button-border-color, #efefef);
+  border-radius: var(--border-radius, 4px);
+  border-color: var(--button-border);
 }
 
-.button-group button {
+.button-group .button {
   border: none;
   border-radius: 0;
+  margin-right: -1px;
+  /* creates divider effect */
 }
 
-.button-primary {
-  --button-color: var(--button-primary-color, blue);
-  --button-border-color: var(--button-primary-border-color);
-  --button-background-color: var(--button-primary-background-color);
+.button-group .button:not(:last-child) {
+  border-right: 1px solid var(--button-border);
+}
+
+.button-group .button:first-child {
+  border-top-left-radius: var(--border-radius, 4px);
+  border-bottom-left-radius: var(--border-radius, 4px);
+}
+
+.button-group .button:last-child {
+  border-top-right-radius: var(--border-radius, 4px);
+  border-bottom-right-radius: var(--border-radius, 4px);
+  margin-right: 0;
+}
+
+.button-primary,
+.button[type="submit"] {
+  --button-text: var(--button-primary-text);
+  --button-border: var(--button-primary-border);
+  --button-bg: var(--button-primary-bg);
 }
 
 .button-success {
-  --button-color: var(--button-success-color, green);
-  --button-border-color: var(--button-success-border-color);
-  --button-background-color: var(--button-success-background-color);
+  --button-text: var(--button-success-text);
+  --button-border: var(--button-success-border);
+  --button-bg: var(--button-success-bg);
 }
 
 .button-warning {
-  --button-color: var(--button-warning-color, orange);
-  --button-border-color: var(--button-warning-border-color);
-  --button-background-color: var(--button-warning-background-color);
+  --button-text: var(--button-warning-text);
+  --button-border: var(--button-warning-border);
+  --button-bg: var(--button-warning-bg);
 }
 
 .button-danger {
-  --button-color: var(--button-danger-color, red);
-  --button-border-color: var(--button-danger-border-color);
-  --button-background-color: var(--button-danger-background-color);
+  --button-text: var(--button-danger-text);
+  --button-border: var(--button-danger-border);
+  --button-bg: var(--button-danger-bg);
 }

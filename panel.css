@@ -22,7 +22,6 @@
   display: flex;
   overflow: hidden;
   flex-direction: column;
-  background-color: var(--content-background-color, white);
 }
 
 .panel-title,

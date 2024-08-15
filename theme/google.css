@@ -1,7 +1,7 @@
-@import url(./default.css);
 
 :root {
-  --radius-size: 4px;
-  --button-color: #fff;
-  --button-background-color: #1a73e8;
+  --border-radius: 4px;
+  --button-background-color: #eee;
+  --button-primary-color: #fff;
+  --button-primary-background-color: #1a73e8;
 }

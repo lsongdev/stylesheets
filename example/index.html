@@ -8,18 +8,14 @@
   <link rel="stylesheet" href="./index.css">
 </head>
 
-<body class=" theme-pink">
-  <div class="container">
+<body class="theme-dark">
+  <div class="container container-mobile">
     <header class="header flex flex-row flex-center flex-jc-between">
 
-      <div class="logo">
-        <svg viewBox="0 0 512 512" width="32" height="32">
-          <path fill="#000000"
-            d="M200 100L300 0l106 106-100 100zM100 200l100-100 212 212-100 100zM106 406l100-100 106 106-100 100z">
-          </path>
-        </svg>
-        <h1 class="inline-block margin-reset">Stylesheet Example</h1>
-      </div>
+      <a class="heading flex" href="/">
+        <img src="https://lsong.org/icon.svg" alt="" class="logo" width="32">
+        <h1 class="title">Stylesheet Example</h1>
+      </a>
 
       <nav id="navbar" class="nav nav-bar">
         <a href="//lsong.org">home</a>
@@ -115,8 +111,33 @@
         </div>
 
         <div class="form-field">
-          <input type="checkbox" name="remember" id="remember">
-          <label for="remember">Remember me</label>
+          <input type="text" class="input input-small" placeholder="Small input">
+        </div>
+
+        <div class="form-field">
+          <input type="text" class="input input-large" placeholder="Large input">
+        </div>
+
+        <div class="form-field">
+          <div class="input-group">
+            <span class="input-addon">@</span>
+            <input type="text" class="input" placeholder="Username">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <div class="input-group">
+            <span class="input-addon">🔍</span>
+            <input type="search" class="input" placeholder="Search">
+            <button type="submit" class="input-addon button">Search</button>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="remember">
+            <input type="checkbox" name="remember" id="remember">
+            Remember me
+          </label>
         </div>
 
         <div class="form-field">
@@ -163,7 +184,7 @@
 
     <div class="panel">
       <h3 class="panel-header">Dialog Example</h3>
-      <dialog id="favDialog">
+      <dialog id="favDialog" class="dialog">
         <form method="dialog">
           <b>Dialog</b>
           <p>
@@ -191,6 +212,7 @@
       <script>
         showButton.addEventListener('click', () => {
           favDialog.showModal();
+          // favDialog.show();
         });
         // "Favorite animal" input sets the value of the submit button
         selectEl.addEventListener('change', (e) => {

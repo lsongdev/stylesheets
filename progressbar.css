@@ -1,34 +1,32 @@
 .progress-bar {
-  z-index: 100;
   width: 100%;
-  height: 20px;
+  z-index: 100;
   overflow: hidden;
-  background: #ccc;
-  border-radius: var(--border-radius);
+  height: var(--progress-bar-height, 20px);
+  background: var(--progress-bar-background, #ccc);
+  border-radius: var(--progress-bar-border-radius, var(--border-radius));
 }
 
 .progress-bar .progress-bar-inner {
-  color: white;
   height: 100%;
-  line-height: 1.3;
-  max-width: 100%;
   min-width: 0;
-  background: skyblue;
+  max-width: 100%;
+  line-height: 1.3;
   text-align: center;
   transition: all .5s ease;
   -webkit-transition: all .5s ease;
+  color: var(--progress-bar-text-color, #fff);
+  background: var(--progress-bar-foreground, skyblue);
 }
 
-.progress-bar-green .progress-bar-inner {
-  background: #4caf50;
+.progress-bar-green {
+  --progress-bar-foreground: #4caf50;
 }
 
-.progress-bar-red .progress-bar-inner {
-  background: #f44336;
+.progress-bar-red {
+  --progress-bar-foreground: #f44336;
 }
 
 .progress-bar-loading .progress-bar-inner {
-  background-size: 40px 40px;
-  background-color: #29d;
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  --progress-bar-foreground: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent) 0 0 / 40px 40px;
 }

@@ -14,7 +14,7 @@
   /* border */
   border-width: 1px;
   border-style: solid;
-  border-radius: var(--radius-size);
+  border-radius: var(--border-radius);
   border-color: var(--border-color, #efefef);
-  background-color: var(--select-background-color, #fff);
+  background: var(--select-background-color, #fff);
 }

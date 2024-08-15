@@ -1,11 +1,93 @@
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+:root {
+  --grid-columns: 12;
+  --grid-gap: 20px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  grid-template-rows: auto;
+  gap: var(--grid-gap);
+}
+
+@media (max-width: var(--breakpoint-xl)) {
+  .grid {
+    --grid-columns: 12;
+  }
+}
+
+@media (max-width: var(--breakpoint-lg)) {
+  .grid {
+    --grid-columns: 9;
+  }
+}
+
+@media (max-width: var(--breakpoint-md)) {
+  .grid {
+    --grid-columns: 6;
+  }
+}
+
+@media (max-width: var(--breakpoint-sm)) {
+  .grid {
+    --grid-columns: 4;
+  }
+}
+
+/* Generate column classes */
+.col-1 {
+  grid-column: span 1;
+}
+
+.col-2 {
+  grid-column: span 2;
+}
+
+.col-3 {
+  grid-column: span 3;
+}
+
+.col-4 {
+  grid-column: span 4;
+}
+
+.col-5 {
+  grid-column: span 5;
+}
+
+.col-6 {
+  grid-column: span 6;
+}
+
+.col-7 {
+  grid-column: span 7;
+}
+
+.col-8 {
+  grid-column: span 8;
+}
+
+.col-9 {
+  grid-column: span 9;
+}
+
+.col-10 {
+  grid-column: span 10;
+}
+
+.col-11 {
+  grid-column: span 11;
+}
+
+.col-12 {
+  grid-column: span 12;
+}
+
+/* Generate row classes */
 .row-1 {
   grid-row: span 1;
 }
@@ -18,62 +100,188 @@
   grid-row: span 3;
 }
 
-.col-1 {
-  grid-column-end: span 1;
+.row-4 {
+  grid-row: span 4;
 }
 
-.col-2 {
-  grid-column-end: span 2;
+.row-5 {
+  grid-row: span 5;
 }
 
-.col-3 {
-  grid-column-end: span 3;
+.row-6 {
+  grid-row: span 6;
 }
 
-.col-4 {
-  grid-column-end: span 4;
-}
+/* Responsive classes for different breakpoints */
+@media (max-width: var(--breakpoint-xl)) {
+  .col-xl-1 {
+    grid-column: span 1;
+  }
 
-.col-5 {
-  grid-column-end: span 5;
-}
+  .col-xl-2 {
+    grid-column: span 2;
+  }
 
-.col-6 {
-  grid-column-end: span 6;
-}
+  .col-xl-3 {
+    grid-column: span 3;
+  }
 
-.col-7 {
-  grid-column-end: span 7;
-}
+  .col-xl-4 {
+    grid-column: span 4;
+  }
 
-.col-8 {
-  grid-column-end: span 8;
-}
+  .col-xl-5 {
+    grid-column: span 5;
+  }
 
-.col-9 {
-  grid-column-end: span 9;
-}
+  .col-xl-6 {
+    grid-column: span 6;
+  }
 
-.col-10 {
-  grid-column-end: span 10;
-}
+  .col-xl-7 {
+    grid-column: span 7;
+  }
 
-.col-11 {
-  grid-column-end: span 11;
-}
+  .col-xl-8 {
+    grid-column: span 8;
+  }
 
-.col-12 {
-  grid-column-end: span 12;
-}
+  .col-xl-9 {
+    grid-column: span 9;
+  }
 
-@media screen and (max-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(6, 1fr);
+  .col-xl-10 {
+    grid-column: span 10;
+  }
+
+  .col-xl-11 {
+    grid-column: span 11;
+  }
+
+  .col-xl-12 {
+    grid-column: span 12;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr;
+@media (max-width: var(--breakpoint-lg)) {
+  .col-lg-1 {
+    grid-column: span 1;
+  }
+
+  .col-lg-2 {
+    grid-column: span 2;
+  }
+
+  .col-lg-3 {
+    grid-column: span 3;
+  }
+
+  .col-lg-4 {
+    grid-column: span 4;
+  }
+
+  .col-lg-5 {
+    grid-column: span 5;
+  }
+
+  .col-lg-6 {
+    grid-column: span 6;
+  }
+
+  .col-lg-7 {
+    grid-column: span 7;
+  }
+
+  .col-lg-8 {
+    grid-column: span 8;
+  }
+
+  .col-lg-9 {
+    grid-column: span 9;
+  }
+}
+
+@media (max-width: var(--breakpoint-md)) {
+  .col-md-1 {
+    grid-column: span 1;
+  }
+
+  .col-md-2 {
+    grid-column: span 2;
+  }
+
+  .col-md-3 {
+    grid-column: span 3;
+  }
+
+  .col-md-4 {
+    grid-column: span 4;
+  }
+
+  .col-md-5 {
+    grid-column: span 5;
+  }
+
+  .col-md-6 {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: var(--breakpoint-sm)) {
+  .col-sm-1 {
+    grid-column: span 1;
+  }
+
+  .col-sm-2 {
+    grid-column: span 2;
+  }
+
+  .col-sm-3 {
+    grid-column: span 3;
+  }
+
+  .col-sm-4 {
+    grid-column: span 4;
+  }
+}
+
+/* Utility classes */
+.hide-sm {
+  display: none;
+}
+
+.hide-md {
+  display: none;
+}
+
+.hide-lg {
+  display: none;
+}
+
+.hide-xl {
+  display: none;
+}
+
+@media (min-width: var(--breakpoint-sm)) {
+  .hide-sm {
+    display: initial;
+  }
+}
+
+@media (min-width: var(--breakpoint-md)) {
+  .hide-md {
+    display: initial;
+  }
+}
+
+@media (min-width: var(--breakpoint-lg)) {
+  .hide-lg {
+    display: initial;
+  }
+}
+
+@media (min-width: var(--breakpoint-xl)) {
+  .hide-xl {
+    display: initial;
   }
 }
