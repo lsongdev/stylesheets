@@ -16,7 +16,6 @@
 
 .input {
   outline: none;
-  display: block;
   appearance: none;
   box-sizing: border-box;
   color: var(--input-text);
@@ -48,6 +47,7 @@
 
 .input-block {
   width: 100%;
+  display: block;
 }
 
 .input-small {
@@ -63,40 +63,21 @@
 .input-group {
   display: flex;
   align-items: stretch;
+  border: var(--input-border-width) solid var(--input-border);
+  border-radius: var(--input-border-radius, var(--border-radius));
+}
+
+.input-group * {
+  border-radius: 0;
 }
 
 .input-group .input {
   flex: 1 1 auto;
-  border-radius: 0;
-}
-
-.input-group .input:first-child {
-  border-top-left-radius: var(--input-border-radius);
-  border-bottom-left-radius: var(--input-border-radius);
-}
-
-.input-group .input:last-child {
-  border-top-right-radius: var(--input-border-radius);
-  border-bottom-right-radius: var(--input-border-radius);
 }
 
 .input-group .input-addon {
   display: flex;
   align-items: center;
   padding: 0 var(--input-padding);
-  border-radius: 0;
-  border: var(--input-border-width) solid var(--input-border);
   font-size: var(--input-font-size);
-}
-
-.input-group .input-addon:first-child {
-  border-right: none;
-  border-top-left-radius: var(--input-border-radius);
-  border-bottom-left-radius: var(--input-border-radius);
-}
-
-.input-group .input-addon:last-child {
-  border-left: none;
-  border-top-right-radius: var(--input-border-radius);
-  border-bottom-right-radius: var(--input-border-radius);
 }

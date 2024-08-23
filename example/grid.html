@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网格布局示例</title>
+    <style>
+        @import url(../grid.css);
+        .grid > div {
+            padding: 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: white;
+        }
+        
+        .item-1 { background-color: #FF6B6B; border: 3px solid #FF3333; }
+        .item-2 { background-color: #4ECDC4; border: 3px solid #1A9E8F; }
+        .item-3 { background-color: #45B7D1; border: 3px solid #2E8BA8; }
+        .item-4 { background-color: #FFA07A; border: 3px solid #FF7F50; }
+        .item-5 { background-color: #98D8C8; border: 3px solid #6CB8A5; }
+        .item-6 { background-color: #F7DC6F; border: 3px solid #F1C40F; }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="col-12 item-1">跨越12列</div>
+        <div class="col-6 col-sm-12 item-2">跨越6列（小屏幕时12列）</div>
+        <div class="col-6 col-sm-12 item-3">跨越6列（小屏幕时12列）</div>
+        <div class="col-4 col-md-6 col-sm-12 item-4">跨越4列（中屏幕时6列，小屏幕时12列）</div>
+        <div class="col-4 col-md-6 col-sm-12 item-5">跨越4列（中屏幕时6列，小屏幕时12列）</div>
+        <div class="col-4 col-md-12 col-sm-12 item-6">跨越4列（中屏幕和小屏幕时12列）</div>
+    </div>
+</body>
+</html>

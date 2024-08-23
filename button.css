@@ -21,7 +21,7 @@
   /* size */
   min-width: 70px;
   padding: .4rem .45rem;
-  display: inline-flex;
+  /* display: inline-flex; */
   box-sizing: border-box;
   /* align */
   align-items: center;
@@ -60,9 +60,11 @@ a.button {
   opacity: .75;
 }
 
+/* 
 .button:focus {
-  /* box-shadow: var(--button-focus-shadow); */
-}
+  box-shadow: var(--button-focus-shadow);
+} 
+*/
 
 .button:disabled {
   opacity: 0.65;
@@ -84,37 +86,6 @@ a.button {
   width: 100%;
   display: block;
   max-width: 100%;
-}
-
-.button-group {
-  overflow: hidden;
-  display: inline-flex;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: var(--border-radius, 4px);
-  border-color: var(--button-border);
-}
-
-.button-group .button {
-  border: none;
-  border-radius: 0;
-  margin-right: -1px;
-  /* creates divider effect */
-}
-
-.button-group .button:not(:last-child) {
-  border-right: 1px solid var(--button-border);
-}
-
-.button-group .button:first-child {
-  border-top-left-radius: var(--border-radius, 4px);
-  border-bottom-left-radius: var(--border-radius, 4px);
-}
-
-.button-group .button:last-child {
-  border-top-right-radius: var(--border-radius, 4px);
-  border-bottom-right-radius: var(--border-radius, 4px);
-  margin-right: 0;
 }
 
 .button-primary,
@@ -140,4 +111,24 @@ a.button {
   --button-text: var(--button-danger-text);
   --button-border: var(--button-danger-border);
   --button-bg: var(--button-danger-bg);
+}
+
+
+.button-group {
+  overflow: hidden;
+  display: inline-flex;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: var(--border-radius, 4px);
+  border-color: var(--button-border);
+}
+
+.button-group .button {
+  border: none;
+  border-radius: 0;
+  margin-right: -1px;
+}
+
+.button-group .button:not(:last-child) {
+  border-right: 1px solid var(--button-border);
 }

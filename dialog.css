@@ -18,6 +18,7 @@
   border-radius: 8px;
 }
 
+.dialog-right,
 .dialog-drawer-right {
   top: 0;
   right: 0;
@@ -28,6 +29,7 @@
   border-radius: 8px 0 0 8px;
 }
 
+.dialog-bottom,
 .dialog-drawer-bottom {
   top: auto;
   bottom: 0;
@@ -60,8 +62,8 @@
   cursor: pointer;
 }
 
-
 @media screen and (max-width: 768px) {
+  .dialog-bottom,
   .dialog-drawer-bottom {
     min-width: 100%;
   }
