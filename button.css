@@ -1,4 +1,5 @@
 :root {
+  --button-padding: 8px;
   --button-bg: #fefefe;
   --button-text: #333;
   --button-border: #efefef;
@@ -20,7 +21,6 @@
 .button {
   /* size */
   min-width: 70px;
-  padding: .4rem .45rem;
   /* display: inline-flex; */
   box-sizing: border-box;
   /* align */
@@ -43,6 +43,7 @@
   cursor: pointer;
   appearance: none;
   color: var(--button-text);
+  padding: var(--button-padding);
   background-color: var(--button-bg);
   box-shadow: var(--button-box-shadow);
   transition: var(--button-transition);
