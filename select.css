@@ -1,7 +1,8 @@
 .select {
   all: unset;
-  padding: .4rem .45rem;
+  padding: 8px;
   font-size: 1em;
+  white-space: nowrap;
   font-family: sans-serif;
   color: var(--text-color);
   /* appearance */
