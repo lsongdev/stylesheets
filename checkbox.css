@@ -9,8 +9,8 @@ Example:
 
 .switch {
   display: inline-flex;
-  --size: 10px;
-  --width: 25px;
+  --switch-size: 10px;
+  --switch-width: 25px;
   --switch-color-on: #5549f1;
   --switch-color-off: rgb(0, 0, 0, 0.2);
 }
@@ -22,8 +22,8 @@ Example:
 }
 
 .switch label {
-  width: var(--width);
-  height: var(--size);
+  width: var(--switch-width);
+  height: var(--switch-size);
   padding: 4px;
   display: block;
   cursor: pointer;
@@ -36,8 +36,8 @@ Example:
 
 .switch label:after {
   content: "";
-  width: var(--size);
-  height: var(--size);
+  width: var(--switch-size);
+  height: var(--switch-size);
   position: absolute;
   transition: 0.3s;
   border-radius: 50em;
@@ -49,5 +49,5 @@ Example:
 }
 
 .switch input:checked+label:after {
-  transform: translateX(calc(var(--width) - var(--size)));
+  transform: translateX(calc(var(--switch-width) - var(--switch-size)));
 }

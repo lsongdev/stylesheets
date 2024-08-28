@@ -1,6 +1,14 @@
+:root {
+  /* base */
+  --dialog-border-color: var(--border-color, #ccc);
+  --dialog-border-width: var(--border-width, 1px);
+  --dialog-border-radius: var(--border-radius, 4px);
+}
+
 .dialog {
-  border: 1px solid #ccc;
   background-color: white;
+  border-radius: var(--dialog-border-radius);
+  border: var(--dialog-border-width) solid var(--dialog-border-color);
   box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 

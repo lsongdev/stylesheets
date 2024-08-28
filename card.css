@@ -3,5 +3,5 @@
   padding: 16px;
   border-radius: var(--border-radius, 8px);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
-  background-color: var(--card-bg-color, rgba(249, 249, 249, 1));
+  background: var(--card-bg, rgba(249, 249, 249, 1));
 }

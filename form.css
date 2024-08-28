@@ -3,13 +3,13 @@
 @import url(./select.css);
 @import url(./checkbox.css);
 
-.form label {
-  display: block;
-}
-
 .form-field {
   flex: 1 1 auto;
   margin-top: 10px;
+}
+
+.form-field label {
+  display: block;
 }
 
 .form-group {
