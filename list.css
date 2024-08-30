@@ -1,9 +1,17 @@
 .list {
   margin: 0;
-  padding: 0 10px;
+  padding: 0;
   list-style: none;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.list li {
+  padding: 5px;
+}
+
+.list li[selected] {
+  background-color: #e0e0e0;
 }
 
 .list-item {
