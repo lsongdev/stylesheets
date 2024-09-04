@@ -12,6 +12,11 @@
   gap: var(--grid-gap);
 }
 
+ul.grid {
+  padding: 0;
+  list-style: none;
+}
+
 /* Default column classes */
 .col-1 { grid-column: span 1; }
 .col-2 { grid-column: span 2; }
