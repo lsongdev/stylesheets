@@ -4,4 +4,9 @@
   border-radius: var(--border-radius, 8px);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
   background: var(--card-bg, rgba(249, 249, 249, 1));
+  transition: all 0.3s;
+}
+
+.card:hover {
+  background-color: rgba(243, 244, 246, 1);
 }
