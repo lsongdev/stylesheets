@@ -17,6 +17,11 @@
   display: inline-block;
 }
 
+.width-halt {
+  width: 50%;
+}
+
+.width-full,
 .full-width {
   width: 100%;
 }
