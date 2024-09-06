@@ -72,7 +72,7 @@
 
 
 .input-group {
-  display: flex;
+  display: inline-flex;
   align-items: stretch;
   border: var(--input-border-width) solid var(--input-border-color);
   border-radius: var(--input-border-radius);
