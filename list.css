@@ -15,6 +15,7 @@
 }
 
 .list-item {
+  gap: 10px;
   display: flex;
   padding: 5px 0;
   list-style: none;
@@ -26,4 +27,17 @@
 
 .list-item:last-of-type {
   border-bottom: none;
+}
+
+.list-item-content {
+  flex: 1;
+}
+
+.list-item-headline {
+  font-weight: bold;
+}
+
+.list-item-supporting {
+  color: #757575;
+  font-size: 0.9em;
 }

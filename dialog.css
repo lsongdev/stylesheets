@@ -6,6 +6,7 @@
 }
 
 .dialog {
+  box-sizing: border-box;
   background-color: white;
   border-radius: var(--dialog-border-radius);
   border: var(--dialog-border-width) solid var(--dialog-border-color);
@@ -42,20 +43,20 @@
   top: auto;
   bottom: 0;
   width: 80%;
-  border-radius: 8px 8px 0 0;
   overflow-y: auto;
+  border-radius: 8px 8px 0 0;
 }
 
 .dialog-toast {
-  position: fixed;
-  bottom: 100px;
   left: 50%;
   margin: 0;
+  bottom: 100px;
   color: white;
-  padding: 8px;
   border: none;
-  border-radius: 8px;
+  padding: 8px;
+  position: fixed;
   font-size: 0.9em;
+  border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.75);
   transform: translateX(-50%);
 }
