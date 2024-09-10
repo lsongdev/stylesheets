@@ -9,7 +9,7 @@
   position: fixed;
   transition: 0.3s;
   flex-direction: column;
-  background: var(--sidebar-background, #333);
+  background: var(--sidebar-bg, #333);
 }
 
 .sidebar-hide {
