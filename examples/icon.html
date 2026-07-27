@@ -248,22 +248,22 @@
             <form class="form">
                 <div class="form-control">
                     <div class="input-group">
-                        <span class="input-group-prepend"><i class="fas fa-user"></i></span>
-                        <input type="text" class="input" placeholder="用户名">
+                        <span class="input-addon" aria-hidden="true"><i class="fas fa-user"></i></span>
+                        <input type="text" class="input" name="username" aria-label="用户名" autocomplete="username" spellcheck="false" placeholder="用户名">
                     </div>
                 </div>
                 
                 <div class="form-control">
                     <div class="input-group">
-                        <span class="input-group-prepend"><i class="fas fa-lock"></i></span>
-                        <input type="password" class="input" placeholder="密码">
+                        <span class="input-addon" aria-hidden="true"><i class="fas fa-lock"></i></span>
+                        <input type="password" class="input" name="password" aria-label="密码" autocomplete="current-password" placeholder="密码">
                     </div>
                 </div>
                 
                 <div class="form-control">
                     <div class="input-group">
-                        <input type="text" class="input" placeholder="搜索...">
-                        <span class="input-group-append"><i class="fas fa-search"></i></span>
+                        <input type="search" class="input" name="query" aria-label="搜索" autocomplete="off" placeholder="搜索…">
+                        <span class="input-addon" aria-hidden="true"><i class="fas fa-search"></i></span>
                     </div>
                 </div>
             </form>

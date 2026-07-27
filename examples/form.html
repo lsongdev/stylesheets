@@ -19,18 +19,18 @@
   <!-- Basic Form -->
   <div class="demo">
     <h2>基本表单</h2>
-    <form>
+    <form class="form">
       <div class="form-group">
-        <label>用户名</label>
-        <input type="text" placeholder="请输入用户名">
+        <label for="basic-username">用户名</label>
+        <input class="input" type="text" id="basic-username" name="username" autocomplete="username" spellcheck="false" placeholder="请输入用户名">
       </div>
       <div class="form-group">
-        <label>邮箱</label>
-        <input type="email" placeholder="请输入邮箱地址">
+        <label for="basic-email">邮箱</label>
+        <input class="input" type="email" id="basic-email" name="email" autocomplete="email" spellcheck="false" placeholder="name@example.com">
       </div>
       <div class="form-group">
-        <label>密码</label>
-        <input type="password" placeholder="请输入密码">
+        <label for="basic-password">密码</label>
+        <input class="input" type="password" id="basic-password" name="password" autocomplete="current-password" placeholder="请输入密码">
       </div>
       <div class="form-actions">
         <button type="submit" class="button">提交</button>
@@ -42,25 +42,25 @@
   <!-- Horizontal Form -->
   <div class="demo">
     <h2>水平表单</h2>
-    <form>
+    <form class="form">
       <div class="form-row">
         <div class="form-group">
-          <label>用户名</label>
-          <input type="text" placeholder="请输入用户名">
+          <label for="row-username">用户名</label>
+          <input class="input" type="text" id="row-username" name="username" autocomplete="username" spellcheck="false" placeholder="请输入用户名">
         </div>
         <div class="form-group">
-          <label>邮箱</label>
-          <input type="email" placeholder="请输入邮箱地址">
+          <label for="row-email">邮箱</label>
+          <input class="input" type="email" id="row-email" name="email" autocomplete="email" spellcheck="false" placeholder="name@example.com">
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label>密码</label>
-          <input type="password" placeholder="请输入密码">
+          <label for="row-password">密码</label>
+          <input class="input" type="password" id="row-password" name="password" autocomplete="new-password" placeholder="请输入密码">
         </div>
         <div class="form-group">
-          <label>确认密码</label>
-          <input type="password" placeholder="请再次输入密码">
+          <label for="row-password-confirmation">确认密码</label>
+          <input class="input" type="password" id="row-password-confirmation" name="password_confirmation" autocomplete="new-password" placeholder="请再次输入密码">
         </div>
       </div>
       <div class="form-actions">
@@ -73,14 +73,14 @@
   <!-- Inline Form -->
   <div class="demo">
     <h2>内联表单</h2>
-    <form class="form-inline">
+    <form class="form form-inline">
       <div class="form-group">
-        <label>用户名</label>
-        <input type="text" placeholder="用户名">
+        <label for="inline-username">用户名</label>
+        <input class="input" type="text" id="inline-username" name="username" autocomplete="username" spellcheck="false" placeholder="用户名">
       </div>
       <div class="form-group">
-        <label>密码</label>
-        <input type="password" placeholder="密码">
+        <label for="inline-password">密码</label>
+        <input class="input" type="password" id="inline-password" name="password" autocomplete="current-password" placeholder="密码">
       </div>
       <div class="form-group">
         <button type="submit" class="button">登录</button>
@@ -91,21 +91,21 @@
   <!-- Form with Validation -->
   <div class="demo">
     <h2>带验证状态</h2>
-    <form>
+    <form class="form">
       <div class="form-group">
-        <label>成功状态</label>
-        <input type="text" class="input-success" placeholder="输入正确">
+        <label for="validation-success">成功状态</label>
+        <input type="text" class="input input-success" id="validation-success" name="success_value" placeholder="输入正确">
         <small class="help-text">输入验证通过</small>
       </div>
       <div class="form-group">
-        <label>错误状态</label>
-        <input type="text" class="input-error" placeholder="输入错误">
-        <div class="error">请输入有效内容</div>
+        <label for="validation-error">错误状态</label>
+        <input type="text" class="input input-error" id="validation-error" name="error_value" aria-invalid="true" aria-describedby="validation-error-message" placeholder="输入错误">
+        <div class="error" id="validation-error-message">请输入有效内容</div>
       </div>
       <div class="form-group">
-        <label>帮助文本</label>
-        <input type="text" placeholder="需要帮助">
-        <small class="help-text">这是帮助说明文字</small>
+        <label for="validation-help">帮助文本</label>
+        <input class="input" type="text" id="validation-help" name="help_value" aria-describedby="validation-help-text" placeholder="需要帮助">
+        <small class="help-text" id="validation-help-text">这是帮助说明文字</small>
       </div>
     </form>
   </div>
@@ -113,21 +113,21 @@
   <!-- Complex Form -->
   <div class="demo">
     <h2>复杂表单</h2>
-    <form>
+    <form class="form">
       <div class="form-row">
         <div class="form-group">
-          <label>姓</label>
-          <input type="text" placeholder="姓">
+          <label for="complex-family-name">姓</label>
+          <input class="input" type="text" id="complex-family-name" name="family_name" autocomplete="family-name" placeholder="姓">
         </div>
         <div class="form-group">
-          <label>名</label>
-          <input type="text" placeholder="名">
+          <label for="complex-given-name">名</label>
+          <input class="input" type="text" id="complex-given-name" name="given_name" autocomplete="given-name" placeholder="名">
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label>国家</label>
-          <select>
+          <label for="complex-country">国家</label>
+          <select class="input select" id="complex-country" name="country" autocomplete="country-name">
             <option>选择国家</option>
             <option>中国</option>
             <option>美国</option>
@@ -135,28 +135,28 @@
           </select>
         </div>
         <div class="form-group">
-          <label>城市</label>
-          <input type="text" placeholder="城市">
+          <label for="complex-city">城市</label>
+          <input class="input" type="text" id="complex-city" name="city" autocomplete="address-level2" placeholder="城市">
         </div>
       </div>
       <div class="form-group">
-        <label>留言</label>
-        <textarea rows="4" placeholder="请输入您的留言内容"></textarea>
+        <label for="complex-message">留言</label>
+        <textarea class="input" id="complex-message" name="message" rows="4" placeholder="请输入您的留言内容"></textarea>
       </div>
       <div class="form-group">
         <div class="form-check">
-          <input type="checkbox" id="agree">
+          <input type="checkbox" id="agree" name="agree">
           <label for="agree">同意服务条款</label>
         </div>
       </div>
       <div class="form-group">
-        <label>订阅邮件</label>
+        <span>订阅邮件</span>
         <div class="form-check">
-          <input type="radio" name="sub" id="sub-yes">
+          <input type="radio" name="sub" id="sub-yes" value="yes">
           <label for="sub-yes">订阅</label>
         </div>
         <div class="form-check">
-          <input type="radio" name="sub" id="sub-no">
+          <input type="radio" name="sub" id="sub-no" value="no">
           <label for="sub-no">不订阅</label>
         </div>
       </div>
