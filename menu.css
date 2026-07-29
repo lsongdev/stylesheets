@@ -25,7 +25,7 @@
   display: flex;
   border-radius: 6px;
   align-items: center;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
   color: var(--menu-item-color, #121212);
   background-color: var(--menu-item-bg, #fafafa);
 }
