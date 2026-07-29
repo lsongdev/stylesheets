@@ -1,5 +1,9 @@
 :root {
   --container-padding: 20px;
+  --container-border-color: #e1e4e8;
+  --layout-window-height: 80dvh;
+  --layout-window-offset: 10dvh;
+  --layout-window-radius: 10px;
   --page-header-gap: 12px;
   --page-header-margin: 20px;
 }
@@ -22,8 +26,12 @@
 
 .layout-container-window {
   height: 80vh;
+  height: var(--layout-window-height);
   display: flex;
-  transform: translateY(10vh);
+  overflow: hidden;
+  border: 1px solid var(--container-border-color);
+  border-radius: var(--layout-window-radius);
+  transform: translateY(var(--layout-window-offset));
 }
 
 .layout-container-viewport {
@@ -119,6 +127,10 @@
   .layout-container-window {
     display: flex;
     height: initial;
+    overflow: hidden;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
     flex-direction: column;
     transform: translateY(0);
   }
