@@ -50,3 +50,32 @@
   color: #757575;
   font-size: 0.9em;
 }
+
+.row {
+  gap: 12px;
+  display: flex;
+  padding: 13px 0;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line, var(--border-color, #eee));
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.order-row {
+  color: inherit;
+  text-decoration: none;
+}
+
+.order-row:hover strong {
+  color: var(--accent, #2563eb);
+}
+
+@media (max-width: 520px) {
+  .row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

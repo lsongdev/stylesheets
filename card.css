@@ -1,11 +1,11 @@
 @import url(./color.css);
 
 .card {
-  --card-padding: 10px;
-  --card-border: 1px solid var(--color-black-op1, #eee);
-  --card-border-radius: var(--border-radius, 8px);
-  --card-bg: var(--color-white-op5);
-  --card-text: var(--color-gray-900);
+  --card-padding: 28px;
+  --card-border: 1px solid var(--line, var(--color-black-op1, #eee));
+  --card-border-radius: 14px;
+  --card-bg: var(--card, var(--color-white-op5));
+  --card-text: var(--text, var(--color-gray-900));
 
   overflow: hidden;
   color: var(--card-text);
@@ -13,7 +13,8 @@
   border: var(--card-border);
   background-color: var(--card-bg);
   border-radius: var(--card-border-radius);
-  margin-bottom: 10px;
+  margin: 24px 0;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 3%);
 }
 
 .card.active {
@@ -29,6 +30,12 @@
     /* background-color: #e0e0e0; */
     transform: translateY(-2px);
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 520px) {
+  .card {
+    --card-padding: 21px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

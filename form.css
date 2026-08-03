@@ -97,6 +97,53 @@
   }
 }
 
+label {
+  display: block;
+  font-weight: 650;
+  margin: 16px 0 6px;
+}
+
+form > .button {
+  margin-top: 18px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.actions form {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.actions .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  margin-top: 0;
+}
+
+.sync-link {
+  margin-top: 20px;
+}
+
+@media (max-width: 520px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   [data-theme="auto"] {
     --form-label-text: var(--color-dark-text);

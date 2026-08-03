@@ -1,7 +1,13 @@
 .alert {
-  padding: 10px 15px;
-  border-radius: 6px;
-  margin-bottom: 15px;
+  padding: 11px 13px;
+  border-radius: 9px;
+  margin: 16px 0;
+  background: color-mix(in srgb, var(--accent, #2563eb) 12%, transparent);
+}
+
+.alert.error {
+  color: var(--danger, #dc3545);
+  background: color-mix(in srgb, var(--danger, #dc3545) 10%, transparent);
 }
 
 .alert-danger {

@@ -28,3 +28,40 @@
   font-size: inherit;
 }
 
+.brand {
+  gap: 9px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--text, var(--color-24292e, #24292e));
+  font-size: 19px;
+  font-weight: 760;
+  line-height: 1;
+  text-decoration: none;
+  letter-spacing: -0.03em;
+}
+
+.brand-mark {
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+
+nav {
+  gap: 16px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+nav a {
+  color: var(--muted, var(--color-586069, #586069));
+  text-decoration: none;
+}
+
+nav form {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+

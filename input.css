@@ -1,12 +1,12 @@
 :root {
-  --input-padding: 8px;
+  --input-padding: 10px;
   --input-font-size: 1em;
-  --input-text: var(--color-333, #333);
-  --input-bg: var(--color-ui-bg-white, #fff);
-  --input-border-color: var(--color-e1e4e8, #e1e4e8);
+  --input-text: var(--text, var(--color-333, #333));
+  --input-bg: var(--bg, var(--color-ui-bg-white, #fff));
+  --input-border-color: var(--line, var(--color-e1e4e8, #e1e4e8));
   --input-border-width: var(--border-width, 1px);
-  --input-border-radius: var(--border-radius, 4px);
-  --input-border-hover: var(--color-ccc, #ccc);
+  --input-border-radius: var(--border-radius, 9px);
+  --input-border-hover: var(--line, var(--color-ccc, #ccc));
   --input-border-focus: var(--color-4a90e2, #4a90e2);
   --input-disabled-bg: var(--color-f5f5f5, #f5f5f5);
   --input-disabled-text: var(--color-888888, #888);
