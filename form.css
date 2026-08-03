@@ -45,10 +45,23 @@
 .form-actions {
   display: flex;
   gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
   margin-top: 30px;
 }
 
+.form-actions form {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
 .form-actions .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  margin-top: 0;
   flex: 1;
 }
 
@@ -111,27 +124,6 @@ form > .button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-}
-
-.actions {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.actions form {
-  display: flex;
-  align-items: center;
-  margin: 0;
-}
-
-.actions .button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 44px;
-  margin-top: 0;
 }
 
 @media (max-width: 520px) {
