@@ -65,3 +65,7 @@ nav form {
   margin: 0;
 }
 
+nav form > .button {
+  margin-top: 0;
+}
+
