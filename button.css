@@ -60,6 +60,13 @@
   --button-ghost-hover-bg: #f6f8fa;
   --button-ghost-hover-text: #24292e;
 
+  /* Link Button Colors */
+  --button-link-bg: transparent;
+  --button-link-text: var(--muted, #586069);
+  --button-link-border: transparent;
+  --button-link-hover-bg: transparent;
+  --button-link-hover-text: var(--accent, #24292e);
+
   /* Sizes */
   --button-size-small-scale: 0.75;
   --button-size-small-min-width: 40px;
@@ -196,6 +203,19 @@ a.button {
   --button-hover-bg: var(--button-ghost-hover-bg);
   --button-hover-text: var(--button-ghost-hover-text);
   --button-active-bg: var(--button-ghost-hover-bg);
+}
+
+/* --- Link (text) --- */
+
+.button.button-link {
+  --button-bg: var(--button-link-bg);
+  --button-text: var(--button-link-text);
+  --button-border-color: var(--button-link-border);
+  --button-hover-bg: var(--button-link-hover-bg);
+  --button-hover-text: var(--button-link-hover-text);
+  --button-active-bg: var(--button-link-hover-bg);
+  --button-padding-y: 0;
+  --button-padding-x: 0;
 }
 
 /* ============================================
