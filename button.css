@@ -19,9 +19,11 @@
   --button-opacity-disabled: 0.5;
 
   /* Default Button Colors */
-  --button-bg: #f6f8fa;
-  --button-text: #24292e;
-  --button-border-color: #e1e4e8;
+  --button-bg: var(--card, #f6f8fa);
+  --button-text: var(--text, #24292e);
+  --button-border-color: var(--line, #e1e4e8);
+  --button-hover-bg: var(--line, #e1e4e8);
+  --button-active-bg: var(--line, #d1d5da);
 
   /* Primary Button Colors */
   --button-primary-bg: #0366d6;
@@ -31,9 +33,9 @@
 
   /* Secondary Button Colors */
   --button-secondary-bg: transparent;
-  --button-secondary-text: #24292e;
-  --button-secondary-border: #e1e4e8;
-  --button-secondary-hover-bg: #f6f8fa;
+  --button-secondary-text: var(--text, #24292e);
+  --button-secondary-border: var(--line, #e1e4e8);
+  --button-secondary-hover-bg: var(--card, #f6f8fa);
 
   /* Success Button Colors */
   --button-success-bg: #2ea44f;
@@ -55,10 +57,10 @@
 
   /* Ghost Button Colors */
   --button-ghost-bg: transparent;
-  --button-ghost-text: #586069;
+  --button-ghost-text: var(--muted, #586069);
   --button-ghost-border: transparent;
-  --button-ghost-hover-bg: #f6f8fa;
-  --button-ghost-hover-text: #24292e;
+  --button-ghost-hover-bg: var(--card, #f6f8fa);
+  --button-ghost-hover-text: var(--text, #24292e);
 
   /* Link Button Colors */
   --button-link-bg: transparent;
