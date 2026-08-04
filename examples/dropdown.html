@@ -1,280 +1,85 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dropdown - CSS Components Demo</title>
-    <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="../dropdown.css">
-    <link rel="stylesheet" href="../button.css">
-    <style>
-        body {
-            padding: 20px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1, h2 {
-            margin-top: 24px;
-            margin-bottom: 16px;
-        }
-        .dropdown-group {
-            margin: 20px 0;
-            padding: 20px;
-            border-left: 4px solid #4F46E5;
-            background-color: #f9f9f9;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-            margin: 10px;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        .dropdown:hover .dropbtn {
-            background-color: #3e8e41;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>下拉 — CSS Components</title>
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="../theme/light.css">
+  <link rel="stylesheet" href="../theme/dark.css">
+  <link rel="stylesheet" href="../theme/google.css">
+  <link rel="stylesheet" href="../theme/pink.css">
+  <link rel="stylesheet" href="./demo.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Dropdown 下拉菜单组件</h1>
-        <p>这是下拉菜单组件的演示页面，展示了各种下拉菜单样式和行为。</p>
-        
-        <div class="dropdown-group">
-            <h2>基本下拉菜单</h2>
-            <div class="dropdown">
-                <button class="button button-primary">下拉菜单 <i class="fas fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="#">选项 1</a>
-                    <a href="#">选项 2</a>
-                    <a href="#">选项 3</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="dropdown-group">
-            <h2>不同颜色的下拉菜单</h2>
-            <div class="dropdown">
-                <button class="button button-secondary">次要菜单 <i class="fas fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="#">账户设置</a>
-                    <a href="#">个人资料</a>
-                    <a href="#">登出</a>
-                </div>
-            </div>
-            
-            <div class="dropdown">
-                <button class="button button-success">成功菜单 <i class="fas fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="#">保存</a>
-                    <a href="#">导出</a>
-                    <a href="#">分享</a>
-                </div>
-            </div>
-            
-            <div class="dropdown">
-                <button class="button button-danger">危险菜单 <i class="fas fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="#">删除</a>
-                    <a href="#">清空</a>
-                    <a href="#">重置</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="dropdown-group">
-            <h2>不同尺寸的下拉菜单</h2>
-            <div class="dropdown">
-                <button class="button button-primary button-sm">小尺寸 <i class="fas fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="#">小选项 1</a>
-                    <a href="#">小选项 2</a>
-                </div>
-            </div>
-            
-            <div class="dropdown">
-                <button class="button button-primary button-md">中尺寸 <i class="fas fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="#">中选项 1</a>
-                    <a href="#">中选项 2</a>
-                    <a href="#">中选项 3</a>
-                </div>
-            </div>
-            
-            <div class="dropdown">
-                <button class="button button-primary button-lg">大尺寸 <i class="fas fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="#">大选项 1</a>
-                    <a href="#">大选项 2</a>
-                    <a href="#">大选项 3</a>
-                    <a href="#">大选项 4</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="dropdown-group">
-            <h2>带图标的下拉菜单</h2>
-            <div class="dropdown">
-                <button class="button button-outline-primary">
-                    <i class="fas fa-cog"></i> 设置 <i class="fas fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#"><i class="fas fa-user mr-2"></i> 个人资料</a>
-                    <a href="#"><i class="fas fa-lock mr-2"></i> 安全</a>
-                    <a href="#"><i class="fas fa-bell mr-2"></i> 通知</a>
-                </div>
-            </div>
-            
-            <div class="dropdown">
-                <button class="button button-outline-success">
-                    <i class="fas fa-download"></i> 导出 <i class="fas fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#"><i class="fas fa-file-pdf mr-2"></i> 导出为PDF</a>
-                    <a href="#"><i class="fas fa-file-excel mr-2"></i> 导出为Excel</a>
-                    <a href="#"><i class="fas fa-file-word mr-2"></i> 导出为Word</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="dropdown-group">
-            <h2>下拉菜单与徽章结合</h2>
-            <div class="dropdown">
-                <button class="button button-primary">
-                    消息 <span class="badge badge-light">3</span> <i class="fas fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">
-                        <div class="d-flex justify-between">
-                            <span>新消息</span>
-                            <span class="badge badge-danger">2</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="d-flex justify-between">
-                            <span>提醒</span>
-                            <span class="badge badge-warning">1</span>
-                        </div>
-                    </a>
-                    <a href="#">查看全部</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="dropdown-group">
-            <h2>右对齐下拉菜单</h2>
-            <div class="d-flex justify-end">
-                <div class="dropdown">
-                    <button class="button button-outline-secondary">
-                        用户菜单 <i class="fas fa-user mr-2"></i> <i class="fas fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content" style="right: 0;">
-                        <a href="#"><i class="fas fa-user mr-2"></i> 个人资料</a>
-                        <a href="#"><i class="fas fa-cog mr-2"></i> 设置</a>
-                        <a href="#"><i class="fas fa-question-circle mr-2"></i> 帮助</a>
-                        <hr style="margin: 5px 0; border-top: 1px solid #eee;">
-                        <a href="#"><i class="fas fa-sign-out-alt mr-2"></i> 登出</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="dropdown-group">
-            <h2>下拉菜单在导航中的应用</h2>
-            <nav class="navigation navigation-horizontal">
-                <a href="#" class="navigation-brand">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="24" height="24" fill="#4F46E5" />
-                    </svg>
-                    导航示例
-                </a>
-                <ul class="navigation-menu">
-                    <li><a href="#"><i class="fas fa-home"></i> <span>首页</span></a></li>
-                    <li>
-                        <a href="#"><i class="fas fa-folder"></i> <span>项目</span> <i class="fas fa-caret-down ml-auto"></i></a>
-                        <ul class="dropdown-content navigation-submenu" style="display: none; position: static; box-shadow: none; background: none;">
-                            <li><a href="#"><span>项目列表</span></a></li>
-                            <li><a href="#"><span>新建项目</span></a></li>
-                            <li><a href="#"><span>归档项目</span></a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><i class="fas fa-users"></i> <span>团队</span></a></li>
-                    <li>
-                        <a href="#"><i class="fas fa-cog"></i> <span>设置</span> <i class="fas fa-caret-down ml-auto"></i></a>
-                        <ul class="dropdown-content navigation-submenu" style="display: none; position: static; box-shadow: none; background: none;">
-                            <li><a href="#"><span>账户设置</span></a></li>
-                            <li><a href="#"><span>安全</span></a></li>
-                            <li><a href="#"><span>通知</span></a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        
-        <div class="dropdown-group">
-            <h2>多级下拉菜单</h2>
-            <div class="dropdown">
-                <button class="button button-outline-primary">多级菜单 <i class="fas fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="#">一级选项 1</a>
-                    <a href="#">一级选项 2</a>
-                    <div class="dropdown">
-                        <a href="#" class="d-flex justify-between">
-                            <span>更多选项</span>
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
-                        <div class="dropdown-content" style="left: 100%; top: 0;">
-                            <a href="#">二级选项 1</a>
-                            <a href="#">二级选项 2</a>
-                            <div class="dropdown">
-                                <a href="#" class="d-flex justify-between">
-                                    <span>更深层级</span>
-                                    <i class="fas fa-chevron-right"></i>
-                                </a>
-                                <div class="dropdown-content" style="left: 100%; top: 0;">
-                                    <a href="#">三级选项 1</a>
-                                    <a href="#">三级选项 2</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <header class="demo-header">
+    <div>
+      <h1>下拉菜单</h1>
+      <p class="demo-subtitle">dropdown.css — 触发器 + 内容面板，点击展开 / 收起</p>
     </div>
-    
-    <script>
-        // 简单的下拉菜单交互脚本
-        document.querySelectorAll('.navigation-menu > li > a').forEach(item => {
-            item.addEventListener('click', function(e) {
-                if (this.nextElementSibling && this.nextElementSibling.classList.contains('navigation-submenu')) {
-                    e.preventDefault();
-                    const submenu = this.nextElementSibling;
-                    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-                }
-            });
-        });
-    </script>
+    <div class="demo-toolbar" role="group" aria-label="主题">
+      <button class="button button-small" type="button" data-set-theme="light">亮色</button>
+      <button class="button button-small" type="button" data-set-theme="dark">暗色</button>
+      <button class="button button-small" type="button" data-set-theme="google">谷歌</button>
+      <button class="button button-small" type="button" data-set-theme="pink">粉红</button>
+    </div>
+  </header>
+
+  <main class="demo-main">
+    <p>
+      结构：<code class="demo-code">.dropdown &gt; .dropdown-toggle + .dropdown-content</code>。
+      触发器加 <code class="demo-code">data-dropdown="id"</code>，目标面板使用该 id；点击外部自动关闭。
+    </p>
+
+    <div class="demo-section">
+      <h2>基础下拉</h2>
+      <div class="demo-row">
+        <div class="dropdown">
+          <button class="button button-primary dropdown-toggle" type="button" data-dropdown="drop-1">更多操作</button>
+          <div class="dropdown-content" id="drop-1">
+            <a class="dropdown-item" href="#">编辑</a>
+            <a class="dropdown-item" href="#">复制链接</a>
+            <div class="dropdown-separator"></div>
+            <a class="dropdown-item" href="#">删除</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>对齐方式（.dropdown.right / .dropdown.left）</h2>
+      <div class="demo-row">
+        <div class="dropdown right">
+          <button class="button button-secondary dropdown-toggle" type="button" data-dropdown="drop-2">右对齐</button>
+          <div class="dropdown-content" id="drop-2">
+            <a class="dropdown-item" href="#">选项一</a>
+            <a class="dropdown-item" href="#">选项二</a>
+          </div>
+        </div>
+        <div class="dropdown left">
+          <button class="button button-secondary dropdown-toggle" type="button" data-dropdown="drop-3">左对齐</button>
+          <div class="dropdown-content" id="drop-3">
+            <a class="dropdown-item" href="#">选项一</a>
+            <a class="dropdown-item" href="#">选项二</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>带图标的分隔列表</h2>
+      <div class="dropdown">
+        <button class="button button-secondary dropdown-toggle" type="button" data-dropdown="drop-4">用户菜单</button>
+        <div class="dropdown-content" id="drop-4">
+          <a class="dropdown-item" href="#">👤 个人资料</a>
+          <a class="dropdown-item" href="#">⚙️ 设置</a>
+          <div class="dropdown-separator"></div>
+          <a class="dropdown-item" href="#">🚪 退出登录</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./demo.js"></script>
 </body>
 </html>

@@ -1,8 +1,8 @@
+@import url(./base.css);
+
 :root {
   --progress-bar-height: 8px;
-  --progress-bar-border-radius: 4px;
-  --progress-bar-background: #e1e4e8;
-  --progress-bar-foreground: linear-gradient(90deg, #0366d6, #007bff);
+  --progress-bar-border-radius: var(--radius-sm);
 }
 
 .progress-bar {
@@ -10,8 +10,8 @@
   z-index: 100;
   overflow: hidden;
   height: var(--progress-bar-height, 20px);
-  background: var(--progress-bar-background, #ccc);
-  border-radius: var(--progress-bar-border-radius, var(--border-radius));
+  background: var(--progress-bar-background, var(--color-border));
+  border-radius: var(--progress-bar-border-radius);
 }
 
 .progress-bar-inner,
@@ -20,7 +20,7 @@
   max-width: 100%;
   border-radius: 4px;
   transition: width 0.5s ease;
-  background: var(--progress-bar-foreground);
+  background: var(--progress-bar-foreground, linear-gradient(90deg, var(--color-primary), var(--color-primary-hover)));
 }
 
 .progress-bar-loading {

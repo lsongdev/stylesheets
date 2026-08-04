@@ -1,188 +1,83 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Badge - CSS Components Demo</title>
-    <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="../badge.css">
-    <style>
-        body {
-            padding: 20px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1, h2 {
-            margin-top: 24px;
-            margin-bottom: 16px;
-        }
-        .badge-group {
-            margin: 20px 0;
-            padding: 20px;
-            border-left: 4px solid #4F46E5;
-            background-color: #f9f9f9;
-        }
-        .badge-sample {
-            margin: 10px 5px;
-            padding: 10px 0;
-        }
-        .d-flex {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>徽章 — CSS Components</title>
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="../theme/light.css">
+  <link rel="stylesheet" href="../theme/dark.css">
+  <link rel="stylesheet" href="../theme/google.css">
+  <link rel="stylesheet" href="../theme/pink.css">
+  <link rel="stylesheet" href="./demo.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Badge 徽章组件</h1>
-        <p>这是徽章组件的演示页面，展示了各种徽章样式和用途。</p>
-        
-        <div class="badge-group">
-            <h2>基本徽章</h2>
-            <div class="badge-sample">
-                <span class="badge">默认徽章</span>
-                <span class="badge badge-primary">主要徽章</span>
-                <span class="badge badge-success">成功徽章</span>
-                <span class="badge badge-danger">危险徽章</span>
-                <span class="badge badge-warning">警告徽章</span>
-                <span class="badge badge-info">信息徽章</span>
-                <span class="badge badge-light">浅色徽章</span>
-                <span class="badge badge-dark">深色徽章</span>
-            </div>
-        </div>
-        
-        <div class="badge-group">
-            <h2>不同尺寸的徽章</h2>
-            <div class="badge-sample">
-                <span class="badge badge-xs">超小徽章</span>
-                <span class="badge badge-sm">小徽章</span>
-                <span class="badge badge-md">中徽章</span>
-                <span class="badge badge-lg">大徽章</span>
-                <span class="badge badge-xl">超大徽章</span>
-            </div>
-        </div>
-        
-        <div class="badge-group">
-            <h2>轮廓徽章</h2>
-            <div class="badge-sample">
-                <span class="badge badge-outline">轮廓徽章</span>
-                <span class="badge badge-outline-primary">主要轮廓</span>
-                <span class="badge badge-outline-success">成功轮廓</span>
-                <span class="badge badge-outline-danger">危险轮廓</span>
-                <span class="badge badge-outline-warning">警告轮廓</span>
-            </div>
-        </div>
-        
-        <div class="badge-group">
-            <h2>圆角徽章</h2>
-            <div class="badge-sample">
-                <span class="badge badge-pill">椭圆形徽章</span>
-                <span class="badge badge-pill badge-primary">椭圆主要</span>
-                <span class="badge badge-pill badge-success">椭圆成功</span>
-                <span class="badge badge-pill badge-danger">椭圆危险</span>
-            </div>
-        </div>
-        
-        <div class="badge-group">
-            <h2>徽章与文本结合</h2>
-            <div class="badge-sample">
-                <h3>标题带有徽章 <span class="badge badge-primary">新</span></h3>
-                <p>这是一个带有徽章的段落 <span class="badge badge-warning">标签</span></p>
-                <div class="d-flex">
-                    <span>项目名称</span>
-                    <span class="badge badge-info">特性</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="badge-group">
-            <h2>徽章与链接结合</h2>
-            <div class="badge-sample">
-                <a href="#" class="link">
-                    导航链接 <span class="badge badge-danger">3</span>
-                </a>
-                |
-                <a href="#" class="link">
-                    消息 <span class="badge badge-success">已读</span>
-                </a>
-                |
-                <a href="#" class="link">
-                    通知 <span class="badge badge-warning">待处理</span>
-                </a>
-            </div>
-        </div>
-        
-        <div class="badge-group">
-            <h2>徽章在按钮中的应用</h2>
-            <div class="badge-sample">
-                <button class="button button-primary">
-                    消息 <span class="badge badge-light badge-in-button">5</span>
-                </button>
-                <button class="button button-secondary">
-                    通知 <span class="badge badge-danger badge-in-button">新</span>
-                </button>
-                <button class="button button-outline-success">
-                    更新 <span class="badge badge-warning badge-in-button">!</span>
-                </button>
-            </div>
-        </div>
-        
-        <div class="badge-group">
-            <h2>徽章在导航中的应用</h2>
-            <div class="badge-sample">
-                <nav class="d-flex gap-4">
-                    <a href="#" class="link">
-                        <i class="fas fa-home"></i> 首页
-                    </a>
-                    <a href="#" class="link">
-                        <i class="fas fa-envelope"></i> 消息 
-                        <span class="badge badge-danger badge-positioned">12</span>
-                    </a>
-                    <a href="#" class="link">
-                        <i class="fas fa-bell"></i> 通知 
-                        <span class="badge badge-warning badge-positioned">3</span>
-                    </a>
-                    <a href="#" class="link">
-                        <i class="fas fa-user"></i> 用户
-                    </a>
-                </nav>
-            </div>
-        </div>
-        
-        <div class="badge-group">
-            <h2>空徽章（仅点状）</h2>
-            <div class="badge-sample">
-                <span class="badge badge-dot"></span>
-                <span class="badge badge-dot badge-primary"></span>
-                <span class="badge badge-dot badge-success"></span>
-                <span class="badge badge-dot badge-danger"></span>
-                <span class="badge badge-dot badge-warning"></span>
-            </div>
-        </div>
-        
-        <div class="badge-group">
-            <h2>徽章在列表中的应用</h2>
-            <div class="badge-sample">
-                <ul class="list-group">
-                    <li class="list-item d-flex justify-between">
-                        <span>任务 1</span>
-                        <span class="badge badge-success">完成</span>
-                    </li>
-                    <li class="list-item d-flex justify-between">
-                        <span>任务 2</span>
-                        <span class="badge badge-warning">进行中</span>
-                    </li>
-                    <li class="list-item d-flex justify-between">
-                        <span>任务 3</span>
-                        <span class="badge badge-danger">紧急</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
+  <header class="demo-header">
+    <div>
+      <h1>徽章</h1>
+      <p class="demo-subtitle">badge.css — 状态徽章与语义别名</p>
     </div>
+    <div class="demo-toolbar" role="group" aria-label="主题">
+      <button class="button button-small" type="button" data-set-theme="light">亮色</button>
+      <button class="button button-small" type="button" data-set-theme="dark">暗色</button>
+      <button class="button button-small" type="button" data-set-theme="google">谷歌</button>
+      <button class="button button-small" type="button" data-set-theme="pink">粉红</button>
+    </div>
+  </header>
+
+  <main class="demo-main">
+    <div class="demo-section">
+      <h2>语义变体</h2>
+      <div class="demo-row">
+        <span class="badge">默认</span>
+        <span class="badge badge-info">信息</span>
+        <span class="badge badge-success">成功</span>
+        <span class="badge badge-warning">警告</span>
+        <span class="badge badge-danger">危险</span>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>状态别名</h2>
+      <div class="demo-row">
+        <span class="badge badge-online">在线</span>
+        <span class="badge badge-running">运行中</span>
+        <span class="badge badge-completed">已完成</span>
+        <span class="badge badge-enabled">已启用</span>
+        <span class="badge badge-pending">待处理</span>
+        <span class="badge badge-offline">离线</span>
+        <span class="badge badge-failed">失败</span>
+        <span class="badge badge-disabled">已停用</span>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>布尔 / 判定别名</h2>
+      <div class="demo-row">
+        <span class="badge badge-true">是</span>
+        <span class="badge badge-false">否</span>
+        <span class="badge badge-valid">有效</span>
+        <span class="badge badge-invalid">无效</span>
+        <span class="badge badge-accept">接受</span>
+        <span class="badge badge-reject">拒绝</span>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>徽章在组件中的使用</h2>
+      <div class="demo-column">
+        <button class="button button-icon" type="button">
+          通知
+          <span class="badge badge-danger">3</span>
+        </button>
+        <div class="card" style="margin:0">
+          <p style="margin-top:0">服务状态：<span class="badge badge-online">正常</span></p>
+          <p>数据同步：<span class="badge badge-running">同步中</span></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./demo.js"></script>
 </body>
 </html>

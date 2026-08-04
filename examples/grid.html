@@ -1,324 +1,109 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid - CSS Components Demo</title>
-    <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="../grid.css">
-    <style>
-        body {
-            padding: 20px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            background: #f8fafc;
-        }
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-        }
-        h1, h2 {
-            margin-top: 24px;
-            margin-bottom: 16px;
-        }
-        .grid-item {
-            background: #4F46E5;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            border-radius: 8px;
-            font-weight: 500;
-        }
-        .grid-item:nth-child(even) {
-            background: #10B981;
-        }
-        .grid-item.darker {
-            background: #312e81;
-        }
-        .grid-item.darker:nth-child(even) {
-            background: #065f46;
-        }
-        .grid-item.outlined {
-            background: transparent;
-            color: #4F46E5;
-            border: 2px dashed #4F46E5;
-        }
-        .grid-item.tall { padding: 3rem 1rem; }
-        .grid-item.short { padding: 0.5rem 1rem; }
-
-        .demo-title {
-            font-weight: bold;
-            margin-bottom: 8px;
-            font-size: 1.1rem;
-        }
-        .demo-description {
-            color: #64748b;
-            margin-bottom: 16px;
-            font-size: 0.9rem;
-        }
-        .demo-section {
-            margin: 30px 0;
-            padding: 24px;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            background: #fff;
-        }
-        code {
-            background: #f1f5f9;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.85em;
-            color: #334155;
-        }
-        .breakpoint-hint {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            background: #e0e7ff;
-            color: #4338ca;
-            margin-bottom: 12px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid — CSS Components</title>
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="../theme/light.css">
+  <link rel="stylesheet" href="../theme/dark.css">
+  <link rel="stylesheet" href="../theme/google.css">
+  <link rel="stylesheet" href="../theme/pink.css">
+  <link rel="stylesheet" href="./demo.css">
+  <style>
+    .demo-grid-box {
+      padding: 14px 0;
+      font-size: 13px;
+      font-weight: 600;
+      text-align: center;
+      color: #fff;
+      background: var(--color-primary);
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Grid 网格布局</h1>
-        <p>现代 CSS Grid 布局系统演示。所有示例基于 <code>grid.css</code>。</p>
-
-        <div class="demo-section">
-            <div class="demo-title">自动列宽网格</div>
-            <div class="demo-description">使用 <code>grid-cols-auto</code> 创建响应式卡片网格，每列最小 <code>--col-min</code> 宽（默认 250px）</div>
-            <div class="grid grid-cols-auto gap-4" style="--col-min: 180px;">
-                <div class="grid-item">Item 1</div>
-                <div class="grid-item">Item 2</div>
-                <div class="grid-item">Item 3</div>
-                <div class="grid-item">Item 4</div>
-                <div class="grid-item">Item 5</div>
-            </div>
-        </div>
-
-        <div class="demo-section">
-            <div class="demo-title">响应式网格</div>
-            <div class="demo-description">在不同屏幕尺寸下自动调整列数：<code>grid-cols-1 sm-grid-cols-2 md-grid-cols-3 lg-grid-cols-4</code></div>
-            <div class="breakpoint-hint">调整浏览器宽度查看变化</div>
-            <div class="grid grid-cols-1 sm-grid-cols-2 md-grid-cols-3 lg-grid-cols-4 gap-4">
-                <div class="grid-item">1 / 2 / 3 / 4 列</div>
-                <div class="grid-item">1 / 2 / 3 / 4 列</div>
-                <div class="grid-item">1 / 2 / 3 / 4 列</div>
-                <div class="grid-item">1 / 2 / 3 / 4 列</div>
-                <div class="grid-item">1 / 2 / 3 / 4 列</div>
-                <div class="grid-item">1 / 2 / 3 / 4 列</div>
-            </div>
-        </div>
-
-        <div class="demo-section">
-            <div class="demo-title">固定列数网格</div>
-            <div class="demo-description">使用 <code>grid-cols-{n}</code> 快速设置固定列数</div>
-
-            <h3>2 列</h3>
-            <div class="grid grid-cols-2 gap-4 mb-4">
-                <div class="grid-item">A</div>
-                <div class="grid-item">B</div>
-            </div>
-
-            <h3>3 列</h3>
-            <div class="grid grid-cols-3 gap-4 mb-4">
-                <div class="grid-item">A</div>
-                <div class="grid-item">B</div>
-                <div class="grid-item">C</div>
-            </div>
-
-            <h3>4 列</h3>
-            <div class="grid grid-cols-4 gap-4 mb-4">
-                <div class="grid-item">A</div>
-                <div class="grid-item">B</div>
-                <div class="grid-item">C</div>
-                <div class="grid-item">D</div>
-            </div>
-
-            <h3>6 列</h3>
-            <div class="grid grid-cols-6 gap-4 mb-4">
-                <div class="grid-item">A</div>
-                <div class="grid-item">B</div>
-                <div class="grid-item">C</div>
-                <div class="grid-item">D</div>
-                <div class="grid-item">E</div>
-                <div class="grid-item">F</div>
-            </div>
-        </div>
-
-        <div class="demo-section">
-            <div class="demo-title">跨列网格项</div>
-            <div class="demo-description">使用 <code>col-span-{n}</code> 让网格项跨越多列</div>
-
-            <div class="grid grid-cols-6 gap-4 mb-4">
-                <div class="grid-item col-span-2">跨 2 列</div>
-                <div class="grid-item">普通</div>
-                <div class="grid-item col-span-2">跨 2 列</div>
-                <div class="grid-item">普通</div>
-            </div>
-
-            <div class="grid grid-cols-6 gap-4 mb-4">
-                <div class="grid-item col-span-3">跨 3 列</div>
-                <div class="grid-item col-span-3">跨 3 列</div>
-            </div>
-
-            <div class="grid grid-cols-6 gap-4 mb-4">
-                <div class="grid-item col-span-4">跨 4 列</div>
-                <div class="grid-item col-span-2">跨 2 列</div>
-            </div>
-
-            <div class="grid grid-cols-6 gap-4 mb-4">
-                <div class="grid-item col-span-6">跨 6 列（全宽）</div>
-            </div>
-        </div>
-
-        <div class="demo-section">
-            <div class="demo-title">响应式跨列</div>
-            <div class="demo-description"><code>col-span-12 sm-col-span-6 md-col-span-4 lg-col-span-3</code> — 小屏全宽，大屏多列</div>
-            <div class="grid grid-cols-12 gap-4">
-                <div class="grid-item col-span-12 sm-col-span-6 md-col-span-4 lg-col-span-3">自适应</div>
-                <div class="grid-item col-span-12 sm-col-span-6 md-col-span-4 lg-col-span-3">自适应</div>
-                <div class="grid-item col-span-12 sm-col-span-6 md-col-span-4 lg-col-span-3">自适应</div>
-                <div class="grid-item col-span-12 sm-col-span-6 md-col-span-4 lg-col-span-3">自适应</div>
-            </div>
-        </div>
-
-        <div class="demo-section">
-            <div class="demo-title">网格偏移</div>
-            <div class="demo-description">使用 <code>col-start-{n}</code> 控制网格项从哪一列开始</div>
-
-            <div class="grid grid-cols-6 gap-4 mb-4">
-                <div class="grid-item col-start-2">从第 2 列开始</div>
-            </div>
-
-            <div class="grid grid-cols-6 gap-4 mb-4">
-                <div class="grid-item col-start-3 col-span-3">从第 3 列开始，跨 3 列</div>
-            </div>
-
-            <div class="grid grid-cols-6 gap-4 mb-4">
-                <div class="grid-item col-start-4 col-span-3">从第 4 列开始，跨 3 列</div>
-            </div>
-        </div>
-
-        <div class="demo-section">
-            <div class="demo-title">行跨与等高布局</div>
-            <div class="demo-description">使用 <code>row-span-{n}</code> 让网格项跨越多行</div>
-            <div class="grid grid-cols-3 gap-4">
-                <div class="grid-item row-span-2 tall">跨 2 行</div>
-                <div class="grid-item">普通</div>
-                <div class="grid-item">普通</div>
-                <div class="grid-item">普通</div>
-                <div class="grid-item">普通</div>
-            </div>
-        </div>
-
-        <div class="demo-section">
-            <div class="demo-title">Dense 密集填充</div>
-            <div class="demo-description">使用 <code>grid-dense</code> 让网格自动填充空隙</div>
-            <div class="grid grid-cols-4 gap-4 grid-dense">
-                <div class="grid-item col-span-2">跨 2 列</div>
-                <div class="grid-item">普通</div>
-                <div class="grid-item">普通</div>
-                <div class="grid-item col-span-2">跨 2 列</div>
-                <div class="grid-item">普通</div>
-                <div class="grid-item">普通</div>
-            </div>
-        </div>
-
-        <div class="demo-section">
-            <div class="demo-title">对齐方式</div>
-            <div class="demo-description">使用 <code>items-*</code> 和 <code>justify-*</code> 控制对齐</div>
-
-            <h3>垂直居中 <code>items-center</code></h3>
-            <div class="grid grid-cols-3 gap-4 items-center mb-4" style="min-height: 120px; border: 1px dashed #cbd5e1; border-radius: 8px; padding: 12px;">
-                <div class="grid-item short">矮</div>
-                <div class="grid-item tall">高</div>
-                <div class="grid-item short">矮</div>
-            </div>
-
-            <h3>底部对齐 <code>items-end</code></h3>
-            <div class="grid grid-cols-3 gap-4 items-end mb-4" style="min-height: 120px; border: 1px dashed #cbd5e1; border-radius: 8px; padding: 12px;">
-                <div class="grid-item short">矮</div>
-                <div class="grid-item tall">高</div>
-                <div class="grid-item short">矮</div>
-            </div>
-
-            <h3>水平居中 <code>justify-center</code></h3>
-            <div class="grid grid-cols-3 gap-4 justify-center mb-4" style="border: 1px dashed #cbd5e1; border-radius: 8px; padding: 12px;">
-                <div class="grid-item">A</div>
-                <div class="grid-item">B</div>
-            </div>
-        </div>
-
-        <div class="demo-section">
-            <div class="demo-title">Order 排序</div>
-            <div class="demo-description">使用 <code>order-*</code> 改变网格项顺序，无需改动 HTML</div>
-            <div class="grid grid-cols-4 gap-4">
-                <div class="grid-item order-3">1（order-3）</div>
-                <div class="grid-item order-1">2（order-1）</div>
-                <div class="grid-item order-4">3（order-4）</div>
-                <div class="grid-item order-2">4（order-2）</div>
-            </div>
-        </div>
-
-        <div class="demo-section">
-            <div class="demo-title">嵌套网格</div>
-            <div class="demo-description">在网格项内部继续使用 <code>.grid</code> 创建嵌套布局</div>
-            <div class="grid grid-cols-3 gap-4">
-                <div class="grid-item p-0">
-                    <div class="grid grid-cols-2 h-full">
-                        <div class="grid-item darker">嵌套 A</div>
-                        <div class="grid-item darker">嵌套 B</div>
-                    </div>
-                </div>
-                <div class="grid-item p-0">
-                    <div class="grid grid-cols-3 h-full">
-                        <div class="grid-item darker">A</div>
-                        <div class="grid-item darker">B</div>
-                        <div class="grid-item darker">C</div>
-                    </div>
-                </div>
-                <div class="grid-item">普通项</div>
-            </div>
-        </div>
-
-        <div class="demo-section">
-            <div class="demo-title">显示/隐藏</div>
-            <div class="demo-description">响应式显示控制：<code>hidden sm-block</code> 表示小屏隐藏、sm 及以上显示</div>
-            <div class="grid grid-cols-3 gap-4">
-                <div class="grid-item hidden sm-block">sm 以下隐藏</div>
-                <div class="grid-item">始终显示</div>
-                <div class="grid-item hidden md-block">md 以下隐藏</div>
-            </div>
-        </div>
-
-        <div class="demo-section">
-            <div class="demo-title">Gap 间距</div>
-            <div class="demo-description">使用 <code>gap-{n}</code>、<code>gap-x-{n}</code>、<code>gap-y-{n}</code> 精确控制间距</div>
-
-            <h3>gap-2</h3>
-            <div class="grid grid-cols-4 gap-2 mb-4">
-                <div class="grid-item">A</div><div class="grid-item">B</div><div class="grid-item">C</div><div class="grid-item">D</div>
-            </div>
-
-            <h3>gap-4</h3>
-            <div class="grid grid-cols-4 gap-4 mb-4">
-                <div class="grid-item">A</div><div class="grid-item">B</div><div class="grid-item">C</div><div class="grid-item">D</div>
-            </div>
-
-            <h3>gap-6</h3>
-            <div class="grid grid-cols-4 gap-6 mb-4">
-                <div class="grid-item">A</div><div class="grid-item">B</div><div class="grid-item">C</div><div class="grid-item">D</div>
-            </div>
-
-            <h3>gap-x-6 gap-y-2</h3>
-            <div class="grid grid-cols-4 gap-x-6 gap-y-2">
-                <div class="grid-item">A</div><div class="grid-item">B</div><div class="grid-item">C</div><div class="grid-item">D</div>
-                <div class="grid-item">E</div><div class="grid-item">F</div><div class="grid-item">G</div><div class="grid-item">H</div>
-            </div>
-        </div>
+  <header class="demo-header">
+    <div>
+      <h1>Grid</h1>
+      <p class="demo-subtitle">12 列栅格：<code class="demo-code">.grid-cols-*</code>、跨列、偏移与响应式断点</p>
     </div>
+    <div class="demo-toolbar" role="group" aria-label="主题">
+      <button class="button button-small" type="button" data-set-theme="light">亮色</button>
+      <button class="button button-small" type="button" data-set-theme="dark">暗色</button>
+      <button class="button button-small" type="button" data-set-theme="google">谷歌</button>
+      <button class="button button-small" type="button" data-set-theme="pink">粉红</button>
+    </div>
+  </header>
+
+  <main class="demo-main">
+    <p>
+      默认 12 列，列数由 <code class="demo-code">--grid-columns</code> 控制，间距由
+      <code class="demo-code">--grid-gap</code>（默认 1.5rem）控制。断点：xl ≤1279px、lg ≤1023px、
+      md ≤767px、sm ≤639px。
+    </p>
+
+    <div class="demo-section">
+      <h2>等分布局</h2>
+      <div class="grid grid-cols-4">
+        <div class="demo-grid-box">1</div><div class="demo-grid-box">2</div>
+        <div class="demo-grid-box">3</div><div class="demo-grid-box">4</div>
+      </div>
+      <div class="grid grid-cols-3">
+        <div class="demo-grid-box">1</div><div class="demo-grid-box">2</div><div class="demo-grid-box">3</div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>跨列（.col-span-*）</h2>
+      <div class="grid grid-cols-12">
+        <div class="demo-grid-box col-span-4">col-span-4</div>
+        <div class="demo-grid-box col-span-8">col-span-8</div>
+        <div class="demo-grid-box col-span-6">col-span-6</div>
+        <div class="demo-grid-box col-span-6">col-span-6</div>
+        <div class="demo-grid-box col-full">col-full</div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>偏移（.col-start-*）</h2>
+      <div class="grid grid-cols-12">
+        <div class="demo-grid-box col-start-2 col-span-5">col-start-2 col-span-5</div>
+        <div class="demo-grid-box col-start-8 col-span-4">col-start-8 col-span-4</div>
+        <div class="demo-grid-box col-start-4 col-span-5">col-start-4 col-span-5</div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>自动填充（.grid-auto / .grid-fit）</h2>
+      <h3>.grid-auto — 按容器自动排布，最小列宽 --col-min（250px）</h3>
+      <div class="grid grid-auto">
+        <div class="demo-grid-box">A</div><div class="demo-grid-box">B</div>
+        <div class="demo-grid-box">C</div><div class="demo-grid-box">D</div>
+        <div class="demo-grid-box">E</div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>响应式</h2>
+      <div class="grid grid-cols-4 lg-grid-cols-2 sm-grid-cols-1">
+        <div class="demo-grid-box">4 → 2 → 1 列</div>
+        <div class="demo-grid-box">4 → 2 → 1 列</div>
+        <div class="demo-grid-box">4 → 2 → 1 列</div>
+        <div class="demo-grid-box">4 → 2 → 1 列</div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>行列间隔工具（utils.css）</h2>
+      <div class="grid grid-cols-3 gap-6">
+        <div class="demo-grid-box">gap-6</div>
+        <div class="demo-grid-box">gap-6</div>
+        <div class="demo-grid-box">gap-6</div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./demo.js"></script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+@import url(./base.css);
+
 /* Table component styles */
 .table-container,
 .table-wrap {
@@ -9,41 +11,31 @@
 }
 
 .table {
-  --table-bg: #fff;
-  --table-header-bg: var(--color-f6f8fa);
-  --table-border: var(--color-e1e4e8);
-  --table-text: var(--color-24292e);
-  --table-hover-bg: var(--color-f6f8fa);
-  --table-stripe-bg: var(--color-f9f9f9);
-  --table-code-bg: var(--color-f6f8fa);
-  --table-info-label: var(--color-586069);
-  --table-shadow: 0 1px 3px var(--color-overlay-normal);
-
   width: 100%;
   border-collapse: collapse;
-  background: var(--table-bg);
+  background: var(--table-bg, var(--color-surface));
   border-radius: 6px;
   overflow-y: hidden;
   overflow-x: auto;
-  box-shadow: var(--table-shadow);
+  box-shadow: var(--table-shadow, 0 1px 3px rgb(var(--shadow-color) / 8%));
 }
 
 .table thead {
-  background: var(--table-header-bg);
-  border-bottom: 2px solid var(--table-border);
+  background: var(--table-header-bg, var(--color-surface-subtle));
+  border-bottom: 2px solid var(--table-border, var(--color-border));
 }
 
 .table th {
   padding: 12px 16px;
   text-align: left;
   font-weight: 600;
-  color: var(--table-text);
+  color: var(--table-text, var(--color-text));
   font-size: 13px;
 }
 
 .table td {
   padding: 12px 16px;
-  border-bottom: 1px solid var(--table-border);
+  border-bottom: 1px solid var(--table-border, var(--color-border));
   font-size: 13px;
 }
 
@@ -62,20 +54,20 @@
 }
 
 .table tbody tr:hover {
-  background: var(--table-hover-bg);
+  background: var(--table-hover-bg, var(--color-surface-subtle));
 }
 
 .table-striped tbody tr:nth-child(odd) {
-  background-color: var(--table-stripe-bg);
+  background-color: var(--table-stripe-bg, var(--color-canvas));
 }
 
 .table-bordered {
-  border: 1px solid var(--table-border);
+  border: 1px solid var(--table-border, var(--color-border));
 }
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid var(--table-border);
+  border: 1px solid var(--table-border, var(--color-border));
 }
 
 .table-compact th,
@@ -103,8 +95,8 @@
 
 
 .info-table {
-  --info-table-label: var(--color-586069);
-  --info-table-border: var(--color-e1e4e8);
+  --info-table-label: var(--color-text-muted);
+  --info-table-border: var(--color-border);
 
   width: 100%;
   border-collapse: collapse;
@@ -130,15 +122,8 @@
   font-weight: 500;
 }
 
-@media (prefers-color-scheme: dark) {
-  [data-theme="auto"] {
-    --table-bg: var(--color-dark-bg);
-    --table-header-bg: var(--color-dark-surface);
-    --table-border: var(--color-dark-border);
-    --table-text: var(--color-dark-text);
-    --table-hover-bg: var(--color-dark-surface);
-    --table-stripe-bg: var(--color-dark-surface-alt);
-    --table-code-bg: var(--color-dark-surface);
-    --table-shadow: var(--table-shadow-dark);
-  }
+.table td.num,
+.table th.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
 }

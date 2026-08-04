@@ -1,13 +1,15 @@
+@import url(./base.css);
+
 .form {
-  width: 100%;
+  /* width: 100%; */
+}
+
+.form > * {
+  margin-top: 10px;
 }
 
 .form-field,
 .form-group {
-  --form-label-text: var(--color-24292e, #24292e);
-  --form-help-text: var(--color-586069, #586069);
-  --form-error: var(--color-cb2431, #cb2431);
-
   margin: 10px 0;
 }
 
@@ -16,7 +18,7 @@
   display: block;
   margin-bottom: 8px;
   font-weight: 600;
-  color: var(--form-label-text);
+  color: var(--form-label-text, var(--color-text));
 }
 
 .form-group select,
@@ -24,22 +26,24 @@
   width: 100%;
 }
 
+.field-help,
 .form-group .help-text,
 .form-group small {
   display: block;
   margin-top: 5px;
-  color: var(--form-help-text);
   font-size: 12px;
+  font-weight: 400;
+  color: var(--form-help-text, var(--color-text-muted));
 }
 
 .form-group .error {
-  color: var(--form-error);
+  color: var(--form-error, var(--color-danger));
   font-size: 12px;
   margin-top: 5px;
 }
 
 .form-group .error :where(.input, select, textarea) {
-  --input-border-color: var(--form-error);
+  --input-border-color: var(--form-error, var(--color-danger));
 }
 
 .form-actions {
@@ -62,6 +66,9 @@
   justify-content: center;
   height: 44px;
   margin-top: 0;
+}
+
+.form-actions-fill .button {
   flex: 1;
 }
 
@@ -79,7 +86,7 @@
 .form-check {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
 }
 
 .form-check input {
@@ -87,7 +94,7 @@
 }
 
 .form-check label {
-  margin-bottom: 0;
+  margin: 0;
   font-weight: normal;
 }
 
@@ -102,22 +109,10 @@
   margin-bottom: 0;
 }
 
-@media (max-width: 640px) {
-  .form-inline,
-  .form-row {
-    align-items: stretch;
-    flex-direction: column;
-  }
-}
-
 label {
   display: block;
   font-weight: 650;
   margin: 16px 0 6px;
-}
-
-form > .button {
-  margin-top: 18px;
 }
 
 .form-grid {
@@ -129,12 +124,5 @@ form > .button {
 @media (max-width: 520px) {
   .form-grid {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  [data-theme="auto"] {
-    --form-label-text: var(--color-dark-text);
-    --form-help-text: var(--color-dark-text-secondary);
   }
 }

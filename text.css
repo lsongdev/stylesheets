@@ -1,4 +1,5 @@
 @import url(./font.css);
+@import url(./base.css);
 
 .text-left {
   text-align: left;
@@ -32,9 +33,9 @@
   font-style: italic;
 }
 
+.muted,
 .text-muted {
-  color: #586069;
-  font-size: 12px;
+  color: var(--color-text-muted);
 }
 
 .text-xs {
@@ -84,23 +85,6 @@
   text-overflow: ellipsis;
 }
 
-
-.text-muted {
-  color: var(--color-586069, #586069);
-}
-
-.font-bold {
-  font-weight: bold;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-center {
-  text-align: center;
-}
-
 .text-success {
   color: var(--color-success, #28a745);
 }
@@ -113,29 +97,9 @@
   color: var(--color-warning, #ffc107);
 }
 
-h1 {
-  font-size: 25px;
-  line-height: 1.25;
-  letter-spacing: -0.025em;
-  margin: 0 0 8px;
-}
-
-h2 {
-  font-size: 17px;
-  margin: 28px 0 12px;
-}
-
-p {
-  margin: 8px 0;
-}
-
-.muted {
-  color: var(--muted, var(--color-586069, #586069));
-}
-
 .eyebrow {
   margin: 0 0 4px;
-  color: var(--muted, var(--color-586069, #586069));
+  color: var(--color-text-muted);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;

@@ -1,3 +1,5 @@
+@import url(./base.css);
+
 /* @example
 <ul class="list">
     <li class="list-item track"><span class="list-item-leading">1</span>
@@ -31,9 +33,15 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--border-color, #eee);
+  border-bottom: 1px solid var(--color-border);
 }
 
+a.list-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list-item:last-child,
 .list-item:last-of-type {
   border-bottom: none;
 }
@@ -49,33 +57,4 @@
 .list-item-supporting {
   color: #757575;
   font-size: 0.9em;
-}
-
-.row {
-  gap: 12px;
-  display: flex;
-  padding: 13px 0;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--line, var(--border-color, #eee));
-}
-
-.row:last-child {
-  border-bottom: none;
-}
-
-.order-row {
-  color: inherit;
-  text-decoration: none;
-}
-
-.order-row:hover strong {
-  color: var(--accent, #2563eb);
-}
-
-@media (max-width: 520px) {
-  .row {
-    align-items: flex-start;
-    flex-direction: column;
-  }
 }

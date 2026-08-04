@@ -1,56 +1,25 @@
 @import url(./default.css);
 
-:root {
-  /* Base colors - Pink theme */
-  --background: 0 0% 100%;
-  --foreground: 340 40% 15%;
+[data-theme="pink"] {
+  color-scheme: light;
 
-  /* Surface colors */
-  --card: 0 0% 100%;
-  --card-foreground: 340 40% 15%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 340 40% 15%;
-
-  /* Primary colors - Pink */
-  --primary: 330 81% 60%;
-  --primary-foreground: 0 0% 100%;
-
-  /* Secondary colors */
-  --secondary: 330 30% 95%;
-  --secondary-foreground: 340 40% 15%;
-
-  /* Muted colors */
-  --muted: 330 30% 95%;
-  --muted-foreground: 330 20% 50%;
-
-  /* Accent colors */
-  --accent: 330 70% 90%;
-  --accent-foreground: 340 40% 15%;
-
-  /* Destructive colors */
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-
-  /* Border and input */
-  --border: 330 50% 85%;
-  --input: 330 30% 90%;
-  --ring: 330 81% 60%;
-
-  /* Legacy variables for compatibility */
-  --text-color: hsl(var(--foreground));
-  --border-color: hsl(var(--border));
-  --background-color: hsl(var(--background));
-  --content-background-color: hsl(var(--card));
-  --container-background: transparent;
-  --link-color: hsl(var(--primary));
-  --title-color: hsl(var(--foreground));
-  --code-block-background-color: hsl(var(--muted));
-  --button-normal-color: hsl(var(--foreground));
-  --button-normal-border-color: hsl(var(--border));
-  --button-normal-background-color: hsl(var(--secondary));
-  --button-primary-color: hsl(var(--primary-foreground));
-  --button-primary-border-color: hsl(var(--primary));
-  --button-primary-background-color: hsl(var(--primary));
-  --switch-color-off: hsl(var(--muted-foreground));
-  --select-background-color: hsl(var(--secondary));
+  --color-canvas: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #fdf2f8;
+  --color-surface-disabled: #fff0f6;
+  --color-text: #351721;
+  --color-text-muted: #996680;
+  --color-text-disabled: #c4a6b3;
+  --color-border: #ecc6d9;
+  --color-border-strong: #dbb0c6;
+  --color-primary: #ec4899;
+  --color-primary-hover: #db2777;
+  --color-focus: #ec4899;
+  --color-success: #16a34a;
+  --color-warning: #ca8a04;
+  --color-danger: #e11d48;
+  --color-on-primary: #ffffff;
+  --color-on-success: #ffffff;
+  --color-on-danger: #ffffff;
+  --shadow-color: 24 24 27;
 }

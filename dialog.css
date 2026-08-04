@@ -1,15 +1,17 @@
+@import url(./base.css);
+
 :root {
-  /* base */
-  --dialog-border-color: var(--border-color, #ccc);
-  --dialog-border-width: var(--border-width, 1px);
-  --dialog-border-radius: var(--border-radius, 4px);
+  /* Navigation and overlays */
+  --dialog-border-width: var(--border-width);
+  --dialog-border-radius: var(--radius-sm);
 }
 
 .dialog {
   box-sizing: border-box;
-  background-color: white;
+  color: var(--color-text);
+  background-color: var(--color-surface);
   border-radius: var(--dialog-border-radius);
-  border: var(--dialog-border-width) solid var(--dialog-border-color);
+  border: var(--dialog-border-width) solid var(--dialog-border-color, var(--color-border));
   box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
@@ -72,6 +74,7 @@
 }
 
 @media screen and (max-width: 768px) {
+
   .dialog-bottom,
   .dialog-drawer-bottom {
     min-width: 100%;

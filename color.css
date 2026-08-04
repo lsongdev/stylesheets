@@ -33,10 +33,12 @@
   --color-ccc: #ccc;
   --color-ddd: #ddd;
   --color-eee: #eee;
+  --color-a1a1aa: #a1a1aa;
   --color-fefefe: #fefefe;
   --color-efefef: #efefef;
   --color-f0f0f0: #f0f0f0;
   --color-f5f5f5: #f5f5f5;
+  --color-f6f5f1: #f6f5f1;
   --color-f6f8fa: #f6f8fa;
   --color-f9f9f9: #f9f9f9;
   --color-fafafa: #fafafa;
@@ -45,6 +47,7 @@
   --color-e9ecef: #e9ecef;
 
   /* Dark mode colors */
+  --color-111210: #111210;
   --color-121212: #121212;
   --color-161717: #161717;
   --color-202020: #202020;
@@ -189,8 +192,10 @@
   --color-dc3545: #dc3545;
   --color-f44336: #f44336;
   --color-1a1a1a: #1a1a1a;
-  --color-0a0a0a: #0a0a0a;
   --color-1f1f1f: #1f1f1f;
+  --color-191a18: #191a18;
+  --color-0a0a0a: #0a0a0a;
+
 
   /* Badge/Status colors */
   --color-d4edda: #d4edda;
@@ -216,10 +221,14 @@
   --color-ccc: #ccc;
   --color-24292e: #24292e;
   --color-757575: #757575;
+  --color-3f3f46: #3f3f46;
+  --color-09090b: #09090b;
+  --color-18181b: #18181b;
+  --color-27272a: #27272a;
 
    /* Dark mode semantic aliases */
-  --color-dark-bg: var(--color-121212);
-  --color-dark-surface: var(--color-0a0a0a);
+  --color-dark-bg: var(--color-111210);
+  --color-dark-surface: var(--color-191a18);
   --color-dark-border: var(--color-1f1f1f);
   --color-dark-text: var(--color-gray-100);
   --color-dark-text-secondary: var(--color-gray-300);
@@ -556,18 +565,18 @@
 }
 
 /* Background color utility classes */
-.bgc-black {
+.bg-black {
   background-color: var(--color-000, #000);
 }
 
-.bgc-white {
+.bg-white {
   background-color: var(--color-fff, #fff);
 }
 
-.bgc-1 {
+.bg-1 {
   background-color: var(--color-fefefe, #fefefe);
 }
 
-.bgc-2 {
+.bg-2 {
   background-color: var(--color-efefef, #efefef);
 }

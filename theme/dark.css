@@ -1,50 +1,53 @@
 @import url(./default.css);
 
-:root {
-  /* Base colors - Dark */
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
+[data-theme="dark"] {
+  color-scheme: dark;
 
-  /* Surface colors */
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
+  --color-canvas: #09090b;
+  --color-surface: #18181b;
+  --color-surface-subtle: #27272a;
+  --color-surface-disabled: #202023;
+  --color-text: #fafafa;
+  --color-text-muted: #a1a1aa;
+  --color-text-disabled: #71717a;
+  --color-border: #3f3f46;
+  --color-border-strong: #52525b;
+  --color-primary: #60a5fa;
+  --color-primary-hover: #93c5fd;
+  --color-focus: #60a5fa;
+  --color-success: #4ade80;
+  --color-warning: #facc15;
+  --color-danger: #f87171;
+  --color-on-primary: #09090b;
+  --color-on-success: #09090b;
+  --color-on-danger: #09090b;
+  --shadow-color: 0 0 0;
+}
 
-  /* Primary colors */
-  --primary: 210 40% 98%;
-  --primary-foreground: 222.2 47.4% 11.2%;
+/* 跟随系统：未显式设置 data-theme 或使用 data-theme="auto" 时，在系统偏好暗色的环境下启用暗色主题 */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]),
+  [data-theme="auto"] {
+    color-scheme: dark;
 
-  /* Secondary colors */
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-
-  /* Muted colors */
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-
-  /* Accent colors */
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
-
-  /* Destructive colors */
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-
-  /* Border and input */
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 212.7 26.8% 83.9%;
-
-  /* Legacy variables for compatibility */
-  --text-color: hsl(var(--foreground));
-  --border-color: hsl(var(--border));
-  --background-color: hsl(var(--background));
-  --content-background-color: hsl(var(--card));
-  --container-background: hsl(var(--card));
-  --link-color: hsl(var(--primary));
-  --title-color: hsl(var(--foreground));
-  --code-block-background-color: hsl(var(--muted));
-  --switch-color-off: hsl(var(--muted-foreground));
-  --select-background-color: hsl(var(--secondary));
+    --color-canvas: #09090b;
+    --color-surface: #18181b;
+    --color-surface-subtle: #27272a;
+    --color-surface-disabled: #202023;
+    --color-text: #fafafa;
+    --color-text-muted: #a1a1aa;
+    --color-text-disabled: #71717a;
+    --color-border: #3f3f46;
+    --color-border-strong: #52525b;
+    --color-primary: #60a5fa;
+    --color-primary-hover: #93c5fd;
+    --color-focus: #60a5fa;
+    --color-success: #4ade80;
+    --color-warning: #facc15;
+    --color-danger: #f87171;
+    --color-on-primary: #09090b;
+    --color-on-success: #09090b;
+    --color-on-danger: #09090b;
+    --shadow-color: 0 0 0;
+  }
 }

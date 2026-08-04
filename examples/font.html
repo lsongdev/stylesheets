@@ -1,120 +1,75 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Font - CSS Components Demo</title>
-    <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="../font.css">
-    <style>
-        body {
-            padding: 20px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1, h2 {
-            margin-top: 24px;
-            margin-bottom: 16px;
-        }
-        .font-sample {
-            margin: 15px 0;
-            padding: 15px;
-            border-left: 4px solid #4F46E5;
-            background-color: #f9f9f9;
-        }
-        .font-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .font-description {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-        .font-class {
-            font-family: monospace;
-            background-color: #eee;
-            padding: 2px 5px;
-            border-radius: 3px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>字体 — CSS Components</title>
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="../theme/light.css">
+  <link rel="stylesheet" href="../theme/dark.css">
+  <link rel="stylesheet" href="../theme/google.css">
+  <link rel="stylesheet" href="../theme/pink.css">
+  <link rel="stylesheet" href="./demo.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Font 字体系统</h1>
-        <p>这是字体系统的演示页面，展示了定义的字体类和大小。</p>
-        
-        <div class="font-sample">
-            <div class="font-title">默认字体</div>
-            <div class="font-description">使用系统默认字体栈</div>
-            <p>This is a paragraph using the default font stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, etc.</p>
-        </div>
-        
-        <div class="font-sample">
-            <div class="font-title">字体大小类</div>
-            <div class="font-description">从小到大的字体大小类</div>
-            <p class="text-xs">Extra Small Text (text-xs)</p>
-            <p class="text-sm">Small Text (text-sm)</p>
-            <p class="text-base">Base Text (text-base)</p>
-            <p class="text-lg">Large Text (text-lg)</p>
-            <p class="text-xl">Extra Large Text (text-xl)</p>
-            <p class="text-2xl">2X Large Text (text-2xl)</p>
-            <p class="text-3xl">3X Large Text (text-3xl)</p>
-        </div>
-        
-        <div class="font-sample">
-            <div class="font-title">字体权重</div>
-            <div class="font-description">不同的字体粗细</div>
-            <p class="font-thin">Thin (font-thin)</p>
-            <p class="font-extralight">Extra Light (font-extralight)</p>
-            <p class="font-light">Light (font-light)</p>
-            <p class="font-normal">Normal (font-normal)</p>
-            <p class="font-medium">Medium (font-medium)</p>
-            <p class="font-semibold">Semibold (font-semibold)</p>
-            <p class="font-bold">Bold (font-bold)</p>
-            <p class="font-extrabold">Extra Bold (font-extrabold)</p>
-            <p class="font-black">Black (font-black)</p>
-        </div>
-        
-        <div class="font-sample">
-            <div class="font-title">字体样式</div>
-            <div class="font-description">常规、斜体等样式</div>
-            <p class="font-italic">Italic Text (font-italic)</p>
-            <p class="font-normal">Normal Text (font-normal)</p>
-            <p class="font-oblique">Oblique Text (font-oblique)</p>
-        </div>
-        
-        <div class="font-sample">
-            <div class="font-title">文本对齐</div>
-            <div class="font-description">不同文本对齐方式</div>
-            <p class="text-left">Left aligned text (text-left)</p>
-            <p class="text-center">Center aligned text (text-center) - 这是居中文本示例</p>
-            <p class="text-right">Right aligned text (text-right)</p>
-            <p class="text-justify">Justified text (text-justify) - This text is justified, meaning it aligns to both the left and right margins, creating a clean edge on both sides. 这是两端对齐的文本示例，左右两边都对齐，形成整齐的边缘。</p>
-        </div>
-        
-        <div class="font-sample">
-            <div class="font-title">文本转换</div>
-            <div class="font-description">大小写转换</div>
-            <p class="uppercase">Uppercase text (uppercase) - 小写变大写</p>
-            <p class="lowercase">LOWERCASE TEXT (lowercase) - 大写变小写</p>
-            <p class="capitalize">Capitalize Each Word (capitalize) - 首字母大写</p>
-            <p class="normal-case">Normal Case (normal-case) - 正常大小写</p>
-        </div>
-        
-        <div class="font-sample">
-            <div class="font-title">行高</div>
-            <div class="font-description">不同的行高设置</div>
-            <p class="leading-tight" style="border: 1px solid #ccc; padding: 10px;">Tight leading (leading-tight)<br>Line 2<br>Line 3</p>
-            <p class="leading-snug" style="border: 1px solid #ccc; padding: 10px; margin-top: 10px;">Snug leading (leading-snug)<br>Line 2<br>Line 3</p>
-            <p class="leading-normal" style="border: 1px solid #ccc; padding: 10px; margin-top: 10px;">Normal leading (leading-normal)<br>Line 2<br>Line 3</p>
-            <p class="leading-relaxed" style="border: 1px solid #ccc; padding: 10px; margin-top: 10px;">Relaxed leading (leading-relaxed)<br>Line 2<br>Line 3</p>
-            <p class="leading-loose" style="border: 1px solid #ccc; padding: 10px; margin-top: 10px;">Loose leading (leading-loose)<br>Line 2<br>Line 3</p>
-        </div>
+  <header class="demo-header">
+    <div>
+      <h1>字体</h1>
+      <p class="demo-subtitle">字族（<code class="demo-code">font.css</code>）与字号 / 字重工具类（<code class="demo-code">text.css</code>）</p>
     </div>
+    <div class="demo-toolbar" role="group" aria-label="主题">
+      <button class="button button-small" type="button" data-set-theme="light">亮色</button>
+      <button class="button button-small" type="button" data-set-theme="dark">暗色</button>
+      <button class="button button-small" type="button" data-set-theme="google">谷歌</button>
+      <button class="button button-small" type="button" data-set-theme="pink">粉红</button>
+    </div>
+  </header>
+
+  <main class="demo-main">
+    <div class="demo-section">
+      <h2>字族</h2>
+      <div class="demo-column">
+        <span class="font-sans">.font-sans — 无衬线默认字族，用于界面主体</span>
+        <span class="font-serif">.font-serif — 衬线字族，适合正文阅读</span>
+        <span class="font-mono">.font-mono — 等宽字族，适合代码与数据</span>
+        <span class="mono">.mono（utils.css）— 等宽简写</span>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>字号</h2>
+      <div class="demo-column">
+        <span class="text-xs">.text-xs — 0.75rem 极小号</span>
+        <span class="text-sm">.text-sm — 0.875rem 小号</span>
+        <span class="text-normal">.text-normal — 1rem 常规</span>
+        <span class="text-lg">.text-lg — 1.125rem 大号</span>
+        <span class="text-xl">.text-xl — 1.25rem 加大</span>
+        <span class="text-2xl">.text-2xl — 1.5rem</span>
+        <span class="text-3xl">.text-3xl — 1.875rem</span>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>字重与风格</h2>
+      <div class="demo-column">
+        <span class="font-bold">.font-bold — 加粗</span>
+        <span class="text-bold">.text-bold — 加粗（text.css）</span>
+        <span class="text-lighter">.text-lighter — 更细</span>
+        <span class="text-italic">.text-italic — 斜体</span>
+        <span class="text-nowrap">.text-nowrap — 不换行</span>
+        <span class="text-overflow-ellipsis" style="display: block; overflow: hidden; max-width: 280px">.text-overflow-ellipsis — 超长文本省略号显示，超长文本省略号显示</span>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>标题</h2>
+      <p class="eyebrow">.eyebrow — 眉题</p>
+      <h1>h1 · 25px</h1>
+      <h2>h2 · 17px</h2>
+      <p>正文与 <code class="demo-code">&lt;h1&gt;/&lt;h2&gt;</code> 的默认样式由 <code class="demo-code">text.css</code> 提供。</p>
+    </div>
+  </main>
+
+  <script src="./demo.js"></script>
 </body>
 </html>

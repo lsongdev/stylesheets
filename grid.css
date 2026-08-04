@@ -38,6 +38,9 @@
 /* Dense packing */
 .grid-dense { grid-auto-flow: row dense; }
 
+/* Fit: auto-fit columns */
+.grid-fit { grid-template-columns: repeat(auto-fit, minmax(var(--col-min), 1fr)); }
+
 /* Subgrid */
 .grid-subgrid { grid-template-columns: subgrid; }
 .grid-rows-subgrid { grid-template-rows: subgrid; }

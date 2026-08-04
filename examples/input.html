@@ -1,199 +1,131 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input - CSS Components Demo</title>
-    <link rel="stylesheet" href="../index.css">
-    <style>
-        body {
-            padding: 20px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1, h2 {
-            margin-top: 24px;
-            margin-bottom: 16px;
-        }
-        .demo-section {
-            margin: 20px 0;
-            padding: 20px;
-            border-left: 4px solid #4F46E5;
-            background-color: #f9f9f9;
-        }
-        .form-control {
-            margin-bottom: 15px;
-        }
-        .form-label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .input-row {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-        .input-row .form-control {
-            flex: 1;
-            margin-bottom: 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>输入框 — CSS Components</title>
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="../theme/light.css">
+  <link rel="stylesheet" href="../theme/dark.css">
+  <link rel="stylesheet" href="../theme/google.css">
+  <link rel="stylesheet" href="../theme/pink.css">
+  <link rel="stylesheet" href="./demo.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Input 输入框组件</h1>
-        <p>这是输入框组件的演示页面，展示了各种输入框样式和类型。</p>
-        
-        <div class="demo-section">
-            <h2>基本输入框</h2>
-            <div class="form-control">
-                <label class="form-label" for="basic-text">文本输入框</label>
-                <input type="text" class="input" id="basic-text" name="text" placeholder="请输入文本…">
-            </div>
-            
-            <div class="form-control">
-                <label class="form-label" for="basic-password">密码输入框</label>
-                <input type="password" class="input" id="basic-password" name="password" autocomplete="current-password" placeholder="请输入密码…">
-            </div>
-            
-            <div class="form-control">
-                <label class="form-label" for="basic-email">邮箱输入框</label>
-                <input type="email" class="input" id="basic-email" name="email" autocomplete="email" spellcheck="false" placeholder="name@example.com">
-            </div>
-            
-            <div class="form-control">
-                <label class="form-label" for="basic-number">数字输入框</label>
-                <input type="number" class="input" id="basic-number" name="number" placeholder="请输入数字…">
-            </div>
-            
-            <div class="form-control">
-                <label class="form-label" for="basic-tel">电话输入框</label>
-                <input type="tel" class="input" id="basic-tel" name="telephone" autocomplete="tel" placeholder="请输入电话号码…">
-            </div>
-        </div>
-        
-        <div class="demo-section">
-            <h2>不同尺寸的输入框</h2>
-            <div class="form-control">
-                <label class="form-label" for="small-input">小型输入框</label>
-                <input type="text" class="input input-small" id="small-input" name="small_input" placeholder="小型输入框">
-            </div>
-            
-            <div class="form-control">
-                <label class="form-label" for="standard-input">标准输入框</label>
-                <input type="text" class="input" id="standard-input" name="standard_input" placeholder="标准输入框">
-            </div>
-            
-            <div class="form-control">
-                <label class="form-label" for="large-input">大型输入框</label>
-                <input type="text" class="input input-large" id="large-input" name="large_input" placeholder="大型输入框">
-            </div>
-        </div>
-        
-        <div class="demo-section">
-            <h2>带前后缀的输入框</h2>
-            <div class="form-control">
-                <label class="form-label" for="username">带前缀的输入框</label>
-                <div class="input-group">
-                    <span class="input-addon">@</span>
-                    <input type="text" class="input" id="username" name="username" autocomplete="username" spellcheck="false" placeholder="用户名">
-                </div>
-            </div>
-            
-            <div class="form-control">
-                <label class="form-label" for="amount">带后缀的输入框</label>
-                <div class="input-group">
-                    <input type="text" class="input" id="amount" name="amount" inputmode="decimal" placeholder="金额">
-                    <span class="input-addon">元</span>
-                </div>
-            </div>
-            
-            <div class="form-control">
-                <label class="form-label" for="domain">带前后缀的输入框</label>
-                <div class="input-group">
-                    <span class="input-addon">https://</span>
-                    <input type="text" class="input" id="domain" name="domain" spellcheck="false" placeholder="example">
-                    <span class="input-addon">.com</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="demo-section">
-            <h2>不同状态的输入框</h2>
-            <div class="form-control">
-                <label class="form-label" for="success-input">成功状态</label>
-                <input type="text" class="input input-success" id="success-input" name="success_input" placeholder="成功状态输入框">
-            </div>
-            
-            <div class="form-control">
-                <label class="form-label" for="error-input">错误状态</label>
-                <input type="text" class="input input-error" id="error-input" name="error_input" aria-invalid="true" aria-describedby="error-help" placeholder="错误状态输入框">
-                <small class="error" id="error-help">请输入有效内容</small>
-            </div>
-            
-            <div class="form-control">
-                <label class="form-label" for="warning-input">警告状态</label>
-                <input type="text" class="input input-warning" id="warning-input" name="warning_input" placeholder="警告状态输入框">
-            </div>
-            
-            <div class="form-control">
-                <label class="form-label" for="disabled-input">禁用状态</label>
-                <input type="text" class="input" id="disabled-input" name="disabled_input" placeholder="禁用状态输入框" disabled>
-            </div>
-        </div>
-        
-        <div class="demo-section">
-            <h2>多行文本输入框</h2>
-            <div class="form-control">
-                <label class="form-label" for="basic-textarea">文本域</label>
-                <textarea class="input input-textarea" id="basic-textarea" name="message" rows="4" placeholder="请输入多行文本…"></textarea>
-            </div>
-            
-            <div class="form-control">
-                <label class="form-label" for="resizable-textarea">调整大小的文本域</label>
-                <textarea class="input input-textarea resize-y" id="resizable-textarea" name="resizable_message" rows="3" placeholder="垂直可调整大小"></textarea>
-            </div>
-        </div>
-        
-        <div class="demo-section">
-            <h2>搜索输入框</h2>
-            <div class="form-control">
-                <label class="form-label" for="search-input">搜索框</label>
-                <div class="input-group">
-                    <span class="input-addon" aria-hidden="true"><i class="fas fa-search"></i></span>
-                    <input type="search" class="input" id="search-input" name="query" autocomplete="off" placeholder="搜索…">
-                </div>
-            </div>
-        </div>
-        
-        <div class="demo-section">
-            <h2>组合输入框</h2>
-            <div class="input-row">
-                <div class="form-control">
-                    <label class="form-label" for="family-name">姓</label>
-                    <input type="text" class="input" id="family-name" name="family_name" autocomplete="family-name" placeholder="姓">
-                </div>
-                <div class="form-control">
-                    <label class="form-label" for="given-name">名</label>
-                    <input type="text" class="input" id="given-name" name="given_name" autocomplete="given-name" placeholder="名">
-                </div>
-            </div>
-            
-            <div class="input-row">
-                <div class="form-control">
-                    <label class="form-label" for="city">城市</label>
-                    <input type="text" class="input" id="city" name="city" autocomplete="address-level2" placeholder="城市">
-                </div>
-                <div class="form-control">
-                    <label class="form-label" for="postal-code">邮编</label>
-                    <input type="text" class="input" id="postal-code" name="postal_code" autocomplete="postal-code" inputmode="numeric" placeholder="邮编">
-                </div>
-            </div>
-        </div>
+  <header class="demo-header">
+    <div>
+      <h1>输入框</h1>
+      <p class="demo-subtitle">input.css — 文本 / 密码 / 数字、尺寸、状态、前后缀与组合</p>
     </div>
+    <div class="demo-toolbar" role="group" aria-label="主题">
+      <button class="button button-small" type="button" data-set-theme="light">亮色</button>
+      <button class="button button-small" type="button" data-set-theme="dark">暗色</button>
+      <button class="button button-small" type="button" data-set-theme="google">谷歌</button>
+      <button class="button button-small" type="button" data-set-theme="pink">粉红</button>
+    </div>
+  </header>
+
+  <main class="demo-main">
+    <div class="demo-section">
+      <h2>基本输入框</h2>
+      <div class="demo-block">
+        <label for="basic-text">文本输入框</label>
+        <input type="text" class="input" id="basic-text" name="text" placeholder="请输入文本…">
+      </div>
+      <div class="demo-block">
+        <label for="basic-password">密码输入框</label>
+        <input type="password" class="input" id="basic-password" name="password" autocomplete="current-password" placeholder="请输入密码…">
+      </div>
+      <div class="demo-block">
+        <label for="basic-email">邮箱输入框</label>
+        <input type="email" class="input" id="basic-email" name="email" autocomplete="email" spellcheck="false" placeholder="name@example.com">
+      </div>
+      <div class="demo-block">
+        <label for="basic-number">数字输入框</label>
+        <input type="number" class="input" id="basic-number" name="number" placeholder="请输入数字…">
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>尺寸</h2>
+      <div class="demo-block">
+        <label for="small-input">小型</label>
+        <input type="text" class="input input-small" id="small-input" placeholder=".input-small">
+      </div>
+      <div class="demo-block">
+        <label for="standard-input">标准</label>
+        <input type="text" class="input" id="standard-input" placeholder=".input">
+      </div>
+      <div class="demo-block">
+        <label for="large-input">大型</label>
+        <input type="text" class="input input-large" id="large-input" placeholder=".input-large">
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>状态</h2>
+      <div class="demo-block">
+        <label for="success-input">成功（.input-success）</label>
+        <input type="text" class="input input-success" id="success-input" placeholder="成功状态输入框">
+      </div>
+      <div class="demo-block">
+        <label for="error-input">错误（.input-error / aria-invalid）</label>
+        <input type="text" class="input input-error" id="error-input" aria-invalid="true" aria-describedby="error-help" placeholder="错误状态输入框">
+        <small class="field-help" id="error-help">请输入有效内容</small>
+      </div>
+      <div class="demo-block">
+        <label for="warning-input">警告（.input-warning）</label>
+        <input type="text" class="input input-warning" id="warning-input" placeholder="警告状态输入框">
+      </div>
+      <div class="demo-block">
+        <label for="disabled-input">禁用</label>
+        <input type="text" class="input" id="disabled-input" placeholder="禁用状态输入框" disabled>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>前后缀（.input-group + .input-addon）</h2>
+      <div class="demo-block">
+        <label for="username">带前缀</label>
+        <div class="input-group">
+          <span class="input-addon">@</span>
+          <input type="text" class="input" id="username" name="username" autocomplete="username" spellcheck="false" placeholder="用户名">
+        </div>
+      </div>
+      <div class="demo-block">
+        <label for="amount">带后缀</label>
+        <div class="input-group">
+          <input type="text" class="input" id="amount" name="amount" inputmode="decimal" placeholder="金额">
+          <span class="input-addon">元</span>
+        </div>
+      </div>
+      <div class="demo-block">
+        <label for="domain">前后缀</label>
+        <div class="input-group">
+          <span class="input-addon">https://</span>
+          <input type="text" class="input" id="domain" name="domain" spellcheck="false" placeholder="example">
+          <span class="input-addon">.com</span>
+        </div>
+      </div>
+      <div class="demo-block">
+        <label for="search-input">组合按钮</label>
+        <div class="input-group">
+          <input type="search" class="input" id="search-input" name="query" autocomplete="off" placeholder="搜索…">
+          <button class="button button-primary" type="button">搜索</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>多行文本</h2>
+      <div class="demo-block">
+        <label for="basic-textarea">文本域</label>
+        <textarea class="input" id="basic-textarea" name="message" rows="4" placeholder="请输入多行文本…"></textarea>
+        <small class="field-help">textarea 直接使用 .input 即可。</small>
+      </div>
+    </div>
+  </main>
+
+  <script src="./demo.js"></script>
 </body>
 </html>

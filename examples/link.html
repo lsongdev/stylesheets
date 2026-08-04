@@ -1,148 +1,69 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link - CSS Components Demo</title>
-    <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="../link.css">
-    <style>
-        body {
-            padding: 20px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1, h2 {
-            margin-top: 24px;
-            margin-bottom: 16px;
-        }
-        .link-group {
-            margin: 20px 0;
-            padding: 20px;
-            border-left: 4px solid #4F46E5;
-            background-color: #f9f9f9;
-        }
-        .link-sample {
-            margin: 10px 0;
-            padding: 8px 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>链接 — CSS Components</title>
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="../link.css">
+  <link rel="stylesheet" href="../theme/light.css">
+  <link rel="stylesheet" href="../theme/dark.css">
+  <link rel="stylesheet" href="../theme/google.css">
+  <link rel="stylesheet" href="../theme/pink.css">
+  <link rel="stylesheet" href="./demo.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Link 链接组件</h1>
-        <p>这是链接组件的演示页面，展示了各种链接样式和状态。</p>
-        
-        <div class="link-group">
-            <h2>基本链接样式</h2>
-            <div class="link-sample">
-                <a href="#" class="link">默认链接</a> | 
-                <a href="#" class="link link-primary">主要链接</a> | 
-                <a href="#" class="link link-success">成功链接</a> | 
-                <a href="#" class="link link-danger">危险链接</a> | 
-                <a href="#" class="link link-warning">警告链接</a> | 
-                <a href="#" class="link link-info">信息链接</a>
-            </div>
-        </div>
-        
-        <div class="link-group">
-            <h2>不同尺寸的链接</h2>
-            <div class="link-sample">
-                <a href="#" class="link link-xs">超小链接 (xs)</a> | 
-                <a href="#" class="link link-sm">小链接 (sm)</a> | 
-                <a href="#" class="link link-md">中等链接 (md)</a> | 
-                <a href="#" class="link link-lg">大链接 (lg)</a> | 
-                <a href="#" class="link link-xl">超大链接 (xl)</a>
-            </div>
-        </div>
-        
-        <div class="link-group">
-            <h2>链接的不同状态</h2>
-            <div class="link-sample">
-                <a href="#" class="link">正常状态链接</a> | 
-                <a href="#" class="link" style="pointer-events: none; opacity: 0.5;">悬停状态链接</a> | 
-                <a href="#" class="link link-disabled">禁用链接</a>
-            </div>
-        </div>
-        
-        <div class="link-group">
-            <h2>带图标的链接</h2>
-            <div class="link-sample">
-                <a href="#" class="link">
-                    <i class="fas fa-home"></i> 首页链接
-                </a> | 
-                <a href="#" class="link link-primary">
-                    <i class="fas fa-user"></i> 个人资料
-                </a> | 
-                <a href="#" class="link link-success">
-                    <i class="fas fa-check"></i> 成功操作
-                </a> | 
-                <a href="#" class="link link-danger">
-                    <i class="fas fa-trash"></i> 删除链接
-                </a>
-            </div>
-        </div>
-        
-        <div class="link-group">
-            <h2>下划线样式链接</h2>
-            <div class="link-sample">
-                <a href="#" class="link link-underline">始终显示下划线</a> | 
-                <a href="#" class="link link-underline-hover">悬停时显示下划线</a> | 
-                <a href="#" class="link link-no-underline">无下划线</a>
-            </div>
-        </div>
-        
-        <div class="link-group">
-            <h2>链接作为按钮样式</h2>
-            <div class="link-sample">
-                <a href="#" class="link link-button">链接按钮</a> | 
-                <a href="#" class="link link-button link-button-primary">主要按钮链接</a> | 
-                <a href="#" class="link link-button link-button-success">成功按钮链接</a> | 
-                <a href="#" class="link link-button link-button-danger">危险按钮链接</a>
-            </div>
-        </div>
-        
-        <div class="link-group">
-            <h2>行内链接样式</h2>
-            <div class="link-sample">
-                <p>这是一段包含<a href="#" class="link">行内链接</a>的文本。链接与周围的文本保持一致的基线和行高。</p>
-                <p>另一个例子是<a href="#" class="link link-primary">主要颜色的行内链接</a>，它在文本中显得更加突出。</p>
-            </div>
-        </div>
-        
-        <div class="link-group">
-            <h2>链接组合示例</h2>
-            <div class="link-sample">
-                <nav class="d-flex gap-4">
-                    <a href="#" class="link link-nav">首页</a>
-                    <a href="#" class="link link-nav link-active">关于我们</a>
-                    <a href="#" class="link link-nav">服务</a>
-                    <a href="#" class="link link-nav">联系</a>
-                </nav>
-            </div>
-            
-            <div class="link-sample mt-4">
-                <div class="d-flex justify-between">
-                    <a href="#" class="link">
-                        <i class="fas fa-arrow-left"></i> 上一篇
-                    </a>
-                    <a href="#" class="link">
-                        下一篇 <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="link-group">
-            <h2>链接在不同背景上的表现</h2>
-            <div class="link-sample" style="background-color: #333; padding: 15px; border-radius: 4px;">
-                <a href="#" class="link link-light">浅色链接 (在深色背景上)</a> | 
-                <a href="#" class="link link-light link-primary">浅色主要链接</a>
-            </div>
-        </div>
+  <header class="demo-header">
+    <div>
+      <h1>链接</h1>
+      <p class="demo-subtitle">link.css — 主色链接、悬停下划线、无下划线链接</p>
     </div>
+    <div class="demo-toolbar" role="group" aria-label="主题">
+      <button class="button button-small" type="button" data-set-theme="light">亮色</button>
+      <button class="button button-small" type="button" data-set-theme="dark">暗色</button>
+      <button class="button button-small" type="button" data-set-theme="google">谷歌</button>
+      <button class="button button-small" type="button" data-set-theme="pink">粉红</button>
+    </div>
+  </header>
+
+  <main class="demo-main">
+    <div class="demo-section">
+      <h2>链接类（.link）</h2>
+      <p>
+        给元素或容器加 <code class="demo-code">.link</code> 即可使用主色链接；悬停时显示下划线。
+        <span class="link">这是一个带 .link 的 span。</span>
+      </p>
+      <div class="demo-column">
+        <a class="link" href="#">.link — 主色链接</a>
+        <a class="link link-without-underline" href="#">.link.link-without-underline — 主色但无下划线</a>
+        <a href="#">普通链接（默认继承文字色）</a>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>容器级链接</h2>
+      <div class="link">
+        <p style="margin-top:0">将 <code class="demo-code">.link</code> 放在容器上，容器内所有 <code class="demo-code">&lt;a&gt;</code> 都变为主色：</p>
+        <div class="demo-row">
+          <a href="#">链接一</a>
+          <a href="#">链接二</a>
+          <a href="#">链接三</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>结合其他组件</h2>
+      <div class="demo-column">
+        <div class="card" style="margin:0">
+          <p style="margin-top:0">卡片内的 <a class="link link-without-underline" href="#">无下划线链接</a> 与
+          <a class="link" href="#">下划线链接</a>。文本按钮也可用 <code class="demo-code">.button.button-link</code>：</p>
+          <a class="button button-link" href="#">更多 →</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./demo.js"></script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+@import url(./base.css);
+
 /* Menu Component */
 .menu {
   display: flex;
@@ -6,6 +8,7 @@
   list-style-type: none;
   flex-grow: 1;
   white-space: nowrap;
+  z-index: 999;
 }
 
 .menu::-webkit-scrollbar {
@@ -26,22 +29,22 @@
   border-radius: 6px;
   align-items: center;
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: var(--menu-item-color, #121212);
-  background-color: var(--menu-item-bg, #fafafa);
+  color: var(--menu-item-color, var(--color-text));
+  background-color: var(--menu-item-bg, transparent);
 }
 
 /* Hover states */
 .menu a:hover {
-  color: var(--menu-item-hover-color, #111827);
-  background-color: var(--menu-item-hover-bg, #f3f4f6);
+  color: var(--menu-item-hover-color, var(--color-text));
+  background-color: var(--menu-item-hover-bg, var(--color-surface-subtle));
 }
 
 /* Active states */
 .menu .menu-item-active>a,
 .menu a.menu-item-active,
 .menu li.menu-active > a {
-  color: var(--menu-item-active-color, #111827);
-  background-color: var(--menu-item-active-bg, #e0e7ff);
+  color: var(--menu-item-active-color, var(--color-text));
+  background-color: var(--menu-item-active-bg, color-mix(in srgb, var(--color-primary) 14%, transparent));
   font-weight: 500;
 }
 
@@ -69,10 +72,10 @@
   margin: 0;
   padding: 8px 0;
   list-style-type: none;
-  background: #ffffff;
+  background: var(--menu-surface, var(--color-surface));
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--menu-border, var(--color-border));
 }
 
 .menu-dropdown.menu-open,
@@ -121,11 +124,11 @@
   margin: 0;
   padding: 8px 0;
   list-style-type: none;
-  background: #ffffff;
+  background: var(--menu-surface, var(--color-surface));
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   z-index: 1001;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--menu-border, var(--color-border));
 }
 
 /* Horizontal menu dropdown on hover */
@@ -163,14 +166,4 @@
 
 .menu-vertical li.menu-open > a::after {
   transform: rotate(90deg);
-}
-
-/* Dark theme overrides */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --menu-item-bg: transparent;
-    --menu-item-color: #ddd;
-    --menu-item-hover-bg: #333;
-    --menu-item-hover-color: #eee;
-  }
 }

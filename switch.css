@@ -1,3 +1,5 @@
+@import url(./base.css);
+
 /**
 Example:
 
@@ -7,12 +9,14 @@ Example:
 </div>
 */
 
-.switch {
-  display: inline-flex;
+:root {
+  /* Status and feedback */
   --switch-size: 10px;
   --switch-width: 25px;
-  --switch-color-on: #5549f1;
-  --switch-color-off: rgb(0, 0, 0, 0.2);
+}
+
+.switch {
+  display: inline-flex;
 }
 
 .switch input[type="checkbox"] {
@@ -31,7 +35,7 @@ Example:
   position: relative;
   transition: 0.3s;
   box-sizing: content-box;
-  background-color: var(--switch-color-off);
+  background-color: var(--switch-color-off, var(--color-text-muted));
 }
 
 .switch label:after {
@@ -45,7 +49,7 @@ Example:
 }
 
 .switch input:checked+label {
-  background-color: var(--switch-color-on);
+  background-color: var(--switch-color-on, var(--color-primary));
 }
 
 .switch input:checked+label:after {
