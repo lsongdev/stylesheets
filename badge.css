@@ -1,23 +1,4 @@
-:root {
-  --badge-bg: #e9ecef;
-  --badge-text: #6c757d;
-  --badge-border-radius: 12px;
-  --badge-padding: 4px 8px;
-  --badge-font-size: 0.75em;
-
-  --badge-success-bg: #d4edda;
-  --badge-success-text: #155724;
-  --badge-warning-bg: #fff3cd;
-  --badge-warning-text: #856404;
-  --badge-danger-bg: #f8d7da;
-  --badge-danger-text: #721c24;
-  --badge-info-bg: #d1ecf1;
-  --badge-info-text: #0c5460;
-  --badge-primary-bg: #dbedff;
-  --badge-primary-text: #0366d6;
-  --badge-secondary-bg: #e1e4e8;
-  --badge-secondary-text: #586069;
-}
+@import url(./base.css);
 
 .badge {
   line-height: 1;
@@ -27,9 +8,9 @@
   display: inline-block;
   letter-spacing: 0.02em;
   vertical-align: baseline;
-  text-transform: uppercase;
-  color: var(--badge-text);
-  background: var(--badge-bg);
+  text-transform: var(--badge-text-transform);
+  color: var(--badge-text, var(--color-text-muted));
+  background: var(--badge-bg, var(--color-surface-subtle));
   padding: var(--badge-padding);
   font-size: var(--badge-font-size);
   border-radius: var(--badge-border-radius);
@@ -38,8 +19,8 @@
 
 .badge-info,
 .badge-processing {
-  --badge-bg: var(--badge-info-bg);
-  --badge-text: var(--badge-info-text);
+  --badge-bg: var(--badge-info-bg, color-mix(in srgb, var(--color-primary) 16%, transparent));
+  --badge-text: var(--badge-info-text, var(--color-primary));
 }
 
 .badge-true,
@@ -52,14 +33,14 @@
 .badge-running,
 .badge-completed,
 .badge-success {
-  --badge-bg: var(--badge-success-bg);
-  --badge-text: var(--badge-success-text);
+  --badge-bg: var(--badge-success-bg, color-mix(in srgb, var(--color-success) 16%, transparent));
+  --badge-text: var(--badge-success-text, var(--color-success));
 }
 
 .badge-pending,
 .badge-warning {
-  --badge-bg: var(--badge-warning-bg);
-  --badge-text: var(--badge-warning-text);
+  --badge-bg: var(--badge-warning-bg, color-mix(in srgb, var(--color-warning) 16%, transparent));
+  --badge-text: var(--badge-warning-text, var(--color-warning));
 }
 
 
@@ -74,6 +55,6 @@
 .badge-inactive,
 .badge-disabled,
 .badge-danger {
-  --badge-bg: var(--badge-danger-bg);
-  --badge-text: var(--badge-danger-text);
+  --badge-bg: var(--badge-danger-bg, color-mix(in srgb, var(--color-danger) 16%, transparent));
+  --badge-text: var(--badge-danger-text, var(--color-danger));
 }

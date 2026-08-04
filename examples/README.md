@@ -29,4 +29,11 @@ Open `dashboard.html` in your browser to view the example. The page showcases va
 
 ## Customization
 
-The CSS variables defined in each component file allow for easy customization of colors, spacing, and other design properties. You can modify the `:root` variables in each CSS file to match your brand guidelines.
+Global semantic token definitions are centralized in `base.css`:
+
+- Override semantic tokens such as `--color-primary` and `--color-surface` to theme the whole library.
+- Override component tokens such as `--input-padding` or `--button-border-radius` for a single component or subtree.
+- Use `data-theme="light"`, `data-theme="dark"`, or `data-theme="auto"` on the root or a local container.
+- Deprecated aliases live in `legacy.css`; new projects can omit that compatibility file.
+
+Open `tokens.html` for live global, component-level, light, and dark override examples.

@@ -2,59 +2,41 @@
 
 :root {
   /* Base colors - Chrome theme */
-  --background: 0 0% 100%;
-  --foreground: 0 0% 20%;
+  --theme-background: 0 0% 100%;
+  --theme-foreground: 0 0% 20%;
 
   /* Surface colors */
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 20%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 20%;
+  --theme-card: 0 0% 100%;
+  --theme-card-foreground: 0 0% 20%;
+  --theme-popover: 0 0% 100%;
+  --theme-popover-foreground: 0 0% 20%;
 
   /* Primary colors - Chrome blue */
-  --primary: 210 100% 50%;
-  --primary-foreground: 0 0% 100%;
+  --theme-primary: 210 100% 50%;
+  --theme-primary-foreground: 0 0% 100%;
 
   /* Secondary colors */
-  --secondary: 0 0% 95%;
-  --secondary-foreground: 0 0% 20%;
+  --theme-secondary: 0 0% 95%;
+  --theme-secondary-foreground: 0 0% 20%;
 
   /* Muted colors */
-  --muted: 0 0% 95%;
-  --muted-foreground: 0 0% 50%;
+  --theme-muted: 0 0% 95%;
+  --theme-muted-foreground: 0 0% 50%;
 
   /* Accent colors */
-  --accent: 210 100% 95%;
-  --accent-foreground: 0 0% 20%;
+  --theme-accent: 210 100% 95%;
+  --theme-accent-foreground: 0 0% 20%;
 
   /* Destructive colors */
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
+  --theme-destructive: 0 84.2% 60.2%;
+  --theme-destructive-foreground: 210 40% 98%;
 
   /* Border and input */
-  --border: 0 0% 85%;
-  --input: 0 0% 90%;
-  --ring: 210 100% 50%;
+  --theme-border: 0 0% 85%;
+  --theme-input: 0 0% 90%;
+  --theme-ring: 210 100% 50%;
 
   /* Radius */
-  --radius: 2px;
+  --theme-radius: 2px;
 
-  /* Legacy variables for compatibility */
-  --text-color: hsl(var(--foreground));
-  --border-color: hsl(var(--border));
-  --background-color: hsl(var(--background));
-  --content-background-color: hsl(var(--card));
-  --container-background: transparent;
-  --link-color: hsl(var(--primary));
-  --title-color: hsl(var(--foreground));
-  --code-block-background-color: hsl(var(--muted));
-  --button-normal-color: hsl(var(--foreground));
-  --button-normal-border-color: hsl(var(--border));
-  --button-normal-background-color: hsl(var(--secondary));
-  --button-primary-color: hsl(var(--primary-foreground));
-  --button-primary-border-color: hsl(var(--primary));
-  --button-primary-background-color: hsl(var(--primary));
-  --button-box-shadow: 0 1px 0 rgb(0 0 0 / 8%), inset 0 1px 2px rgb(255 255 255 / 75%);
-  --switch-color-off: hsl(var(--muted-foreground));
-  --select-background-color: hsl(var(--secondary));
 }

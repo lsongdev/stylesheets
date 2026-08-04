@@ -1,4 +1,5 @@
 @import url(./font.css);
+@import url(./base.css);
 
 .text-left {
   text-align: left;
@@ -33,7 +34,7 @@
 }
 
 .text-muted {
-  color: #586069;
+  color: var(--color-text-muted);
   font-size: 12px;
 }
 
@@ -130,12 +131,12 @@ p {
 }
 
 .muted {
-  color: var(--muted, var(--color-586069, #586069));
+  color: var(--color-text-muted);
 }
 
 .eyebrow {
   margin: 0 0 4px;
-  color: var(--muted, var(--color-586069, #586069));
+  color: var(--color-text-muted);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;

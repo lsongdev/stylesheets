@@ -1,17 +1,18 @@
+@import url(./base.css);
 
 details {
   margin-bottom: 1rem;
-  border: 1px solid #eee;
+  border: 1px solid var(--color-border);
   border-radius: 10px;
   padding: 1rem 1.25rem;
-  background: #fafafa;
+  background: var(--color-surface);
   cursor: pointer;
 }
 
 details summary {
   font-weight: 600;
   font-size: 1.05rem;
-  color: #111;
+  color: var(--color-text);
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -21,7 +22,7 @@ details summary {
 details summary::after {
   content: "+";
   font-size: 1.25rem;
-  color: #2563eb;
+  color: var(--color-primary);
   transition: transform 0.2s;
 }
 
@@ -32,7 +33,7 @@ details[open] summary::after {
 details p {
   margin-top: 0.75rem;
   font-size: 1rem;
-  color: #555;
+  color: var(--color-text-muted);
   line-height: 1.7;
 }
 
@@ -45,7 +46,7 @@ details p {
   grid-template-columns: minmax(130px, 0.7fr) minmax(0, 1.3fr);
   gap: 16px;
   padding: 10px 0;
-  border-bottom: 1px solid var(--line, var(--color-eee, #eee));
+  border-bottom: 1px solid var(--color-border);
 }
 
 .details > div:last-child {
@@ -53,7 +54,7 @@ details p {
 }
 
 .details dt {
-  color: var(--muted, var(--color-757575, #757575));
+  color: var(--color-text-muted);
 }
 
 .details dd {

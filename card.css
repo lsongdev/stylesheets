@@ -1,26 +1,20 @@
-@import url(./color.css);
+@import url(./base.css);
 
 .card {
-  --card-padding: 28px;
-  --card-border: 1px solid var(--line, var(--color-black-op1, #eee));
-  --card-border-radius: 14px;
-  --card-bg: var(--card, var(--color-white-op5));
-  --card-text: var(--text, var(--color-gray-900));
-
   overflow: hidden;
-  color: var(--card-text);
+  color: var(--card-text, var(--color-text));
   padding: var(--card-padding);
-  border: var(--card-border);
-  background-color: var(--card-bg);
+  border: var(--card-border, var(--border-width) solid var(--color-border));
+  background-color: var(--card-bg, var(--color-surface));
   border-radius: var(--card-border-radius);
   margin: 24px 0;
-  box-shadow: 0 1px 2px rgb(0 0 0 / 3%);
+  box-shadow: var(--card-shadow, 0 1px 2px rgb(var(--shadow-color) / 3%));
 }
 
 .card.active {
     /* border: 1px solid #2196f3; */
-    background-color: var(--card-bg-active-bg, #e3f2fd);
-    border: 1px solid var(--card-border-active-color, #2196f3);
+    background-color: var(--card-bg-active-bg, color-mix(in srgb, var(--color-primary) 12%, var(--color-surface)));
+    border: 1px solid var(--card-border-active-color, var(--color-primary));
 }
 .card.selectable {
     cursor: pointer;
@@ -35,15 +29,5 @@
 @media (max-width: 520px) {
   .card {
     --card-padding: 21px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  [data-theme="auto"] .card {
-    --card-text: var(--color-dark-text);
-    --card-bg: var(--color-dark-surface);
-    --card-border: 1px solid var(--color-dark-border);
-    --card-border-active-color: var(--color-333);
-    --card-bg-active-bg: var(--color-1a1a1a, #1a1a1a);
   }
 }

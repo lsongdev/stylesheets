@@ -1,38 +1,31 @@
+@import url(./base.css);
 
 .navbar {
   gap: 10px;
-  width: 100%;
   display: flex;
-  font-size: 16px;
-  align-items: center;
-  justify-content: space-between;
+  min-height: 48px;
   overflow-x: auto;
   overflow-y: hidden;
-  border-bottom-style: var(--border-style, solid);
-  border-bottom-color: var(--border-color, #efefef);
-  border-bottom-width: var(--border-width, 1px);
+  align-items: center;
+  justify-content: space-between;
 }
 
-.navbar::-webkit-scrollbar {
+.navbar::-webkit-scrollbar,
+.navbar nav::-webkit-scrollbar {
   display: none;
-}
-
-.navbar-brand,
-.sidebar-brand {
-  gap: 5px;
-  display: flex;
 }
 
 .navbar-brand h1,
 .sidebar-brand h1 {
+  margin: 0;
   font-size: inherit;
 }
 
-.brand {
-  gap: 9px;
+.navbar-brand {
+  gap: 5px;
   display: inline-flex;
   align-items: center;
-  color: var(--text, var(--color-24292e, #24292e));
+  color: var(--color-text);
   font-size: 19px;
   font-weight: 760;
   line-height: 1;
@@ -40,32 +33,41 @@
   letter-spacing: -0.03em;
 }
 
-.brand-mark {
+.navbar-brand-mark {
   width: 22px;
   height: 22px;
   flex: none;
 }
 
-nav {
-  gap: 16px;
+.navbar nav {
+  gap: 10px;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  justify-content: flex-start;
+}
+
+.navbar nav:last-of-type {
   justify-content: flex-end;
 }
 
-nav a {
-  color: var(--muted, var(--color-586069, #586069));
+.navbar nav a {
+  color: var(--color-text-muted);
   text-decoration: none;
 }
 
-nav form {
-  display: flex;
+.navbar nav a.active {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.navbar nav form {
+  display: inline-flex;
   align-items: center;
   margin: 0;
 }
 
-nav form > .button {
+.navbar nav form > .button {
   margin-top: 0;
 }
-

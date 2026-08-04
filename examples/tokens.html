@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Tokens - CSS Components Demo</title>
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="../card.css">
+  <style>
+    body {
+      padding: 32px 20px;
+    }
+
+    main {
+      width: min(100%, 1040px);
+      margin: 0 auto;
+    }
+
+    h1,
+    h2,
+    p {
+      margin-top: 0;
+    }
+
+    .toolbar,
+    .component-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .theme-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .theme-preview {
+      padding: 20px;
+      color: var(--color-text);
+      background: var(--color-canvas);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+    }
+
+    .theme-preview .card {
+      margin: 16px 0 0;
+      padding: 18px;
+    }
+
+    .theme-preview .input {
+      margin: 12px 0;
+    }
+
+    /* Global override: every component inside this scope follows the brand. */
+    .brand-scope {
+      --color-primary: #7c3aed;
+      --color-primary-hover: #6d28d9;
+      --color-focus: #8b5cf6;
+    }
+
+    /* Component override: global colors stay unchanged; only inputs differ. */
+    .compact-inputs {
+      --input-padding: 6px 9px;
+      --input-border-radius: 999px;
+      --input-bg: color-mix(in srgb, var(--color-primary) 8%, var(--color-surface));
+    }
+
+    pre {
+      padding: 16px;
+      overflow-x: auto;
+      color: var(--color-text);
+      background: var(--color-surface-subtle);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+    }
+
+    .token-note {
+      color: var(--color-text-muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Design Tokens</h1>
+    <p class="token-note">全局语义 token 控制整体主题，组件 token 只控制单个组件。主题可以设置在根节点，也可以设置在任意局部容器。</p>
+
+    <div class="toolbar" aria-label="页面主题">
+      <strong>页面主题：</strong>
+      <button class="button" type="button" data-set-theme="auto">跟随系统</button>
+      <button class="button" type="button" data-set-theme="light">亮色</button>
+      <button class="button" type="button" data-set-theme="dark">暗色</button>
+    </div>
+
+    <div class="theme-grid">
+      <section class="theme-preview" data-theme="light">
+        <h2>局部亮色</h2>
+        <input class="input" type="text" placeholder="--input-* 继承亮色语义 token">
+        <div class="component-row">
+          <button class="button button-primary" type="button">Primary</button>
+          <span class="badge badge-success">Success</span>
+        </div>
+      </section>
+
+      <section class="theme-preview" data-theme="dark">
+        <h2>局部暗色</h2>
+        <input class="input" type="text" placeholder="同一页面内独立暗色区域">
+        <div class="component-row">
+          <button class="button button-primary" type="button">Primary</button>
+          <span class="badge badge-warning">Warning</span>
+        </div>
+      </section>
+
+      <section class="theme-preview brand-scope compact-inputs">
+        <h2>分层覆盖</h2>
+        <input class="input" type="text" placeholder="仅输入框使用紧凑胶囊样式">
+        <div class="component-row">
+          <button class="button button-primary" type="button">全局品牌色</button>
+          <button class="button" type="button">默认按钮</button>
+        </div>
+      </section>
+    </div>
+
+    <h2>推荐覆盖方式</h2>
+    <pre><code>/* 全局语义覆盖 */
+:root {
+  --color-primary: #7c3aed;
+  --color-primary-hover: #6d28d9;
+}
+
+/* 只覆盖暗色 */
+[data-theme="dark"] {
+  --color-surface: #111827;
+  --input-border-color: #4b5563;
+}
+
+/* 只覆盖一个组件或局部区域 */
+.compact-form {
+  --input-padding: 6px 9px;
+  --input-border-radius: 999px;
+}</code></pre>
+
+    <h2>迁移旧变量</h2>
+    <p class="token-note"><code>legacy.css</code> 集中保存旧变量别名。默认入口仍会加载它；新项目可直接引入 <code>base.css</code>，迁移完成后移除兼容层。</p>
+  </main>
+
+  <script>
+    document.querySelectorAll('[data-set-theme]').forEach((button) => {
+      button.addEventListener('click', () => {
+        document.documentElement.dataset.theme = button.dataset.setTheme;
+      });
+    });
+  </script>
+</body>
+</html>

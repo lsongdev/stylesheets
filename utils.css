@@ -1,5 +1,6 @@
 @import url(./text.css);
 @import url(./color.css);
+@import url(./base.css);
 
 /* Display utilities */
 .hide,
@@ -125,6 +126,22 @@
 .mt-10 { margin-top: 10px; }
 .pt-5 { padding-top: 5px; }
 .pt-10 { padding-top: 10px; }
+
+/* Empty state */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* Monospace */
+.mono {
+  font-family: ui-monospace, SFMono-Regular, monospace;
+}
 
 /* sm:block */
 

@@ -1,50 +1,41 @@
 @import url(./default.css);
 
 :root {
+  color-scheme: dark;
+
   /* Base colors - Dark */
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
+  --theme-background: 222.2 84% 4.9%;
+  --theme-foreground: 210 40% 98%;
 
   /* Surface colors */
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
+  --theme-card: 222.2 84% 4.9%;
+  --theme-card-foreground: 210 40% 98%;
+  --theme-popover: 222.2 84% 4.9%;
+  --theme-popover-foreground: 210 40% 98%;
 
   /* Primary colors */
-  --primary: 210 40% 98%;
-  --primary-foreground: 222.2 47.4% 11.2%;
+  --theme-primary: 210 40% 98%;
+  --theme-primary-foreground: 222.2 47.4% 11.2%;
 
   /* Secondary colors */
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
+  --theme-secondary: 217.2 32.6% 17.5%;
+  --theme-secondary-foreground: 210 40% 98%;
 
   /* Muted colors */
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
+  --theme-muted: 217.2 32.6% 17.5%;
+  --theme-muted-foreground: 215 20.2% 65.1%;
 
   /* Accent colors */
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
+  --theme-accent: 217.2 32.6% 17.5%;
+  --theme-accent-foreground: 210 40% 98%;
 
   /* Destructive colors */
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
+  --theme-destructive: 0 62.8% 30.6%;
+  --theme-destructive-foreground: 210 40% 98%;
 
   /* Border and input */
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 212.7 26.8% 83.9%;
+  --theme-border: 217.2 32.6% 17.5%;
+  --theme-input: 217.2 32.6% 17.5%;
+  --theme-ring: 212.7 26.8% 83.9%;
 
-  /* Legacy variables for compatibility */
-  --text-color: hsl(var(--foreground));
-  --border-color: hsl(var(--border));
-  --background-color: hsl(var(--background));
-  --content-background-color: hsl(var(--card));
-  --container-background: hsl(var(--card));
-  --link-color: hsl(var(--primary));
-  --title-color: hsl(var(--foreground));
-  --code-block-background-color: hsl(var(--muted));
-  --switch-color-off: hsl(var(--muted-foreground));
-  --select-background-color: hsl(var(--secondary));
 }

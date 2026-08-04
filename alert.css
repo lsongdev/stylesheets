@@ -1,21 +1,24 @@
+@import url(./base.css);
+
 .alert {
   padding: 11px 13px;
   border-radius: 9px;
   margin: 16px 0;
-  background: color-mix(in srgb, var(--accent, #2563eb) 12%, transparent);
+  background: color-mix(in srgb, var(--color-primary) 12%, transparent);
 }
 
-.alert.error {
-  color: var(--danger, #dc3545);
-  background: color-mix(in srgb, var(--danger, #dc3545) 10%, transparent);
-}
-
+.alert.error,
 .alert-danger {
-  background: #fee;
-  border: 1px solid #c00;
+  color: var(--color-danger);
+  background: color-mix(in srgb, var(--color-danger) 10%, transparent);
+}
+
+.alert-success {
+  color: var(--color-success);
+  background: color-mix(in srgb, var(--color-success) 10%, transparent);
 }
 
 .alert-warning {
-  background: #fff3cd;
-  border: 1px solid #ffc107;
+  color: #856404;
+  background: color-mix(in srgb, #ffc107 15%, transparent);
 }

@@ -1,65 +1,41 @@
 @import url(./default.css);
 
 :root {
+  color-scheme: dark;
+
   /* Base colors - shadcn Dark theme */
-  --background: 240 10% 3.9%;
-  --foreground: 0 0% 98%;
+  --theme-background: 240 10% 3.9%;
+  --theme-foreground: 0 0% 98%;
 
   /* Surface colors */
-  --card: 240 10% 3.9%;
-  --card-foreground: 0 0% 98%;
-  --popover: 240 10% 3.9%;
-  --popover-foreground: 0 0% 98%;
+  --theme-card: 240 10% 3.9%;
+  --theme-card-foreground: 0 0% 98%;
+  --theme-popover: 240 10% 3.9%;
+  --theme-popover-foreground: 0 0% 98%;
 
   /* Primary colors */
-  --primary: 0 0% 98%;
-  --primary-foreground: 240 5.9% 10%;
+  --theme-primary: 0 0% 98%;
+  --theme-primary-foreground: 240 5.9% 10%;
 
   /* Secondary colors */
-  --secondary: 240 3.7% 15.9%;
-  --secondary-foreground: 0 0% 98%;
+  --theme-secondary: 240 3.7% 15.9%;
+  --theme-secondary-foreground: 0 0% 98%;
 
   /* Muted colors */
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
+  --theme-muted: 240 3.7% 15.9%;
+  --theme-muted-foreground: 240 5% 64.9%;
 
   /* Accent colors */
-  --accent: 240 3.7% 15.9%;
-  --accent-foreground: 0 0% 98%;
+  --theme-accent: 240 3.7% 15.9%;
+  --theme-accent-foreground: 0 0% 98%;
 
   /* Destructive colors */
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 0 0% 98%;
+  --theme-destructive: 0 62.8% 30.6%;
+  --theme-destructive-foreground: 0 0% 98%;
 
   /* Border and input */
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
-  --ring: 240 4.9% 83.9%;
+  --theme-border: 240 3.7% 15.9%;
+  --theme-input: 240 3.7% 15.9%;
+  --theme-ring: 240 4.9% 83.9%;
 
-  /* Legacy variables for compatibility */
-  --text-color: hsl(var(--foreground));
-  --border-color: hsl(var(--border));
-  --background-color: hsl(var(--background));
-  --content-background-color: hsl(var(--card));
-  --container-background: hsl(var(--card));
-  --link-color: hsl(var(--primary));
-  --title-color: hsl(var(--foreground));
-  --code-block-background-color: hsl(var(--muted));
-  --button-normal-color: hsl(var(--foreground));
-  --button-normal-border-color: hsl(var(--border));
-  --button-normal-background-color: hsl(var(--secondary));
-  --button-primary-color: hsl(var(--primary-foreground));
-  --button-primary-border-color: hsl(var(--primary));
-  --button-primary-background-color: hsl(var(--primary));
-  --button-success-color: #fff;
-  --button-success-border-color: #27ae60;
-  --button-success-background-color: #27ae60;
-  --button-warning-color: #fff;
-  --button-warning-border-color: #f39c12;
-  --button-warning-background-color: #f39c12;
-  --button-danger-color: #fff;
-  --button-danger-border-color: #e74c3c;
-  --button-danger-background-color: #e74c3c;
-  --switch-color-off: hsl(var(--muted-foreground));
-  --select-background-color: hsl(var(--secondary));
 }

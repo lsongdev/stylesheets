@@ -2,55 +2,38 @@
 
 :root {
   /* Base colors - Blue theme */
-  --background: 210 40% 98%;
-  --foreground: 222.2 84% 4.9%;
+  --theme-background: 210 40% 98%;
+  --theme-foreground: 222.2 84% 4.9%;
 
   /* Surface colors */
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
+  --theme-card: 0 0% 100%;
+  --theme-card-foreground: 222.2 84% 4.9%;
+  --theme-popover: 0 0% 100%;
+  --theme-popover-foreground: 222.2 84% 4.9%;
 
   /* Primary colors - Blue */
-  --primary: 200 98% 39%;
-  --primary-foreground: 0 0% 100%;
+  --theme-primary: 200 98% 39%;
+  --theme-primary-foreground: 0 0% 100%;
 
   /* Secondary colors */
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
+  --theme-secondary: 210 40% 96.1%;
+  --theme-secondary-foreground: 222.2 47.4% 11.2%;
 
   /* Muted colors */
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
+  --theme-muted: 210 40% 96.1%;
+  --theme-muted-foreground: 215.4 16.3% 46.9%;
 
   /* Accent colors */
-  --accent: 199 89% 48%;
-  --accent-foreground: 0 0% 100%;
+  --theme-accent: 199 89% 48%;
+  --theme-accent-foreground: 0 0% 100%;
 
   /* Destructive colors */
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
+  --theme-destructive: 0 84.2% 60.2%;
+  --theme-destructive-foreground: 210 40% 98%;
 
   /* Border and input */
-  --border: 200 98% 39%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 200 98% 39%;
+  --theme-border: 200 98% 39%;
+  --theme-input: 214.3 31.8% 91.4%;
+  --theme-ring: 200 98% 39%;
 
-  /* Legacy variables for compatibility */
-  --text-color: hsl(var(--foreground));
-  --border-color: hsl(var(--border));
-  --background-color: hsl(var(--background));
-  --content-background-color: hsl(var(--card));
-  --container-background: transparent;
-  --link-color: hsl(var(--primary));
-  --title-color: hsl(var(--foreground));
-  --code-block-background-color: hsl(var(--muted));
-  --button-normal-color: hsl(var(--foreground));
-  --button-normal-border-color: hsl(var(--border));
-  --button-normal-background-color: hsl(var(--secondary));
-  --button-primary-color: hsl(var(--primary-foreground));
-  --button-primary-border-color: hsl(var(--primary));
-  --button-primary-background-color: hsl(var(--primary));
-  --switch-color-off: hsl(var(--muted-foreground));
-  --select-background-color: hsl(var(--secondary));
 }
