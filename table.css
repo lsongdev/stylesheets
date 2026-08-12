@@ -3,10 +3,12 @@
 /* Table component styles */
 .table-container,
 .table-wrap {
+  box-sizing: border-box;
   max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
   width: 100%;
+  overscroll-behavior-inline: contain;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -15,8 +17,6 @@
   border-collapse: collapse;
   background: var(--table-bg, var(--color-surface));
   border-radius: 6px;
-  overflow-y: hidden;
-  overflow-x: auto;
   box-shadow: var(--table-shadow, 0 1px 3px rgb(var(--shadow-color) / 8%));
 }
 
@@ -83,8 +83,10 @@
 
 .table-actions {
   display: flex;
+  align-items: center;
   gap: 8px;
   flex-wrap: wrap;
+  min-width: 0;
 }
 
 .table-actions a,
