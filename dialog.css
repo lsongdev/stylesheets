@@ -81,9 +81,10 @@
   font-weight: 650;
 }
 
-.dialog-field :where(input, select, textarea) {
+.dialog .dialog-field :where(input, select, textarea) {
   box-sizing: border-box;
   width: 100%;
+  font-size: max(16px, 1em);
 }
 
 .dialog-top-right,
