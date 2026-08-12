@@ -82,10 +82,11 @@
 }
 
 .table-actions {
+  --table-actions-gap: 8px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
+  gap: var(--table-actions-gap);
+  flex-wrap: nowrap;
   min-width: 0;
 }
 
