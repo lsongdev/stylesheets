@@ -3,11 +3,18 @@
 :root {
   /* Navigation and overlays */
   --dialog-border-width: var(--border-width);
-  --dialog-border-radius: var(--radius-sm);
+  --dialog-border-radius: var(--radius-lg);
+  --dialog-width: 480px;
+  --dialog-padding: 22px;
 }
 
 .dialog {
   box-sizing: border-box;
+  width: min(calc(100% - 2rem), var(--dialog-width));
+  max-width: none;
+  max-height: calc(100dvh - 2rem);
+  padding: 0;
+  overflow: auto;
   color: var(--color-text);
   background-color: var(--color-surface);
   border-radius: var(--dialog-border-radius);
@@ -16,7 +23,67 @@
 }
 
 .dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgb(0 0 0 / 48%);
+  backdrop-filter: blur(2px);
+}
+
+.dialog > form {
+  margin: 0;
+}
+
+.dialog-header,
+.dialog-footer {
+  display: flex;
+  align-items: center;
+}
+
+.dialog-header {
+  justify-content: space-between;
+  gap: 16px;
+  padding: var(--dialog-padding) calc(var(--dialog-padding) + 36px) 0 var(--dialog-padding);
+}
+
+.dialog-header h1,
+.dialog-header h2,
+.dialog-header h3 {
+  margin: 0;
+}
+
+.dialog-body {
+  padding: var(--dialog-padding);
+}
+
+.dialog-body > :first-child {
+  margin-top: 0;
+}
+
+.dialog-body > :last-child {
+  margin-bottom: 0;
+}
+
+.dialog-footer {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 var(--dialog-padding) var(--dialog-padding);
+}
+
+.dialog-footer .button {
+  margin: 0;
+}
+
+.dialog-field {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.dialog-field :where(input, select, textarea) {
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .dialog-top-right,
@@ -35,6 +102,7 @@
   right: 0;
   left: auto;
   bottom: 0;
+  width: min(calc(100% - 2rem), var(--dialog-drawer-width, 420px));
   min-height: 100vh;
   max-height: 100vh;
   border-radius: 8px 0 0 8px;
@@ -69,7 +137,12 @@
   right: 10px;
   background: none;
   border: none;
-  font-size: 18px;
+  z-index: 1;
+  min-width: 36px;
+  min-height: 36px;
+  margin: 0;
+  font-size: 24px;
+  line-height: 1;
   cursor: pointer;
 }
 
@@ -78,5 +151,11 @@
   .dialog-bottom,
   .dialog-drawer-bottom {
     min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .dialog-footer .button {
+    flex: 1;
   }
 }

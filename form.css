@@ -74,13 +74,26 @@
 
 .form-inline {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   align-items: flex-end;
 }
 
+.form-inline .form-field,
 .form-inline .form-group {
   flex: 1;
-  margin-bottom: 0;
+  min-width: 0;
+  margin: 0;
+}
+
+.form-inline > label,
+.form-inline .form-field > label,
+.form-inline .form-group > label {
+  margin-top: 0;
+}
+
+.form-inline > .button {
+  margin: 0;
 }
 
 .form-check {

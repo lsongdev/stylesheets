@@ -97,26 +97,18 @@
   </main>
 
   <script src="./demo.js"></script>
-  <script>
+  <script type="module">
     (function () {
-      var dialogs = document.querySelectorAll('.dialog');
+      import('https://lsong.org/scripts/dom/dialog.js?v=20260812-1').then(function (dialogApi) {
+        document.querySelectorAll('.dialog').forEach(function (dialog) {
+          dialogApi.bindDialog(dialog);
+        });
 
-      document.addEventListener('click', function (event) {
-        var open = event.target.closest('[data-open-dialog]');
-        if (open) {
+        document.addEventListener('click', function (event) {
+          var open = event.target.closest('[data-open-dialog]');
+          if (!open) return;
           var dialog = document.getElementById(open.getAttribute('data-open-dialog'));
-          if (dialog) dialog.showModal();
-        }
-        var close = event.target.closest('[data-close-dialog]');
-        if (close) {
-          var target = document.getElementById(close.getAttribute('data-close-dialog'));
-          if (target) target.close();
-        }
-      });
-
-      dialogs.forEach(function (dialog) {
-        dialog.addEventListener('click', function (event) {
-          if (event.target === dialog) dialog.close();
+          if (dialog) dialogApi.showDialog(dialog);
         });
       });
     })();
