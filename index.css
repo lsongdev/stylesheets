@@ -11,7 +11,6 @@
 @import url(./switch.css);
 @import url(./utils.css);
 @import url(./table.css);
-@import url(./text.css);
 @import url(./badge.css);
 @import url(./dropdown.css);
 @import url(./navbar.css);
@@ -23,30 +22,3 @@
 @import url(./theme/dark.css);
 @import url(./theme/pink.css);
 @import url(./theme/google.css);
-
-/* Shared editorial landing pattern: a generous first viewport with a clear
-   label, strong heading, and optional actions. Pages can adjust only the
-   content-specific tokens when needed. */
-.hero {
-  min-height: clamp(360px, 58vh, 680px);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-block: clamp(72px, 11vw, 128px);
-}
-
-.hero h1,
-.hero h2 {
-  max-width:  min(100%, 900px);
-  margin: 0;
-  font-size: clamp(48px, 8vw, 88px);
-  line-height: 0.94;
-  letter-spacing: -0.065em;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 28px;
-}
