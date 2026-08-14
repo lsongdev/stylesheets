@@ -114,6 +114,23 @@
           <button class="button button-primary" type="button">搜索</button>
         </div>
       </div>
+      <div class="demo-block">
+        <p>包含无障碍标签</p>
+        <form class="input-group" role="search">
+          <label class="sr-only" for="accessible-search">搜索关键词</label>
+          <input type="search" class="input" id="accessible-search" name="query" autocomplete="off" placeholder=".sr-only 不会破坏圆角">
+          <button class="button button-primary" type="submit">搜索</button>
+          <input type="hidden" name="source" value="components-demo">
+        </form>
+      </div>
+      <div class="demo-block">
+        <label for="hidden-context">包含隐藏字段</label>
+        <form class="input-group">
+          <input type="hidden" name="context" value="example">
+          <input type="text" class="input" id="hidden-context" name="message" placeholder="隐藏字段不会成为第一个控件">
+          <button class="button" type="submit">发送</button>
+        </form>
+      </div>
     </div>
 
     <div class="demo-section">

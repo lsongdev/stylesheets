@@ -113,6 +113,21 @@
   border-end-end-radius: var(--input-border-radius);
 }
 
+/*
+ * Select the first and last controls rather than the first and last DOM
+ * children. This keeps the group intact when it contains labels, help text,
+ * hidden inputs, or other non-visual semantic nodes.
+ */
+.input-group > :nth-child(1 of :is(.input, .select, .button, .input-addon)) {
+  border-start-start-radius: var(--input-border-radius);
+  border-end-start-radius: var(--input-border-radius);
+}
+
+.input-group > :nth-last-child(1 of :is(.input, .select, .button, .input-addon)) {
+  border-start-end-radius: var(--input-border-radius);
+  border-end-end-radius: var(--input-border-radius);
+}
+
 .input-group > :is(.input, .select, .button):focus-visible {
   position: relative;
   z-index: 1;

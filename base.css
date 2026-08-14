@@ -43,3 +43,8 @@
   --color-on-danger: #ffffff;
   --shadow-color: 24 24 27;
 }
+
+/* Preserve the native hidden contract when a component sets display. */
+[hidden] {
+  display: none !important;
+}
