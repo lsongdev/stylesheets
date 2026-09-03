@@ -36,6 +36,8 @@
 
 ## 主题机制
 
+文章排版的字体策略、宿主集成和视觉检查场景见 [prose.md](./prose.md)。
+
 - 主题通过 `data-theme="<名称>"` 显式开启，写在 `<html>` 或任意子树均可。
 - 演示页同时引入 `theme/light.css`、`theme/dark.css`、`theme/google.css`、`theme/pink.css`，由 `demo.js` 读取 `?theme=` 参数或 `localStorage` 决定当前主题。
 - 注意：`animation.css`、`icon.css`、`sidebar.css`、`section.css`、`progressbar.css`、`link.css` 未包含在 `index.css` 中，需要时请单独引入。

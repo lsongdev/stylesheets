@@ -27,15 +27,18 @@
 
   <main class="demo-main prose">
     <article>
-      <header>
+      <header class="prose-header">
         <h1>让长文章更容易阅读</h1>
-        <p class="muted">发布于 2026 年 9 月 3 日 · 阅读约 5 分钟</p>
+        <p class="prose-meta">发布于 2026 年 9 月 3 日 · 阅读约 5 分钟</p>
       </header>
 
       <p>好的文章排版不应喧宾夺主。它需要清晰的层级、舒适的行长与稳定的节奏，同时照顾中文和英文混排。正文可以包含<a href="#links">链接</a>、<strong>重点内容</strong>、<em>强调文字</em>、<mark>高亮片段</mark>和 <code>inlineCode()</code>。</p>
 
+      <p lang="en">Good typography gives an article a steady rhythm. Georgia brings familiar shapes to English prose, while an explicit Chinese serif fallback keeps 中文与 English in the same visual register. Readable text needs room to breathe, from its first sentence to its final footnote.</p>
+      <p>混排细节：在 2026 年，Web Components 与浏览器 API 仍在演进。「标准」不只是统一字号，还包括<strong>重点文字的分量</strong>、标点的位置，以及 CSS、HTML 和中文之间自然的节奏。</p>
+
       <h2 id="links"><a href="#links">结构与层级</a></h2>
-      <p>标题之间留有更明显的空间，让读者快速扫描文章。正文宽度默认限制为 <code>68ch</code>，也可在容器上覆盖：</p>
+      <p>标题之间留有更明显的空间，让读者快速扫描文章。正文宽度默认限制为 <code>68ch</code>，也可在容器上覆盖。设置 <code>--prose-measure: none</code> 后，正文宽度完全由站点布局决定：</p>
       <pre><code>&lt;article class="prose" style="--prose-measure: 60ch"&gt;
   ...
 &lt;/article&gt;</code></pre>
@@ -80,7 +83,7 @@
         </thead>
         <tbody>
           <tr><td><code>--prose-measure</code></td><td>68ch</td><td>控制正文最大行长</td></tr>
-          <tr><td><code>--prose-line-height</code></td><td>1.75</td><td>控制正文行距</td></tr>
+          <tr><td><code>--prose-line-height</code></td><td>1.75 / 中文 1.85</td><td>控制正文行距</td></tr>
           <tr><td><code>--prose-block-gap</code></td><td>1.5em</td><td>控制内容块节奏</td></tr>
         </tbody>
       </table>
@@ -97,6 +100,16 @@
       </section>
     </article>
   </main>
+
+  <article class="demo-main prose" style="--prose-measure: none" aria-labelledby="wide-title">
+    <header class="prose-header">
+      <h1 id="wide-title">让正文跟随站点宽度</h1>
+      <p class="prose-meta">相同的排版组件 · 由外层容器决定行长</p>
+    </header>
+    <p>这段正文使用与上方相同的 <code>.prose</code>，只覆盖行长令牌，便能与站点容器左右对齐。导航下方的留白、页面的边距和最大宽度属于宿主站点；字体回退、标题层级、段落节奏、代码与表格则由标准样式库提供。</p>
+    <h2 lang="en">A shared foundation for articles in Chinese and English</h2>
+    <p lang="en">The same component can live inside a reading column or fill a wider publication layout. Typography remains consistent, while the surrounding site decides how much space the article should occupy.</p>
+  </article>
 
   <script src="./demo.js"></script>
 </body>

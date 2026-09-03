@@ -4,8 +4,10 @@
  * Prose is a theme-aware typesetting layer for articles and rendered Markdown.
  * Add .prose to the content container and customize it with --prose-* tokens.
  */
-.prose {
-  --prose-font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, "Songti SC", "Noto Serif CJK SC", serif;
+:where(.prose) {
+  /* Explicit CJK faces must precede generic families, which can resolve early. */
+  --prose-font-family: Georgia, "Times New Roman", "Source Han Serif SC", "Noto Serif CJK SC", "Noto Serif SC", "Songti SC", "SimSun", serif;
+  --prose-heading-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
   --prose-mono-font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --prose-font-size: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
   --prose-line-height: 1.75;
@@ -14,14 +16,24 @@
   --prose-heading-color: var(--color-text);
   --prose-link-color: var(--color-primary);
   --prose-code-background: var(--color-surface-subtle);
+}
 
+:where(.prose:lang(zh)) {
+  --prose-line-height: 1.85;
+}
+
+.prose {
   box-sizing: border-box;
   max-width: var(--prose-measure);
   color: var(--color-text);
   font-family: var(--prose-font-family);
   font-size: var(--prose-font-size);
   line-height: var(--prose-line-height);
+  /* Keep native stroke weight, including on sites that smooth all body text. */
+  -webkit-font-smoothing: auto;
   overflow-wrap: break-word;
+  word-break: normal;
+  line-break: strict;
   text-rendering: optimizeLegibility;
 }
 
@@ -43,9 +55,9 @@
 
 .prose :where(h1, h2, h3, h4, h5, h6) {
   color: var(--prose-heading-color);
-  font-family: var(--prose-heading-font-family, inherit);
-  font-weight: 700;
-  line-height: 1.25;
+  font-family: var(--prose-heading-font-family);
+  font-weight: 600;
+  line-height: 1.35;
   text-wrap: balance;
 }
 
@@ -78,6 +90,33 @@
 
 .prose h6 {
   color: var(--color-text-muted);
+}
+
+/* CJK headings need full character spacing; Latin titles can be tighter. */
+.prose :where(h1, h2):lang(zh) {
+  letter-spacing: normal;
+}
+
+.prose :is(h1, h2, h3, h4, h5) + :where(h2, h3, h4, h5, h6) {
+  margin-top: 1em;
+}
+
+/* Optional article header: internal rhythm only; the host owns page spacing. */
+.prose .prose-header {
+  margin-bottom: 2.5em;
+}
+
+.prose .prose-header > :where(h1, h2) {
+  margin-bottom: 0.4em;
+}
+
+.prose .prose-meta {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-family: var(--prose-heading-font-family);
+  font-size: 0.8em;
+  line-height: 1.5;
+  font-variant-numeric: lining-nums tabular-nums;
 }
 
 .prose :where(p, dl, ol, ul, pre, table, blockquote, figure, details) {
@@ -375,7 +414,7 @@
 }
 
 @media (max-width: 640px) {
-  .prose {
+  :where(.prose) {
     --prose-block-gap: 1.25em;
     --prose-font-size: 1rem;
   }
