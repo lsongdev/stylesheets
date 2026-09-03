@@ -10,7 +10,8 @@
  * tokens when only one component needs to differ. Theme selectors can be
  * placed on <html> or on any subtree.
  */
-:root {
+/* Theme selectors must always win, even when another theme imports base.css later. */
+:where(:root) {
   /* base */
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-size: 15px;

@@ -16,6 +16,7 @@
 | 基础 | `base.html` | base.css 语义令牌与排版 |
 | 基础 | `color.html` | color.css 调色板与文字工具类 |
 | 基础 | `font.html` | font.css / text.css 字族字号工具类 |
+| 基础 | `prose.html` | prose.css / `.prose` 文章与 Markdown 排版 |
 | 基础 | `animation.html` | animation.css 呼吸动画关键帧 |
 | 布局 | `flex.html` | flex.css 弹性布局工具类 |
 | 布局 | `grid.html` | grid.css 12 列栅格与响应式断点 |
