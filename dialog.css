@@ -4,8 +4,8 @@
   /* Navigation and overlays */
   --dialog-border-width: var(--border-width);
   --dialog-border-radius: var(--radius-lg);
-  --dialog-width: 480px;
-  --dialog-padding: 22px;
+  --dialog-width: 560px;
+  --dialog-padding: 16px;
 }
 
 .dialog {

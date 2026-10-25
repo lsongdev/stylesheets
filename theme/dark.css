@@ -3,24 +3,24 @@
 [data-theme="dark"] {
   color-scheme: dark;
 
-  --color-canvas: #09090b;
-  --color-surface: #18181b;
-  --color-surface-subtle: #27272a;
-  --color-surface-disabled: #202023;
-  --color-text: #fafafa;
-  --color-text-muted: #a1a1aa;
-  --color-text-disabled: #71717a;
-  --color-border: #3f3f46;
-  --color-border-strong: #52525b;
-  --color-primary: #60a5fa;
-  --color-primary-hover: #93c5fd;
-  --color-focus: #60a5fa;
+  --color-canvas: #0f1216;
+  --color-surface: #171b21;
+  --color-surface-subtle: #1e232b;
+  --color-surface-disabled: #1a1e25;
+  --color-text: #e6e9ee;
+  --color-text-muted: #9099a6;
+  --color-text-disabled: #6b7280;
+  --color-border: #2a3039;
+  --color-border-strong: #3a414c;
+  --color-primary: #4f8bff;
+  --color-primary-hover: #6e9fff;
+  --color-focus: #4f8bff;
   --color-success: #4ade80;
-  --color-warning: #facc15;
-  --color-danger: #f87171;
-  --color-on-primary: #09090b;
-  --color-on-success: #09090b;
-  --color-on-danger: #09090b;
+  --color-warning: #f5b34a;
+  --color-danger: #f26d6d;
+  --color-on-primary: #ffffff;
+  --color-on-success: #0f1216;
+  --color-on-danger: #0f1216;
   --shadow-color: 0 0 0;
 }
 
@@ -30,24 +30,24 @@
   [data-theme="auto"] {
     color-scheme: dark;
 
-    --color-canvas: #09090b;
-    --color-surface: #18181b;
-    --color-surface-subtle: #27272a;
-    --color-surface-disabled: #202023;
-    --color-text: #fafafa;
-    --color-text-muted: #a1a1aa;
-    --color-text-disabled: #71717a;
-    --color-border: #3f3f46;
-    --color-border-strong: #52525b;
-    --color-primary: #60a5fa;
-    --color-primary-hover: #93c5fd;
-    --color-focus: #60a5fa;
+    --color-canvas: #0f1216;
+    --color-surface: #171b21;
+    --color-surface-subtle: #1e232b;
+    --color-surface-disabled: #1a1e25;
+    --color-text: #e6e9ee;
+    --color-text-muted: #9099a6;
+    --color-text-disabled: #6b7280;
+    --color-border: #2a3039;
+    --color-border-strong: #3a414c;
+    --color-primary: #4f8bff;
+    --color-primary-hover: #6e9fff;
+    --color-focus: #4f8bff;
     --color-success: #4ade80;
-    --color-warning: #facc15;
-    --color-danger: #f87171;
-    --color-on-primary: #09090b;
-    --color-on-success: #09090b;
-    --color-on-danger: #09090b;
+    --color-warning: #f5b34a;
+    --color-danger: #f26d6d;
+    --color-on-primary: #ffffff;
+    --color-on-success: #0f1216;
+    --color-on-danger: #0f1216;
     --shadow-color: 0 0 0;
   }
 }

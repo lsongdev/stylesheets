@@ -2,8 +2,8 @@
 
 .alert {
   margin: 16px 0;
-  padding: 11px 13px;
-  border-radius: 9px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
   background: color-mix(in srgb, var(--color-primary) 10%, transparent);
   overflow: hidden;
 }

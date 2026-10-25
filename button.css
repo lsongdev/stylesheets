@@ -7,17 +7,17 @@
   /* Button */
   --button-font-size: 14px;
   --button-font-family: var(--font-family);
-  --button-font-weight: 600;
-  --button-line-height: 1.5;
-  --button-padding-y: 8px;
-  --button-padding-x: 16px;
+  --button-font-weight: 500;
+  --button-line-height: 1.43;
+  --button-padding-y: 5px;
+  --button-padding-x: 12px;
   --button-border-width: var(--border-width);
   --button-border-radius: var(--radius-sm);
   --button-transition: background-color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard), box-shadow var(--duration-fast) var(--ease-standard);
   --button-opacity-hover: 1;
   --button-opacity-active: 0.85;
   --button-opacity-disabled: 0.5;
-  --button-size-small-scale: 0.75;
+  --button-size-small-scale: 0.86;
   --button-size-small-min-width: 40px;
   --button-size-large-scale: 1.15;
   --button-size-large-min-width: 100px;

@@ -1,10 +1,10 @@
 @import url(./base.css);
 
 :root {
-  --badge-border-radius: 12px;
-  --badge-padding: 4px 8px;
-  --badge-font-size: 0.75em;
-  --badge-text-transform: uppercase;
+  --badge-border-radius: 999px;
+  --badge-padding: 3px 8px;
+  --badge-font-size: 12px;
+  --badge-text-transform: none;
 }
 
 .badge {

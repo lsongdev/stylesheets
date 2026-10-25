@@ -2,10 +2,10 @@
 
 :root {
   /* Input */
-  --input-padding: 10px;
+  --input-padding: 8px;
   --input-font-size: 1em;
   --input-border-width: var(--border-width);
-  --input-border-radius: var(--radius-md);
+  --input-border-radius: var(--radius-sm);
   --input-transition: border-color var(--duration-fast) var(--ease-standard), box-shadow var(--duration-fast) var(--ease-standard);
 }
 
