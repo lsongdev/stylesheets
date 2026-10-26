@@ -24,7 +24,7 @@
   --shadow-color: 0 0 0;
 }
 
-/* 跟随系统：未显式设置 data-theme 或使用 data-theme="auto" 时，在系统偏好暗色的环境下启用暗色主题 */
+/* Follow the system: with no data-theme, or data-theme="auto", use the dark theme when the system prefers it. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]),
   [data-theme="auto"] {
