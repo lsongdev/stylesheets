@@ -1,6 +1,6 @@
 {
   "name": "@lsongdev/stylesheets",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Semantic-token CSS components: plain stylesheets, no build step to use them.",
   "license": "MIT",
   "type": "module",

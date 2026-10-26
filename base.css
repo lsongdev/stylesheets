@@ -23,6 +23,12 @@
   --duration-fast: 0.2s;
   --ease-standard: ease;
   --focus-ring-width: 3px;
+  /* Form controls (buttons, inputs, selects) share these so they line up.
+     16px text also keeps iOS from zooming into a focused field. */
+  --control-font-size: 16px;
+  --control-line-height: 1.25;
+  --control-padding-y: 7px;
+  --control-padding-x: 12px;
   /* colors */
   --color-canvas: #f6f7f9;
   --color-surface: #ffffff;
@@ -43,6 +49,17 @@
   --color-on-success: #ffffff;
   --color-on-danger: #ffffff;
   --shadow-color: 16 24 40;
+}
+
+/* With a mouse or trackpad, controls can be denser. iOS is left out even
+   then (an iPad with a trackpad reports a fine pointer) because it zooms
+   into fields under 16px; -webkit-touch-callout exists only there. */
+@supports not (-webkit-touch-callout: none) {
+  @media (pointer: fine) {
+    :where(:root) {
+      --control-font-size: 14px;
+    }
+  }
 }
 
 /* Preserve the native hidden contract when a component sets display. */

@@ -77,6 +77,13 @@
   --input-border-color: #4b5563;
 }
 
+/* Buttons, inputs and selects share one size; keep fields at 16px or more
+   where iOS users type, or Safari zooms in */
+:root {
+  --control-font-size: 15px;
+  --control-padding-y: 6px;
+}
+
 /* 只覆盖一个组件或局部区域 */
 .compact-form {
   --input-padding: 6px 9px;

@@ -5,12 +5,12 @@
    ============================================ */
 :root {
   /* Button */
-  --button-font-size: 14px;
+  --button-font-size: var(--control-font-size);
   --button-font-family: var(--font-family);
   --button-font-weight: 500;
-  --button-line-height: 1.43;
-  --button-padding-y: 5px;
-  --button-padding-x: 12px;
+  --button-line-height: var(--control-line-height);
+  --button-padding-y: var(--control-padding-y);
+  --button-padding-x: var(--control-padding-x);
   --button-border-width: var(--border-width);
   --button-border-radius: var(--radius-sm);
   --button-transition: background-color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard), box-shadow var(--duration-fast) var(--ease-standard);
