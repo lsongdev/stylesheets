@@ -65,3 +65,13 @@
   --badge-bg: var(--badge-danger-bg, color-mix(in srgb, var(--color-danger) 16%, transparent));
   --badge-text: var(--badge-danger-text, var(--color-danger));
 }
+/* A dot in the badge's colour before its text: <span class="badge-dot"></span> */
+.badge-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  vertical-align: 0.1em;
+  border-radius: 50%;
+  background: currentColor;
+}
