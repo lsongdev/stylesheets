@@ -45,3 +45,30 @@
 .field-invalid .input {
   --input-border-color: var(--color-danger);
 }
+
+/* A checkbox or radio with its label to the right. */
+.field-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.field-check input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+/* A growing list of inputs, one per row, each with a remove button. */
+.list-input {
+  display: grid;
+  gap: 6px;
+}
+
+.list-input-row {
+  display: flex;
+  gap: 6px;
+}
