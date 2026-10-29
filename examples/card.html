@@ -40,6 +40,7 @@
 
     <div class="demo-section">
       <h2>可选中卡片（.card.selectable）</h2>
+      <p>网格内的卡片外边距为零，间距由 <code class="demo-code">--grid-gap</code> 控制；网格后的卡片仍保留文档流外边距。</p>
       <div class="grid grid-cols-2 sm-grid-cols-1">
         <div class="card selectable">
           <h3 style="margin-top:0">基础版</h3>
@@ -54,12 +55,15 @@
           <button class="button button-primary button-block" type="button">选择</button>
         </div>
       </div>
+      <div class="card">
+        <p style="margin:0">网格后的卡片，与上方网格保持默认间距。</p>
+      </div>
     </div>
 
     <div class="demo-section">
       <h2>令牌覆盖</h2>
-      <div class="card" style="--card-padding: 16px; --card-border-radius: var(--radius-sm); --card-bg: var(--color-surface-subtle); --card-border: 1px dashed var(--color-border-strong)">
-        <p style="margin:0">通过内联令牌覆盖卡片外观：紧凑内边距、小圆角、虚线边框、次要底色。</p>
+      <div class="card" style="--card-margin: 0; --card-padding: 16px; --card-border-radius: var(--radius-sm); --card-bg: var(--color-surface-subtle); --card-border: 1px dashed var(--color-border-strong)">
+        <p style="margin:0">通过内联令牌覆盖卡片外观：零外边距（--card-margin）、紧凑内边距、小圆角、虚线边框、次要底色。</p>
       </div>
     </div>
   </main>
