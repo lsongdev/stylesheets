@@ -47,6 +47,23 @@
   gap: 8px;
 }
 
+
+/* Reserve at least a third for the title; actions wrap within the rest.
+   Headers with a Back link keep their separate title/back grid. */
+.page-header:not(.page-header-with-back) > .page-title {
+  flex: 1 1 33.333%;
+  min-width: 33.333%;
+}
+
+.page-header:not(.page-header-with-back) > .page-actions {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: calc(66.667% - 16px);
+  justify-content: flex-end;
+}
+
+.page-actions > .page-actions { min-width: 0; max-width: 100%; }
+
 .page-header-with-back {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto auto;
