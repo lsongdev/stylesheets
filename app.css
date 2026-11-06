@@ -16,6 +16,17 @@
   line-height: var(--line-height);
 }
 
+/* Links in the theme colour, underlined on hover. :where() keeps these at
+   zero specificity, so any component or class rule wins. */
+.app :where(a) {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.app :where(a:hover) {
+  text-decoration: underline;
+}
+
 /*
  * A centred column with side padding, for a page's navigation and content.
  * --container-width sets its widest size, --container-padding its sides.
