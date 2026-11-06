@@ -37,7 +37,7 @@ body > main, .stack {
   gap: var(--stack-gap, 16px);
 }
 
-body > main, .stack > * {
+.stack > * {
   margin-block: 0;
 }
 
