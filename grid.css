@@ -346,3 +346,11 @@ ul.grid, ol.grid {
   .sm-order-first { order: -9999; }
   .sm-order-last { order: 9999; }
 }
+
+/*
+ * As many columns as fit, each at least --grid-min wide (240px), for cards
+ * and stats whose count varies: <div class="grid grid-auto">.
+ */
+.grid-auto {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--grid-min, 240px)), 1fr));
+}

@@ -18,7 +18,7 @@
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 16px;
-  margin-bottom: var(--page-header-margin-bottom, 18px);
+  margin-bottom: var(--page-header-margin-bottom, 0);
 }
 
 .page-title {
