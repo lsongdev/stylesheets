@@ -28,13 +28,19 @@
 }
 
 /*
- * Vertical spacing between children, set by the container instead of by
- * margins on the components: <main class="stack">…</main>. --stack-gap sets it.
+ * Vertical spacing between children, set by the container with a gap instead
+ * of by the children's margins: <main class="stack">…</main>. --stack-gap
+ * sets it. Cards, alerts and page headers otherwise keep a 16px bottom margin
+ * of their own (--card-margin, --alert-margin, --page-header-margin-bottom);
+ * inside a stack those are zero.
  */
 body > main, .stack {
   display: flex;
   flex-direction: column;
   gap: var(--stack-gap, 16px);
+  --card-margin: 0;
+  --alert-margin: 0;
+  --page-header-margin-bottom: 0;
 }
 
 .stack > * {
