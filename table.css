@@ -162,6 +162,15 @@
   flex-wrap: nowrap;
 }
 
+/* A column that takes the free width and wraps, such as long names, so it
+   doesn't push the other columns out of view. */
+.table-scroll > .table :is(th, td).table-grow {
+  width: 100%;
+  min-width: var(--table-grow-min, 240px);
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
 .table-framed {
   background: var(--table-bg, var(--color-surface));
   border: 1px solid var(--table-border, var(--color-border));
