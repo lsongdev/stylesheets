@@ -3,7 +3,6 @@
 /*
  * The heading row of a page: title and subtitle on the left, actions on
  * the right, wrapping on narrow screens.
- * Opt-in: not part of index.css.
  *
  * <header class="page-header">
  *   <div class="page-title"><h1>Containers</h1><div class="page-subtitle">12 running</div></div>
