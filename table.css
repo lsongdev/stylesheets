@@ -168,3 +168,51 @@
   border-radius: var(--radius-md);
   box-shadow: var(--table-shadow, 0 1px 2px rgb(var(--shadow-color) / 6%), 0 1px 3px rgb(var(--shadow-color) / 8%));
 }
+
+/*
+ * A sortable column header: a button filling the cell, with an arrow for the
+ * current direction. Put aria-sort on the th.
+ *
+ * <th aria-sort="ascending"><button class="table-sort">Name<span class="table-sort-indicator">▲</span></button></th>
+ */
+.table-sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.table-sort:hover,
+th[aria-sort="ascending"] .table-sort,
+th[aria-sort="descending"] .table-sort {
+  color: var(--color-text);
+}
+
+.table-sort:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.table-sort-indicator {
+  min-width: 1em;
+  font-size: 0.8em;
+}
+
+/* The single cell of a table without rows. */
+.table .table-empty {
+  padding: 2.5rem 1rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  white-space: normal;
+}
+
+.table tbody .table-empty-row:hover {
+  background: none;
+}
