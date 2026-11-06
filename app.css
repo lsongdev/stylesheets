@@ -28,6 +28,20 @@
 }
 
 /*
+ * Vertical spacing between children, set by the container instead of by
+ * margins on the components: <main class="stack">…</main>. --stack-gap sets it.
+ */
+body > main, .stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--stack-gap, 16px);
+}
+
+body > main, .stack > * {
+  margin-block: 0;
+}
+
+/*
  * A centred column with side padding, for a page's navigation and content.
  * --container-width sets its widest size, --container-padding its sides.
  *

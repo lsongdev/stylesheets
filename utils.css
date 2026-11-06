@@ -156,20 +156,6 @@
   border-radius: var(--radius-md);
 }
 
-/*
- * Vertical spacing between children, set by the container instead of by
- * margins on the components: <main class="stack">…</main>. --stack-gap sets it.
- */
-.stack {
-  display: flex;
-  flex-direction: column;
-  gap: var(--stack-gap, 16px);
-}
-
-.stack > * {
-  margin-block: 0;
-}
-
 /* A wrapping row of controls above a list or table: search, filters, buttons. */
 .toolbar {
   display: flex;
