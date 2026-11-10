@@ -147,7 +147,7 @@
 }
 
 @media screen and (min-width: 769px) {
-  /* mini mode */
+  /* compact mode: collapsed to icons (.sidebar-open on wide screens) */
   .sidebar-open {
     --sidebar-width: var(--sidebar-collapsed-width);
   }
