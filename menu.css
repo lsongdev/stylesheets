@@ -142,9 +142,18 @@
   list-style: none;
 }
 
-/* What a group or a link holds sits indented below it. */
+/* What a group or a link holds sits below it, flush by default;
+   --menu-nested-indent indents it. */
 .menu-vertical li > ul {
-  padding-left: var(--menu-nested-indent, 28px);
+  padding-left: var(--menu-nested-indent, 0);
+}
+
+/* A group's items share a tinted panel, so they read as one set apart from
+   the next group. --menu-group-bg sets the tint (none to remove it). */
+.menu-group > ul {
+  padding: var(--menu-group-padding, 2px);
+  border-radius: var(--menu-group-radius, var(--radius-md));
+  background: var(--menu-group-bg, color-mix(in srgb, var(--color-text) 3%, transparent));
 }
 
 .menu-heading {
