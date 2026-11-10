@@ -156,10 +156,11 @@
     display: none;
   }
 
-  /* Icons only, at any depth of the menu tree: labels, badges and
-     headings hide, and the icons centre in the narrow column. */
+  /* Icons only, at any depth of the menu tree: labels and badges hide and
+     the icons centre in the narrow column. Each group is one icon button
+     (.menu-flyout) whose list opens as a panel beside the sidebar. */
   .sidebar-open .menu a > span,
-  .sidebar-open .menu-heading,
+  .sidebar-open .menu-heading > span,
   .sidebar-open .sidebar-footer span {
     display: none;
   }
@@ -175,10 +176,70 @@
     padding-right: 0;
   }
 
-  /* With the headings gone, a rule keeps the groups apart. */
-  .sidebar-open .menu-group + .menu-group {
-    margin-top: 4px;
-    padding-top: 4px;
-    border-top: 1px solid var(--sidebar-border-color, var(--color-border));
+  /* The group's button, drawn like a link. */
+  .sidebar-open .menu-flyout > .menu-heading {
+    justify-content: center;
+    margin: var(--menu-vertical-item-margin, 10px 0);
+    padding: var(--menu-vertical-item-padding, 12px);
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: var(--menu-vertical-item-radius, 12px);
+    color: var(--menu-item-color, var(--color-text));
+    font-size: var(--menu-vertical-font-size, 15px);
+    letter-spacing: normal;
+  }
+
+  .sidebar-open .menu-flyout > .menu-heading::after {
+    display: none;
+  }
+
+  .sidebar-open .menu-flyout > .menu-heading > i {
+    width: 20px;
+    text-align: center;
+  }
+
+  .sidebar-open .menu-flyout > .menu-heading:hover,
+  .sidebar-open .menu-flyout-open > .menu-heading {
+    background-color: var(--menu-item-hover-bg, var(--color-surface-subtle));
+  }
+
+  .sidebar-open .menu-group-active > .menu-heading {
+    background-color: var(--menu-item-active-bg, color-mix(in srgb, var(--color-primary) 14%, transparent));
+  }
+
+  /* The panel: the group's own list, fixed beside the sidebar (the
+     component sets top and left), titled with the group's name. */
+  .sidebar-open .menu-flyout > ul {
+    position: fixed;
+    z-index: var(--sidebar-flyout-z-index, 1100);
+    min-width: var(--sidebar-flyout-width, 200px);
+    max-height: calc(100dvh - 16px);
+    overflow-y: auto;
+    padding: 6px;
+    color: var(--color-text);
+    background: var(--menu-surface, var(--color-surface));
+    border: 1px solid var(--menu-border, var(--color-border));
+    border-radius: var(--radius-md);
+    box-shadow: 0 10px 15px -3px rgb(var(--shadow-color) / 12%), 0 4px 6px -2px rgb(var(--shadow-color) / 6%);
+  }
+
+  .sidebar-open .menu-flyout > ul::before {
+    content: attr(data-title);
+    padding: 4px 8px 6px;
+    color: var(--color-text-muted);
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .sidebar-open .menu-flyout > ul a {
+    justify-content: flex-start;
+    margin: 1px 0;
+    padding: 7px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+  }
+
+  .sidebar-open .menu-flyout > ul a > span {
+    display: revert;
   }
 }
