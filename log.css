@@ -1,12 +1,25 @@
 @import url(./base.css);
 
 /*
- * A dark, scrolling block of program output. Mark standard error lines
- * with .log-stderr.
+ * The console surface, shared by program output (.log) and terminals
+ * (.terminal-frame, holding an emulator such as xterm, whose own root is
+ * .terminal): dark in every theme. --log-border outlines it, which the
+ * dark theme sets so it stays distinct from a dark page.
  *
  * <pre class="log">starting…
  * <span class="log-stderr">warning: …</span></pre>
+ *
+ * <div class="terminal-frame">…emulator…</div>
  */
+.log,
+.terminal-frame {
+  box-sizing: border-box;
+  color: var(--log-text, #d6dde6);
+  background: var(--log-bg, #0f1419);
+  border: 1px solid var(--log-border, transparent);
+  border-radius: var(--radius-md);
+}
+
 .log {
   height: var(--log-height, 440px);
   margin: 0;
@@ -15,9 +28,13 @@
   font: 12.5px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
-  color: var(--log-text, #d6dde6);
-  background: var(--log-bg, #0f1419);
-  border-radius: var(--radius-md);
+}
+
+/* The emulator fills it; give it a transparent background to show this one. */
+.terminal-frame {
+  height: var(--terminal-height, 480px);
+  padding: 8px;
+  overflow: hidden;
 }
 
 .log-stderr {
