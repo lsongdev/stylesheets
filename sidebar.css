@@ -138,7 +138,7 @@
     padding: 8px 0 16px;
   }
 
-  .sidebar .menu-vertical a {
+  .sidebar .menu-vertical :is(a, .menu-heading) {
     margin: 2px 0;
     padding: 11px 12px;
     border-radius: 8px;
@@ -176,26 +176,15 @@
     padding-right: 0;
   }
 
-  /* The group's button, drawn like a link. */
+  /* The group's button: its icon alone, centred like the links'. */
   .sidebar-open .menu-flyout > .menu-heading {
     justify-content: center;
-    margin: var(--menu-vertical-item-margin, 10px 0);
-    padding: var(--menu-vertical-item-padding, 12px);
     padding-left: 0;
     padding-right: 0;
-    border-radius: var(--menu-vertical-item-radius, 12px);
-    color: var(--menu-item-color, var(--color-text));
-    font-size: var(--menu-vertical-font-size, 15px);
-    letter-spacing: normal;
   }
 
   .sidebar-open .menu-flyout > .menu-heading::after {
     display: none;
-  }
-
-  .sidebar-open .menu-flyout > .menu-heading > i {
-    width: 20px;
-    text-align: center;
   }
 
   .sidebar-open .menu-flyout > .menu-heading:hover,

@@ -51,10 +51,10 @@
     </div>
 
     <div class="demo-section">
-      <h2>纵向菜单（.menu.menu-vertical.menu-tree，点击展开分组）</h2>
+      <h2>纵向菜单（.menu.menu-vertical，点击展开分组）</h2>
       <div class="grid grid-cols-2 sm-grid-cols-1">
         <div>
-          <ul class="menu menu-vertical menu-tree" style="max-height: 320px; border-right: 1px solid var(--color-border); padding-right: 8px">
+          <ul class="menu menu-vertical" style="max-height: 320px; border-right: 1px solid var(--color-border); padding-right: 8px">
             <li><a href="#"><i class="fas fa-house"></i><span>首页</span></a></li>
             <li class="menu-group"><button class="menu-heading" type="button" aria-expanded="false" aria-controls="demo-menu-1"><i class="fas fa-box"></i><span>产品</span></button>
               <ul id="demo-menu-1" hidden>
@@ -76,7 +76,7 @@
           <p class="text-sm muted">
             分组是 <code class="demo-code">li.menu-group</code>：一个 <code class="demo-code">.menu-heading</code> 加它自己的列表。
             标题用 <code class="demo-code">button[aria-expanded][aria-controls]</code> 时可展开收起，收起的列表带 <code class="demo-code">hidden</code>。
-            默认标题是分组小标签，<code class="demo-code">.menu-tree</code> 把它画成菜单项；
+            分组标题和菜单项同样大小，可带图标；
             <code class="demo-code">.menu-item-active</code> / <code class="demo-code">.menu-active</code> 标记当前项。
           </p>
         </div>

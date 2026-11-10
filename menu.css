@@ -107,18 +107,18 @@
  * <ul class="menu menu-vertical">
  *   <li><a href="#/">Dashboard</a></li>
  *   <li class="menu-group">
- *     <span class="menu-heading" id="docker-heading">Docker</span>
+ *     <span class="menu-heading" id="docker-heading"><i>…</i><span>Docker</span></span>
  *     <ul aria-labelledby="docker-heading"><li><a href="#/docker">Containers</a></li></ul>
  *   </li>
  *   <li class="menu-group">
- *     <button class="menu-heading" type="button" aria-expanded="true" aria-controls="storage">Storage</button>
+ *     <button class="menu-heading" type="button" aria-expanded="true" aria-controls="storage"><i>…</i><span>Storage</span></button>
  *     <ul id="storage">…</ul>
  *   </li>
  * </ul>
  *
- * By default a heading is a small label over its group. .menu-tree draws
- * group headings as items instead (icon, label, chevron) and indents what
- * they hold.
+ * A heading is drawn like the links: same size, an optional icon before its
+ * label, and a chevron when it is a disclosure button. Restyle .menu-heading
+ * for another look, e.g. small labels over flat groups.
  */
 .menu-vertical {
   flex-direction: column;
@@ -142,8 +142,8 @@
   list-style: none;
 }
 
-/* A link's own list sits indented below it. */
-.menu-vertical li:not(.menu-group) > ul {
+/* What a group or a link holds sits indented below it. */
+.menu-vertical li > ul {
   padding-left: var(--menu-nested-indent, 28px);
 }
 
@@ -153,30 +153,25 @@
   gap: 8px;
   box-sizing: border-box;
   width: 100%;
-  margin: 0;
-  padding: var(--menu-heading-padding, 12px 12px 4px);
+  margin: var(--menu-vertical-item-margin, 10px 0);
+  padding: var(--menu-vertical-item-padding, 12px 12px 12px 30px);
   border: 0;
+  border-radius: var(--menu-vertical-item-radius, 12px);
   background: none;
-  color: var(--color-text-muted);
+  color: var(--menu-heading-color, var(--menu-item-color, var(--color-text)));
   font-family: inherit;
+  font-size: var(--menu-vertical-font-size, 15px);
+  font-weight: var(--menu-heading-weight, inherit);
   line-height: inherit;
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: .04em;
   text-align: left;
-}
-
-.menu-vertical:not(.menu-tree) > .menu-group:first-child > .menu-heading {
-  padding-top: 0;
 }
 
 button.menu-heading {
   cursor: pointer;
-  border-radius: var(--menu-vertical-item-radius, 6px);
 }
 
 button.menu-heading:hover {
-  color: var(--color-text);
+  background-color: var(--menu-item-hover-bg, var(--color-surface-subtle));
 }
 
 button.menu-heading:focus-visible {
@@ -201,25 +196,6 @@ button.menu-heading::after {
 button.menu-heading[aria-expanded="false"]::after {
   margin-bottom: 0;
   transform: rotate(-45deg);
-}
-
-/* Tree: group headings look like the links. */
-.menu-tree .menu-heading {
-  margin: var(--menu-vertical-item-margin, 10px 0);
-  padding: var(--menu-vertical-item-padding, 12px 12px 12px 30px);
-  border-radius: var(--menu-vertical-item-radius, 12px);
-  color: var(--menu-item-color, var(--color-text));
-  font-size: var(--menu-vertical-font-size, 15px);
-  font-weight: inherit;
-  letter-spacing: normal;
-}
-
-.menu-tree button.menu-heading:hover {
-  background-color: var(--menu-item-hover-bg, var(--color-surface-subtle));
-}
-
-.menu-tree .menu-group > ul {
-  padding-left: var(--menu-nested-indent, 28px);
 }
 
 /* A count or status at the end of an item. */
