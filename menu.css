@@ -98,7 +98,28 @@
   z-index: 2000;
 }
 
-/* Vertical Menu */
+/*
+ * Vertical menu: one nested tree, whatever it looks like. A group is an
+ * item holding a heading and a list of its own; a link may also hold a
+ * nested list. A collapsible group's heading is a disclosure button and its
+ * list is `hidden` while closed.
+ *
+ * <ul class="menu menu-vertical">
+ *   <li><a href="#/">Dashboard</a></li>
+ *   <li class="menu-group">
+ *     <span class="menu-heading" id="docker-heading">Docker</span>
+ *     <ul aria-labelledby="docker-heading"><li><a href="#/docker">Containers</a></li></ul>
+ *   </li>
+ *   <li class="menu-group">
+ *     <button class="menu-heading" type="button" aria-expanded="true" aria-controls="storage">Storage</button>
+ *     <ul id="storage">…</ul>
+ *   </li>
+ * </ul>
+ *
+ * By default a heading is a small label over its group. .menu-tree draws
+ * group headings as items instead (icon, label, chevron) and indents what
+ * they hold.
+ */
 .menu-vertical {
   flex-direction: column;
   padding: 20px 0;
@@ -112,18 +133,93 @@
   border-radius: var(--menu-vertical-item-radius, 12px);
 }
 
-/* A group heading between the items of a vertical menu:
-   <li class="menu-heading">Docker</li> */
+/* Nested lists stack like the menu itself, so item margins never collapse. */
+.menu-vertical ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* A link's own list sits indented below it. */
+.menu-vertical li:not(.menu-group) > ul {
+  padding-left: var(--menu-nested-indent, 28px);
+}
+
 .menu-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
   padding: var(--menu-heading-padding, 12px 12px 4px);
+  border: 0;
+  background: none;
   color: var(--color-text-muted);
+  font-family: inherit;
+  line-height: inherit;
   font-size: 11.5px;
   font-weight: 600;
   letter-spacing: .04em;
+  text-align: left;
 }
 
-.menu-heading:first-child {
+.menu-vertical:not(.menu-tree) > .menu-group:first-child > .menu-heading {
   padding-top: 0;
+}
+
+button.menu-heading {
+  cursor: pointer;
+  border-radius: var(--menu-vertical-item-radius, 6px);
+}
+
+button.menu-heading:hover {
+  color: var(--color-text);
+}
+
+button.menu-heading:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: -2px;
+}
+
+/* The disclosure chevron: down while open, right while closed. */
+button.menu-heading::after {
+  content: "";
+  flex: none;
+  width: 5px;
+  height: 5px;
+  margin: 0 4px 2px auto;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  opacity: .7;
+  transform: rotate(45deg);
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+button.menu-heading[aria-expanded="false"]::after {
+  margin-bottom: 0;
+  transform: rotate(-45deg);
+}
+
+/* Tree: group headings look like the links. */
+.menu-tree .menu-heading {
+  margin: var(--menu-vertical-item-margin, 10px 0);
+  padding: var(--menu-vertical-item-padding, 12px 12px 12px 30px);
+  border-radius: var(--menu-vertical-item-radius, 12px);
+  color: var(--menu-item-color, var(--color-text));
+  font-size: var(--menu-vertical-font-size, 15px);
+  font-weight: inherit;
+  letter-spacing: normal;
+}
+
+.menu-tree button.menu-heading:hover {
+  background-color: var(--menu-item-hover-bg, var(--color-surface-subtle));
+}
+
+.menu-tree .menu-group > ul {
+  padding-left: var(--menu-nested-indent, 28px);
 }
 
 /* A count or status at the end of an item. */
@@ -157,36 +253,4 @@
 /* Horizontal menu dropdown on hover */
 .menu-horizontal li:hover > ul {
   display: block;
-}
-
-/* Submenu (vertical) */
-.menu-vertical li > ul {
-  display: none;
-  position: static;
-  box-shadow: none;
-  border: none;
-  width: 100%;
-  background: transparent;
-  padding: 0;
-  padding-left: 0;
-}
-
-.menu-vertical li > ul li a {
-  padding-left: 48px !important;
-}
-
-/* Chevron for vertical menu items with submenus */
-.menu-vertical li:has(ul) > a::after {
-  content: '\f105';
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  position: absolute;
-  right: 24px;
-  transition: transform 0.3s;
-  font-size: 12px;
-  opacity: 0.6;
-}
-
-.menu-vertical li.menu-open > a::after {
-  transform: rotate(90deg);
 }

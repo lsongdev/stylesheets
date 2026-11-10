@@ -1,5 +1,5 @@
 /* Shared behaviors for the CSS Components example pages.
-   Handles: explicit theme switching, dropdowns, and vertical submenus. */
+   Handles: explicit theme switching, dropdowns, and collapsible menu groups. */
 (function () {
   'use strict';
 
@@ -37,16 +37,16 @@
     }
   });
 
-  /* Vertical submenu toggle (menu.css) */  document.addEventListener('click', function (event) {
-    var link = event.target.closest('.menu-vertical li > a[data-submenu]');
-    if (!link) return;
-    event.preventDefault();
-    var li = link.parentElement;
-    var submenu = li.querySelector(':scope > ul');
-    if (!submenu) return;
-    var open = submenu.style.display === 'block';
-    submenu.style.display = open ? 'none' : 'block';
-    li.classList.toggle('menu-open', !open);
+  /* Collapsible menu groups (menu.css): a heading button shows or hides
+     the list it controls. */
+  document.addEventListener('click', function (event) {
+    var heading = event.target.closest('.menu-vertical button.menu-heading[aria-controls]');
+    if (!heading) return;
+    var list = document.getElementById(heading.getAttribute('aria-controls'));
+    if (!list) return;
+    var expanded = heading.getAttribute('aria-expanded') !== 'true';
+    heading.setAttribute('aria-expanded', String(expanded));
+    list.hidden = !expanded;
   });
 
   /* Dropdowns (dropdown.css) */
