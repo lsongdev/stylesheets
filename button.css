@@ -84,9 +84,10 @@
   pointer-events: none;
 }
 
-/* Link as button */
-
-a.button {
+/* Link as button: never underlined, even where a page underlines its links
+   (hover included). */
+a.button,
+a.button:hover {
   text-decoration: none;
 }
 

@@ -17,6 +17,14 @@
   box-shadow: var(--card-shadow, 0 1px 2px rgb(var(--shadow-color) / 6%), 0 1px 3px rgb(var(--shadow-color) / 8%));
 }
 
+/* A card that is a link: the whole card is the target, so its text keeps the
+   card's colour and is never underlined, even on hover. */
+a.card,
+a.card:hover {
+  color: var(--card-text, var(--color-text));
+  text-decoration: none;
+}
+
 /* Grid gap owns spacing. Document-flow card margins would narrow each
    column and add vertical space on top of the grid's gap. */
 .grid > .card {
