@@ -156,13 +156,29 @@
     display: none;
   }
 
-  .sidebar-open .menu>li>a>span,
+  /* Icons only, at any depth of the menu tree: labels, badges and
+     headings hide, and the icons centre in the narrow column. */
+  .sidebar-open .menu a > span,
   .sidebar-open .menu-heading,
   .sidebar-open .sidebar-footer span {
     display: none;
   }
 
-  .sidebar-open .menu>li>a {
-    padding-left: 12px;
+  .sidebar-open .menu ul {
+    padding-left: 0;
+  }
+
+  .sidebar-open .menu a,
+  .sidebar-open .sidebar-footer .button {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* With the headings gone, a rule keeps the groups apart. */
+  .sidebar-open .menu-group + .menu-group {
+    margin-top: 4px;
+    padding-top: 4px;
+    border-top: 1px solid var(--sidebar-border-color, var(--color-border));
   }
 }
