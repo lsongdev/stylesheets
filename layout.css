@@ -14,10 +14,15 @@
  * most --app-window-width × --app-window-height, centred both ways with at
  * least --app-window-gap around it, whose content scrolls inside. Screens
  * under 1280 × 760 still get the full-window frame.
+ *
+ * --app-height is the frame's height (the window's, or the viewport's), for
+ * content sized to it, e.g. calc(var(--app-height) - 200px). It inherits
+ * into shadow roots.
  */
 .app-layout {
+  --app-height: 100dvh;
   display: flex;
-  min-height: 100dvh;
+  min-height: var(--app-height);
 }
 
 .app-layout .sidebar {
@@ -54,11 +59,12 @@
   }
 
   .app-layout-windowed {
+    --app-height: min(calc(100dvh - 2 * var(--app-window-gap, 32px)), var(--app-window-height, 960px));
     position: fixed;
     inset: 0;
     margin: auto;
     width: min(calc(100vw - 2 * var(--app-window-gap, 32px)), var(--app-window-width, 1440px));
-    height: min(calc(100dvh - 2 * var(--app-window-gap, 32px)), var(--app-window-height, 960px));
+    height: var(--app-height);
     min-height: 0;
     overflow: hidden;
     background: var(--color-canvas);
