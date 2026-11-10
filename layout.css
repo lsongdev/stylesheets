@@ -1,0 +1,81 @@
+@import url(./base.css);
+
+/*
+ * An application's frame: navigation (sidebar.css) beside the content. By
+ * default it fills the window and the page scrolls, the sidebar staying in
+ * place; on narrow screens the sidebar becomes a bar above the content.
+ *
+ * <div class="app-layout">
+ *   <aside class="sidebar">…</aside>
+ *   <main class="app-main">…</main>
+ * </div>
+ *
+ * .app-layout-windowed keeps it compact on large screens: a window of at
+ * most --app-window-width × --app-window-height, centred both ways with at
+ * least --app-window-gap around it, whose content scrolls inside. Screens
+ * under 1280 × 760 still get the full-window frame.
+ */
+.app-layout {
+  display: flex;
+  min-height: 100dvh;
+}
+
+.app-layout .sidebar {
+  position: sticky;
+  top: 0;
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0;
+  padding: var(--app-main-padding, 24px 28px 48px);
+}
+
+@media (min-width: 769px) {
+  .app-layout .sidebar {
+    height: 100dvh;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .app-main {
+    padding: var(--app-main-padding-narrow, 16px 16px 40px);
+  }
+}
+
+@media (min-width: 1280px) and (min-height: 760px) {
+  /* The page around the window. */
+  body:has(.app-layout-windowed) {
+    background: var(--app-window-backdrop, color-mix(in srgb, var(--color-canvas) 90%, var(--color-text)));
+  }
+
+  .app-layout-windowed {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: min(calc(100vw - 2 * var(--app-window-gap, 32px)), var(--app-window-width, 1440px));
+    height: min(calc(100dvh - 2 * var(--app-window-gap, 32px)), var(--app-window-height, 960px));
+    min-height: 0;
+    overflow: hidden;
+    background: var(--color-canvas);
+    border: 1px solid var(--color-border);
+    border-radius: var(--app-window-radius, var(--radius-lg));
+    box-shadow: 0 24px 48px -12px rgb(var(--shadow-color) / 18%), 0 4px 12px rgb(var(--shadow-color) / 8%);
+  }
+
+  .app-layout-windowed .sidebar {
+    position: static;
+    height: auto;
+  }
+
+  /* A stable gutter keeps the width steady as content starts to scroll. */
+  .app-layout-windowed .app-main {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+  }
+}
