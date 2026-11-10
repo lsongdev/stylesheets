@@ -40,3 +40,66 @@
 .log-stderr {
   color: var(--log-stderr-text, #ff9b9b);
 }
+
+/*
+ * Terminal colours in a log (LogView's ansi mode): .ansi-fg-0 … 15 and
+ * .ansi-bg-0 … 15 use --log-ansi-0 … 15, a palette for the dark console
+ * surface; the default-fg/-bg classes are the inverse of the surface's own.
+ */
+.log {
+  --log-ansi-0: #5c6370;
+  --log-ansi-1: #e06c75;
+  --log-ansi-2: #98c379;
+  --log-ansi-3: #e5c07b;
+  --log-ansi-4: #61afef;
+  --log-ansi-5: #c678dd;
+  --log-ansi-6: #56b6c2;
+  --log-ansi-7: #d6dde6;
+  --log-ansi-8: #7f848e;
+  --log-ansi-9: #ff7b86;
+  --log-ansi-10: #b5e890;
+  --log-ansi-11: #f0d58c;
+  --log-ansi-12: #82c4ff;
+  --log-ansi-13: #dc9cf0;
+  --log-ansi-14: #7fd3dd;
+  --log-ansi-15: #ffffff;
+}
+
+.ansi-fg-0 { color: var(--log-ansi-0); }
+.ansi-fg-1 { color: var(--log-ansi-1); }
+.ansi-fg-2 { color: var(--log-ansi-2); }
+.ansi-fg-3 { color: var(--log-ansi-3); }
+.ansi-fg-4 { color: var(--log-ansi-4); }
+.ansi-fg-5 { color: var(--log-ansi-5); }
+.ansi-fg-6 { color: var(--log-ansi-6); }
+.ansi-fg-7 { color: var(--log-ansi-7); }
+.ansi-fg-8 { color: var(--log-ansi-8); }
+.ansi-fg-9 { color: var(--log-ansi-9); }
+.ansi-fg-10 { color: var(--log-ansi-10); }
+.ansi-fg-11 { color: var(--log-ansi-11); }
+.ansi-fg-12 { color: var(--log-ansi-12); }
+.ansi-fg-13 { color: var(--log-ansi-13); }
+.ansi-fg-14 { color: var(--log-ansi-14); }
+.ansi-fg-15 { color: var(--log-ansi-15); }
+.ansi-bg-0 { background: var(--log-ansi-0); }
+.ansi-bg-1 { background: var(--log-ansi-1); }
+.ansi-bg-2 { background: var(--log-ansi-2); }
+.ansi-bg-3 { background: var(--log-ansi-3); }
+.ansi-bg-4 { background: var(--log-ansi-4); }
+.ansi-bg-5 { background: var(--log-ansi-5); }
+.ansi-bg-6 { background: var(--log-ansi-6); }
+.ansi-bg-7 { background: var(--log-ansi-7); }
+.ansi-bg-8 { background: var(--log-ansi-8); }
+.ansi-bg-9 { background: var(--log-ansi-9); }
+.ansi-bg-10 { background: var(--log-ansi-10); }
+.ansi-bg-11 { background: var(--log-ansi-11); }
+.ansi-bg-12 { background: var(--log-ansi-12); }
+.ansi-bg-13 { background: var(--log-ansi-13); }
+.ansi-bg-14 { background: var(--log-ansi-14); }
+.ansi-bg-15 { background: var(--log-ansi-15); }
+.ansi-fg-default-bg { color: var(--log-bg, #0f1419); }
+.ansi-bg-default-fg { background: var(--log-text, #d6dde6); }
+.ansi-bold { font-weight: 700; }
+.ansi-dim { opacity: .7; }
+.ansi-italic { font-style: italic; }
+.ansi-underline { text-decoration: underline; }
