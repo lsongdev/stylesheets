@@ -140,3 +140,20 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .form-actions {
+    width: 100%;
+  }
+
+  .form-actions > .button {
+    flex: 1 1 0;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .form-actions > .spacer {
+    display: none;
+  }
+}
